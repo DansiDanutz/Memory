@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory App - Monitoring Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes pulse-green {
+            0%, 100% { background-color: #10b981; }
+            50% { background-color: #34d399; }
+        }
+        @keyframes pulse-yellow {
+            0%, 100% { background-color: #f59e0b; }
+            50% { background-color: #fbbf24; }
+        }
+        @keyframes pulse-red {
+            0%, 100% { background-color: #ef4444; }
+            50% { background-color: #f87171; }
+        }
+        .status-healthy { animation: pulse-green 2s infinite; }
+        .status-degraded { animation: pulse-yellow 2s infinite; }
+        .status-unhealthy { animation: pulse-red 2s infinite; }
+
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: transform 0.3s;
+        }
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .dark-mode {
+            background: #1a202c;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark-mode">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-4xl font-bold text-white mb-2">Memory App Monitor</h1>
+                <p class="text-gray-400">Real-time System Dashboard</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="text-right">
+                    <p class="text-sm text-gray-400">Last Updated</p>
+                    <p class="text-lg text-white" id="lastUpdate">--:--:--</p>
+                </div>
+                <div class="w-4 h-4 rounded-full" id="statusIndicator"></div>
+            </div>
+        </div>
+
+        <!-- Alert Banner -->
+        <div id="alertBanner" class="hidden mb-6 p-4 rounded-lg bg-red-900 text-white">
+            <div class="flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                </svg>
+                <span id="alertMessage">System Alert</span>
+            </div>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="metric-card p-6 rounded-lg text-white">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <p class="text-sm opacity-75">Response Time</p>
+                        <p class="text-3xl font-bold" id="responseTime">--ms</p>
+                    </div>
+                    <svg class="w-8 h-8 opacity-50" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                    </svg>
+                </div>
+                <div class="text-sm opacity-75">
+                    <span id="responseChange" class="text-green-300">↓ 5%</span> from last hour
+                </div>
+            </div>
+
+            <div class="metric-card p-6 rounded-lg text-white">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <p class="text-sm opacity-75">Active Users</p>
+                        <p class="text-3xl font-bold" id="activeUsers">--</p>
+                    </div>
+                    <svg class="w-8 h-8 opacity-50" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                    </svg>
+                </div>
+                <div class="text-sm opacity-75">
+                    <span id="userChange" class="text-green-300">+12</span> new today
+                </div>
+            </div>
+
+            <div class="metric-card p-6 rounded-lg text-white">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <p class="text-sm opacity-75">Memory Count</p>
+                        <p class="text-3xl font-bold" id="memoryCount">--</p>
+                    </div>
+                    <svg class="w-8 h-8 opacity-50" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H4v10a2 2 0 002 2h8a2 2 0 002-2V5h-2a1 1 0 100-2 2 2 0 012 2v10a4 4 0 01-4 4H6a4 4 0 01-4-4V5z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="text-sm opacity-75">
+                    <span id="memoryChange" class="text-green-300">+245</span> this week
+                </div>
+            </div>
+
+            <div class="metric-card p-6 rounded-lg text-white">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <p class="text-sm opacity-75">Uptime</p>
+                        <p class="text-3xl font-bold" id="uptime">--%</p>
+                    </div>
+                    <svg class="w-8 h-8 opacity-50" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="text-sm opacity-75">
+                    Last <span id="uptimeDays">--</span> days
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Status Grid -->
+        <div class="bg-gray-800 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-white mb-4">Service Health</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="serviceGrid">
+                <!-- Services will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <!-- Request Rate Chart -->
+            <div class="bg-gray-800 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-white mb-4">Request Rate (last hour)</h3>
+                <canvas id="requestChart" height="150"></canvas>
+            </div>
+
+            <!-- Response Time Chart -->
+            <div class="bg-gray-800 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-white mb-4">Response Times (ms)</h3>
+                <canvas id="responseChart" height="150"></canvas>
+            </div>
+        </div>
+
+        <!-- System Resources -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <!-- CPU Usage -->
+            <div class="bg-gray-800 rounded-lg p-6">
+                <h3 class="text-lg font-bold text-white mb-4">CPU Usage</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center justify-between">
+                        <div>
+                            <span class="text-xs font-semibold inline-block text-cyan-300">
+                                <span id="cpuPercent">0</span>%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden h-4 mb-4 text-xs flex rounded bg-gray-700">
+                        <div id="cpuBar" style="width:0%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-cyan-500 transition-all duration-500"></div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">Cores: <span id="cpuCores">--</span></p>
+            </div>
+
+            <!-- Memory Usage -->
+            <div class="bg-gray-800 rounded-lg p-6">
+                <h3 class="text-lg font-bold text-white mb-4">Memory Usage</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center justify-between">
+                        <div>
+                            <span class="text-xs font-semibold inline-block text-purple-300">
+                                <span id="memPercent">0</span>%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden h-4 mb-4 text-xs flex rounded bg-gray-700">
+                        <div id="memBar" style="width:0%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500 transition-all duration-500"></div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">Available: <span id="memAvailable">--</span> GB</p>
+            </div>
+
+            <!-- Disk Usage -->
+            <div class="bg-gray-800 rounded-lg p-6">
+                <h3 class="text-lg font-bold text-white mb-4">Disk Usage</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center justify-between">
+                        <div>
+                            <span class="text-xs font-semibold inline-block text-yellow-300">
+                                <span id="diskPercent">0</span>%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden h-4 mb-4 text-xs flex rounded bg-gray-700">
+                        <div id="diskBar" style="width:0%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-500 transition-all duration-500"></div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">Free: <span id="diskFree">--</span> GB</p>
+            </div>
+        </div>
+
+        <!-- Recent Events -->
+        <div class="bg-gray-800 rounded-lg p-6">
+            <h2 class="text-2xl font-bold text-white mb-4">Recent Events</h2>
+            <div class="space-y-2" id="eventLog">
+                <!-- Events will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const API_BASE = '/api/v1';
+        const WS_URL = `ws://${window.location.host}/ws/metrics`;
+        const UPDATE_INTERVAL = 5000; // 5 seconds
+
+        // State
+        let requestChart, responseChart;
+        let ws;
+        let lastUpdate = Date.now();
+
+        // Initialize charts
+        function initCharts() {
+            // Request Rate Chart
+            const requestCtx = document.getElementById('requestChart').getContext('2d');
+            requestChart = new Chart(requestCtx, {
+                type: 'line',
+                data: {
+                    labels: Array(20).fill('').map((_, i) => `${-20 + i}m`),
+                    datasets: [{
+                        label: 'Requests/min',
+                        data: Array(20).fill(0),
+                        borderColor: 'rgb(59, 130, 246)',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { color: 'rgba(255, 255, 255, 0.7)' }
+                        },
+                        x: {
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { color: 'rgba(255, 255, 255, 0.7)' }
+                        }
+                    }
+                }
+            });
+
+            // Response Time Chart
+            const responseCtx = document.getElementById('responseChart').getContext('2d');
+            responseChart = new Chart(responseCtx, {
+                type: 'line',
+                data: {
+                    labels: Array(20).fill('').map((_, i) => `${-20 + i}m`),
+                    datasets: [{
+                        label: 'P50',
+                        data: Array(20).fill(0),
+                        borderColor: 'rgb(34, 197, 94)',
+                        backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                        tension: 0.4
+                    }, {
+                        label: 'P95',
+                        data: Array(20).fill(0),
+                        borderColor: 'rgb(251, 191, 36)',
+                        backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                        tension: 0.4
+                    }, {
+                        label: 'P99',
+                        data: Array(20).fill(0),
+                        borderColor: 'rgb(239, 68, 68)',
+                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            labels: { color: 'rgba(255, 255, 255, 0.7)' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { color: 'rgba(255, 255, 255, 0.7)' }
+                        },
+                        x: {
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { color: 'rgba(255, 255, 255, 0.7)' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Fetch metrics from API
+        async function fetchMetrics() {
+            try {
+                // Fetch health data
+                const healthResponse = await fetch(`${API_BASE}/health/detailed`);
+                const healthData = await healthResponse.json();
+                updateHealthStatus(healthData);
+
+                // Fetch metrics
+                const metricsResponse = await fetch(`${API_BASE}/metrics`);
+                const metricsText = await metricsResponse.text();
+                updateSystemMetrics(metricsText);
+
+                // Fetch status
+                const statusResponse = await fetch(`${API_BASE}/status`);
+                const statusData = await statusResponse.json();
+                updateAppStatus(statusData);
+
+                // Update last update time
+                updateTimestamp();
+
+            } catch (error) {
+                console.error('Failed to fetch metrics:', error);
+                showAlert('Failed to fetch metrics from server');
+            }
+        }
+
+        // Update health status
+        function updateHealthStatus(data) {
+            const indicator = document.getElementById('statusIndicator');
+            indicator.className = `w-4 h-4 rounded-full status-${data.status}`;
+
+            // Update service grid
+            const grid = document.getElementById('serviceGrid');
+            grid.innerHTML = '';
+
+            data.services.forEach(service => {
+                const serviceDiv = document.createElement('div');
+                serviceDiv.className = 'bg-gray-700 rounded p-4';
+
+                const statusColor = service.status === 'healthy' ? 'text-green-400' :
+                                   service.status === 'degraded' ? 'text-yellow-400' : 'text-red-400';
+
+                serviceDiv.innerHTML = `
+                    <div class="flex justify-between items-center">
+                        <span class="text-white font-medium">${service.service}</span>
+                        <span class="${statusColor} text-sm">${service.status}</span>
+                    </div>
+                    ${service.latency_ms ? `<p class="text-xs text-gray-400 mt-1">${service.latency_ms}ms</p>` : ''}
+                `;
+                grid.appendChild(serviceDiv);
+            });
+
+            // Show alert if unhealthy
+            if (data.status === 'unhealthy') {
+                showAlert(`System unhealthy: ${data.summary.unhealthy} services down`);
+            }
+        }
+
+        // Update system metrics
+        function updateSystemMetrics(metricsText) {
+            const lines = metricsText.split('\n');
+            const metrics = {};
+
+            lines.forEach(line => {
+                if (line.startsWith('cpu_usage_percent')) {
+                    metrics.cpu = parseFloat(line.split(' ')[1]);
+                } else if (line.startsWith('memory_usage_bytes')) {
+                    metrics.memUsed = parseInt(line.split(' ')[1]);
+                } else if (line.startsWith('memory_available_bytes')) {
+                    metrics.memAvailable = parseInt(line.split(' ')[1]);
+                } else if (line.startsWith('disk_usage_percent')) {
+                    metrics.disk = parseFloat(line.split(' ')[1]);
+                }
+            });
+
+            // Update CPU
+            if (metrics.cpu !== undefined) {
+                document.getElementById('cpuPercent').textContent = metrics.cpu.toFixed(1);
+                document.getElementById('cpuBar').style.width = `${metrics.cpu}%`;
+                document.getElementById('cpuBar').className = getCpuBarClass(metrics.cpu);
+            }
+
+            // Update Memory
+            if (metrics.memUsed && metrics.memAvailable) {
+                const total = metrics.memUsed + metrics.memAvailable;
+                const percent = (metrics.memUsed / total * 100).toFixed(1);
+                document.getElementById('memPercent').textContent = percent;
+                document.getElementById('memBar').style.width = `${percent}%`;
+                document.getElementById('memAvailable').textContent = (metrics.memAvailable / (1024**3)).toFixed(2);
+            }
+
+            // Update Disk
+            if (metrics.disk !== undefined) {
+                document.getElementById('diskPercent').textContent = metrics.disk.toFixed(1);
+                document.getElementById('diskBar').style.width = `${metrics.disk}%`;
+            }
+        }
+
+        // Update app status
+        function updateAppStatus(data) {
+            // Update uptime
+            if (data.uptime_seconds) {
+                const days = Math.floor(data.uptime_seconds / 86400);
+                const uptime = ((data.uptime_seconds / 86400) * 100).toFixed(2);
+                document.getElementById('uptime').textContent = `${Math.min(uptime, 100)}%`;
+                document.getElementById('uptimeDays').textContent = days;
+            }
+        }
+
+        // Update charts with new data
+        function updateCharts(data) {
+            // Update request chart
+            if (data.requestRate !== undefined) {
+                requestChart.data.datasets[0].data.shift();
+                requestChart.data.datasets[0].data.push(data.requestRate);
+                requestChart.update('none');
+            }
+
+            // Update response chart
+            if (data.responseTime) {
+                responseChart.data.datasets[0].data.shift();
+                responseChart.data.datasets[0].data.push(data.responseTime.p50 || 0);
+                responseChart.data.datasets[1].data.shift();
+                responseChart.data.datasets[1].data.push(data.responseTime.p95 || 0);
+                responseChart.data.datasets[2].data.shift();
+                responseChart.data.datasets[2].data.push(data.responseTime.p99 || 0);
+                responseChart.update('none');
+
+                // Update main metric
+                document.getElementById('responseTime').textContent = `${data.responseTime.p50 || '--'}ms`;
+            }
+        }
+
+        // WebSocket connection for real-time updates
+        function connectWebSocket() {
+            ws = new WebSocket(WS_URL);
+
+            ws.onopen = () => {
+                console.log('WebSocket connected');
+                addEvent('System', 'WebSocket connected', 'info');
+            };
+
+            ws.onmessage = (event) => {
+                try {
+                    const data = JSON.parse(event.data);
+                    handleRealtimeUpdate(data);
+                } catch (error) {
+                    console.error('Failed to parse WebSocket message:', error);
+                }
+            };
+
+            ws.onerror = (error) => {
+                console.error('WebSocket error:', error);
+                addEvent('System', 'WebSocket error', 'error');
+            };
+
+            ws.onclose = () => {
+                console.log('WebSocket disconnected, reconnecting...');
+                setTimeout(connectWebSocket, 5000);
+            };
+        }
+
+        // Handle real-time updates
+        function handleRealtimeUpdate(data) {
+            // Update metrics
+            if (data.activeUsers !== undefined) {
+                document.getElementById('activeUsers').textContent = data.activeUsers;
+            }
+            if (data.memoryCount !== undefined) {
+                document.getElementById('memoryCount').textContent = data.memoryCount;
+            }
+
+            // Update charts
+            updateCharts(data);
+
+            // Add event if present
+            if (data.event) {
+                addEvent(data.event.source, data.event.message, data.event.type);
+            }
+
+            updateTimestamp();
+        }
+
+        // Add event to log
+        function addEvent(source, message, type = 'info') {
+            const eventLog = document.getElementById('eventLog');
+            const eventDiv = document.createElement('div');
+
+            const typeColors = {
+                'info': 'text-blue-400',
+                'warning': 'text-yellow-400',
+                'error': 'text-red-400',
+                'success': 'text-green-400'
+            };
+
+            eventDiv.className = 'flex justify-between items-center p-2 bg-gray-700 rounded';
+            eventDiv.innerHTML = `
+                <div class="flex items-center">
+                    <span class="${typeColors[type] || 'text-gray-400'} mr-2">●</span>
+                    <span class="text-sm text-white">${message}</span>
+                </div>
+                <span class="text-xs text-gray-400">${new Date().toLocaleTimeString()}</span>
+            `;
+
+            eventLog.insertBefore(eventDiv, eventLog.firstChild);
+
+            // Keep only last 10 events
+            while (eventLog.children.length > 10) {
+                eventLog.removeChild(eventLog.lastChild);
+            }
+        }
+
+        // Show alert banner
+        function showAlert(message) {
+            const banner = document.getElementById('alertBanner');
+            const alertMessage = document.getElementById('alertMessage');
+            alertMessage.textContent = message;
+            banner.classList.remove('hidden');
+
+            setTimeout(() => {
+                banner.classList.add('hidden');
+            }, 10000);
+        }
+
+        // Update timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            document.getElementById('lastUpdate').textContent = now.toLocaleTimeString();
+            lastUpdate = Date.now();
+        }
+
+        // Get CPU bar class based on usage
+        function getCpuBarClass(percent) {
+            let baseClass = 'shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center transition-all duration-500';
+            if (percent < 50) {
+                return `${baseClass} bg-green-500`;
+            } else if (percent < 80) {
+                return `${baseClass} bg-yellow-500`;
+            } else {
+                return `${baseClass} bg-red-500`;
+            }
+        }
+
+        // Simulate data for demo (remove in production)
+        function simulateData() {
+            const data = {
+                activeUsers: Math.floor(Math.random() * 50) + 10,
+                memoryCount: Math.floor(Math.random() * 1000) + 500,
+                requestRate: Math.floor(Math.random() * 100) + 20,
+                responseTime: {
+                    p50: Math.floor(Math.random() * 50) + 20,
+                    p95: Math.floor(Math.random() * 100) + 50,
+                    p99: Math.floor(Math.random() * 200) + 100
+                }
+            };
+
+            handleRealtimeUpdate(data);
+
+            // Random events
+            if (Math.random() > 0.7) {
+                const events = [
+                    { source: 'WhatsApp', message: 'New message received', type: 'info' },
+                    { source: 'Memory', message: 'Memory created successfully', type: 'success' },
+                    { source: 'Voice', message: 'Transcription completed', type: 'info' },
+                    { source: 'Backup', message: 'Backup started', type: 'info' },
+                    { source: 'API', message: 'Rate limit warning', type: 'warning' }
+                ];
+                const event = events[Math.floor(Math.random() * events.length)];
+                addEvent(event.source, event.message, event.type);
+            }
+        }
+
+        // Initialize dashboard
+        async function init() {
+            initCharts();
+            await fetchMetrics();
+
+            // Try WebSocket connection
+            if (window.location.hostname !== 'localhost') {
+                connectWebSocket();
+            } else {
+                // For local testing, use simulation
+                setInterval(simulateData, 2000);
+            }
+
+            // Periodic API updates
+            setInterval(fetchMetrics, UPDATE_INTERVAL);
+
+            // Add initial event
+            addEvent('System', 'Dashboard initialized', 'success');
+        }
+
+        // Start dashboard
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
