@@ -1,0 +1,22 @@
+{
+  "memories": [
+    {
+      "id": "addf6298",
+      "category": "GENERAL",
+      "timestamp": "2025-09-14T23:49:49.084413",
+      "content_preview": "How are you",
+      "encrypted": false,
+      "tenant_id": null,
+      "department_id": null,
+      "user_phone": "40744602272"
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "by_category": {
+      "GENERAL": 1
+    },
+    "first_memory": "2025-09-14T23:49:49.084413",
+    "last_memory": "2025-09-14T23:49:49.084413"
+  }
+}

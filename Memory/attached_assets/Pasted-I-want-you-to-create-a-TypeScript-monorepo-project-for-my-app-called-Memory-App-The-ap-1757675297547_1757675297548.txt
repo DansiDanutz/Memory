@@ -1,0 +1,41 @@
+I want you to create a **TypeScript monorepo** project for my app called **Memory App**.  
+
+The app is a privacy-first AI memory + legacy system with a **Smart Limits Engine (SLE)** that governs what to say, to whom, and why.
+
+### Core Requirements:
+1. Use **TypeScript** with a monorepo structure:
+   - `packages/sle` → Smart Limits Engine core
+   - `packages/mpl` → Policy evaluator (Disclosure Tree)
+   - `packages/blts` → Trust scoring engine
+   - `packages/cemg` → Mutual knowledge estimator
+   - `packages/kpe` → Provenance checker
+   - `packages/ipsg` → Influence planner
+   - `apps/dev-runner` → Demo runner to test evaluations
+
+2. In `packages/sle/src/evaluate.ts` implement the SLE logic:
+   - Inputs: callerId, utterance, domain, scope, strictTruth?, sensitive?
+   - Flow: MPL → CEMG → BLTS → KPE → IPSG
+   - Outcomes: disclose | partial | redact | probe | verify | divert | decline | throttle | inconclusive
+   - Return object includes: outcome, reasonCodes, thresholds, optional prompts
+
+3. Provide **stub implementations** for MPL, BLTS, CEMG, KPE, IPSG in their packages (simple mock functions with placeholders).
+   - Example: BLTS returns trust score from a mock dictionary.
+   - Example: MPL always allow = true.
+   - Example: CEMG returns 0.8 if utterance includes “spoke”, else 0.4.
+
+4. Add **tests** using `vitest` in `packages/sle/test/evaluate.spec.ts`:
+   - Ensure `evaluate()` returns `probe` if MKE is too low.
+   - Ensure it returns `disclose` if trust + policy pass.
+
+5. Add a **demo runner** in `apps/dev-runner/src/demo.ts` that calls `evaluate()` with sample data (e.g., grandmother asking about finance) and logs the decision.
+
+6. Root `package.json` should include workspaces and scripts:
+   - `npm run build` → build all packages
+   - `npm run test` → run vitest
+   - `npm run dev` → run demo
+
+### Output
+- Generate the full **file/folder structure** with complete code for each file.
+- Include a **README.md** with setup instructions (install, build, test, run demo).
+- Ensure the project runs correctly on Replit with `npm install && npm run dev`.
+

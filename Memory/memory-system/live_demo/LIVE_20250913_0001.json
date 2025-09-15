@@ -1,0 +1,14 @@
+{
+  "id": "LIVE_20250913_0001",
+  "user": "john_doe_5354",
+  "timestamp": "2025-09-13T03:41:03.917563",
+  "content": "Client meeting with Amazon team - Friday 10 AM - Prepare Q4 proposal",
+  "category": "\ud83d\udcbc WORK",
+  "ai_insights": {
+    "gpt5": "GPT-5: Critical business commitment detected",
+    "claude": "Claude: Importance level HIGH",
+    "grok": "Grok: Social impact analyzed"
+  },
+  "smart_reminder": "Thursday 5 PM",
+  "status": "ACTIVE"
+}

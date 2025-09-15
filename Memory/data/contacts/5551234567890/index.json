@@ -1,0 +1,22 @@
+{
+  "memories": [
+    {
+      "id": "27d55ffc",
+      "category": "ULTRA_SECRET",
+      "timestamp": "2025-09-15T01:57:32.310384",
+      "content_preview": "",
+      "encrypted": true,
+      "tenant_id": "memoapp",
+      "department_id": "general",
+      "user_phone": "5551234567890"
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "by_category": {
+      "ULTRA_SECRET": 1
+    },
+    "last_memory": "2025-09-15T01:57:32.310384",
+    "first_memory": "2025-09-15T01:57:32.310384"
+  }
+}

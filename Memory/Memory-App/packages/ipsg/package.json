@@ -1,0 +1,14 @@
+{
+  "name": "@memory-app/ipsg",
+  "version": "1.0.0",
+  "description": "Influence Planning and Strategy Generation - Risk assessment and planning",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

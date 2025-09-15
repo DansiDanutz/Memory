@@ -1,0 +1,84 @@
+{
+  "memories": [
+    {
+      "id": "e6d30deb",
+      "category": "GENERAL",
+      "timestamp": "2025-09-15T01:33:47.182955",
+      "content_preview": "help:",
+      "encrypted": false,
+      "tenant_id": "memoapp",
+      "department_id": "general",
+      "user_phone": "1234567890"
+    },
+    {
+      "id": "e322a9c9",
+      "category": "CONFIDENTIAL",
+      "timestamp": "2025-09-15T01:33:53.770557",
+      "content_preview": "Passport 12345",
+      "encrypted": false,
+      "tenant_id": "memoapp",
+      "department_id": "general",
+      "user_phone": "1234567890"
+    },
+    {
+      "id": "10a2bf61",
+      "category": "GENERAL",
+      "timestamp": "2025-09-15T01:41:35.904413",
+      "content_preview": "help:",
+      "encrypted": false,
+      "tenant_id": "memoapp",
+      "department_id": "general",
+      "user_phone": "1234567890"
+    },
+    {
+      "id": "8624a28d",
+      "category": "GENERAL",
+      "timestamp": "2025-09-15T01:41:36.997947",
+      "content_preview": "stats:",
+      "encrypted": false,
+      "tenant_id": "memoapp",
+      "department_id": "general",
+      "user_phone": "1234567890"
+    },
+    {
+      "id": "81103cb0",
+      "category": "GENERAL",
+      "timestamp": "2025-09-15T01:41:37.576849",
+      "content_preview": "categories:",
+      "encrypted": false,
+      "tenant_id": "memoapp",
+      "department_id": "general",
+      "user_phone": "1234567890"
+    },
+    {
+      "id": "baab4831",
+      "category": "CONFIDENTIAL",
+      "timestamp": "2025-09-15T01:41:38.603570",
+      "content_preview": "Passport 12345",
+      "encrypted": false,
+      "tenant_id": "memoapp",
+      "department_id": "general",
+      "user_phone": "1234567890"
+    },
+    {
+      "id": "8fb17b6e",
+      "category": "SECRET",
+      "timestamp": "2025-09-15T01:41:39.148958",
+      "content_preview": "",
+      "encrypted": true,
+      "tenant_id": "memoapp",
+      "department_id": "general",
+      "user_phone": "1234567890"
+    }
+  ],
+  "stats": {
+    "total": 7,
+    "by_category": {
+      "GENERAL": 4,
+      "CONFIDENTIAL": 2,
+      "SECRET": 1
+    },
+    "last_memory": "2025-09-15T01:41:39.148958",
+    "first_memory": "2025-09-15T01:33:47.182955"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@memory-app/telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram Bot integration for Memory App with SLE privacy governance",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@memory-app/sle": "file:../sle",
+    "@memory-app/voice-processor": "file:../voice-processor",
+    "@memory-app/grok-vision": "file:../grok-vision",
+    "@memory-app/conversation": "file:../conversation",
+    "telegraf": "^4.16.3",
+    "axios": "^1.6.7",
+    "form-data": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  }
+}

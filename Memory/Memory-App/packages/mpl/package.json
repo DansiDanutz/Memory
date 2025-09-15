@@ -1,0 +1,14 @@
+{
+  "name": "@memory-app/mpl",
+  "version": "1.0.0",
+  "description": "Memory Policy Layer - Disclosure Tree and Policy Evaluation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

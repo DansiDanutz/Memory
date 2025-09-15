@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory App Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <i class="fas fa-shield-alt"></i>
+                <h2>Admin Dashboard</h2>
+                <p>Memory App Platform Management</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <span>Login</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+            <div id="loginError" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard" class="dashboard-container" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-brain"></i>
+                <h3>Memory Admin</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-page="overview">
+                    <i class="fas fa-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-page="users">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a>
+                <a href="#" class="nav-item" data-page="memories">
+                    <i class="fas fa-database"></i>
+                    <span>Memories</span>
+                </a>
+                <a href="#" class="nav-item" data-page="analytics">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item" data-page="games">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Gaming</span>
+                </a>
+                <a href="#" class="nav-item" data-page="communications">
+                    <i class="fas fa-comments"></i>
+                    <span>Communications</span>
+                </a>
+                <a href="#" class="nav-item" data-page="logs">
+                    <i class="fas fa-file-alt"></i>
+                    <span>System Logs</span>
+                </a>
+                <a href="#" class="nav-item" data-page="config">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuration</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="pageTitle">Dashboard Overview</h2>
+                </div>
+                <div class="header-right">
+                    <div class="admin-info">
+                        <span id="adminRole" class="badge">Admin</span>
+                        <span id="adminName">Administrator</span>
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Overview Page -->
+            <div id="overviewPage" class="page-content">
+                <!-- Statistics Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card primary">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 id="totalUsers">0</h3>
+                            <p>Total Users</p>
+                            <span class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> <span id="newUsersToday">0</span> today
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card success">
+                        <div class="stat-icon">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 id="totalMemories">0</h3>
+                            <p>Total Memories</p>
+                            <span class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> <span id="memorieToday">0</span> today
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card warning">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 id="activeUsers">0</h3>
+                            <p>Active Users</p>
+                            <span class="stat-change">Last 24 hours</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card info">
+                        <div class="stat-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3 id="systemStatus">Healthy</h3>
+                            <p>System Status</p>
+                            <span class="stat-change positive">All services running</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <h3>User Growth</h3>
+                        <canvas id="userGrowthChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Memory Activity</h3>
+                        <canvas id="memoryActivityChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Communication Channels -->
+                <div class="section">
+                    <h3>Communication Channels</h3>
+                    <div class="channels-grid">
+                        <div class="channel-card whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4 id="whatsappCount">0</h4>
+                                <p>WhatsApp</p>
+                            </div>
+                        </div>
+                        <div class="channel-card telegram">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <h4 id="telegramCount">0</h4>
+                                <p>Telegram</p>
+                            </div>
+                        </div>
+                        <div class="channel-card sms">
+                            <i class="fas fa-sms"></i>
+                            <div>
+                                <h4 id="smsCount">0</h4>
+                                <p>SMS</p>
+                            </div>
+                        </div>
+                        <div class="channel-card voice">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 id="voiceCount">0</h4>
+                                <p>Voice</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="section">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list" id="recentActivity">
+                        <!-- Activity items will be added here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Users Page -->
+            <div id="usersPage" class="page-content" style="display: none;">
+                <div class="page-header">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="userSearch" placeholder="Search users...">
+                    </div>
+                    <button class="btn-primary" id="exportUsersBtn">
+                        <i class="fas fa-download"></i> Export
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Memories</th>
+                                <th>Status</th>
+                                <th>Created</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <!-- User rows will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Memories Page -->
+            <div id="memoriesPage" class="page-content" style="display: none;">
+                <div class="page-header">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="memorySearch" placeholder="Search memories...">
+                    </div>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="ideas">Ideas</option>
+                        <option value="reminders">Reminders</option>
+                    </select>
+                </div>
+
+                <div class="memories-grid" id="memoriesGrid">
+                    <!-- Memory cards will be added here -->
+                </div>
+            </div>
+
+            <!-- Analytics Page -->
+            <div id="analyticsPage" class="page-content" style="display: none;">
+                <div class="analytics-header">
+                    <select id="analyticsPeriod" class="filter-select">
+                        <option value="7days">Last 7 Days</option>
+                        <option value="30days">Last 30 Days</option>
+                        <option value="90days">Last 90 Days</option>
+                    </select>
+                </div>
+
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>User Engagement</h3>
+                        <canvas id="engagementChart"></canvas>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Memory Categories</h3>
+                        <canvas id="categoriesChart"></canvas>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Platform Usage</h3>
+                        <canvas id="usageChart"></canvas>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Channel Distribution</h3>
+                        <canvas id="channelChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="metrics-summary">
+                    <div class="metric">
+                        <label>Retention Rate</label>
+                        <div class="metric-value">
+                            <span id="retentionRate">0%</span>
+                            <div class="progress-bar">
+                                <div class="progress" id="retentionProgress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <label>Avg Session Duration</label>
+                        <div class="metric-value">
+                            <span id="avgSessionDuration">0m</span>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <label>Daily Active Users</label>
+                        <div class="metric-value">
+                            <span id="dauCount">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games Page -->
+            <div id="gamesPage" class="page-content" style="display: none;">
+                <div class="games-stats">
+                    <div class="stat-card">
+                        <h4>Active Games</h4>
+                        <p id="activeGames">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Total Players</h4>
+                        <p id="totalPlayers">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Challenges Today</h4>
+                        <p id="challengesToday">0</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Top Players</h3>
+                    <div class="leaderboard" id="gameLeaderboard">
+                        <!-- Leaderboard entries will be added here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Communications Page -->
+            <div id="communicationsPage" class="page-content" style="display: none;">
+                <div class="comm-overview">
+                    <h3>Send Platform Notification</h3>
+                    <form id="notificationForm">
+                        <input type="text" id="notifTitle" placeholder="Notification Title" required>
+                        <textarea id="notifMessage" placeholder="Message content..." required></textarea>
+                        <div class="form-row">
+                            <select id="notifTarget">
+                                <option value="all">All Users</option>
+                                <option value="active">Active Users</option>
+                                <option value="specific">Specific User</option>
+                            </select>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="section">
+                    <h3>Recent Communications</h3>
+                    <div class="comm-list" id="recentComms">
+                        <!-- Communication items will be added here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logs Page -->
+            <div id="logsPage" class="page-content" style="display: none;">
+                <div class="logs-header">
+                    <select id="logLevel" class="filter-select">
+                        <option value="">All Levels</option>
+                        <option value="INFO">INFO</option>
+                        <option value="WARNING">WARNING</option>
+                        <option value="ERROR">ERROR</option>
+                    </select>
+                    <button class="btn-secondary" id="refreshLogsBtn">
+                        <i class="fas fa-sync"></i> Refresh
+                    </button>
+                </div>
+
+                <div class="logs-container">
+                    <div class="log-viewer" id="logViewer">
+                        <!-- Log entries will be added here -->
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Audit Logs</h3>
+                    <div class="audit-logs" id="auditLogs">
+                        <!-- Audit log entries will be added here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Configuration Page -->
+            <div id="configPage" class="page-content" style="display: none;">
+                <div class="config-section">
+                    <h3>Platform Settings</h3>
+                    <form id="configForm">
+                        <div class="config-group">
+                            <label>Platform Name</label>
+                            <input type="text" id="platformName" value="Memory App">
+                        </div>
+                        <div class="config-group">
+                            <label>Maintenance Mode</label>
+                            <label class="switch">
+                                <input type="checkbox" id="maintenanceMode">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="config-group">
+                            <label>Max Memories per User</label>
+                            <input type="number" id="maxMemories" value="1000">
+                        </div>
+                        <div class="config-group">
+                            <label>Max File Size (MB)</label>
+                            <input type="number" id="maxFileSize" value="10">
+                        </div>
+                        <button type="submit" class="btn-primary">Save Configuration</button>
+                    </form>
+                </div>
+
+                <div class="config-section">
+                    <h3>Feature Toggles</h3>
+                    <div class="feature-toggles">
+                        <div class="toggle-item">
+                            <label>WhatsApp Integration</label>
+                            <label class="switch">
+                                <input type="checkbox" id="whatsappEnabled" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-item">
+                            <label>Telegram Integration</label>
+                            <label class="switch">
+                                <input type="checkbox" id="telegramEnabled" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-item">
+                            <label>Voice Authentication</label>
+                            <label class="switch">
+                                <input type="checkbox" id="voiceAuthEnabled" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-item">
+                            <label>Gaming Features</label>
+                            <label class="switch">
+                                <input type="checkbox" id="gamingEnabled" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- User Detail Modal -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>User Details</h2>
+            <div id="userDetails">
+                <!-- User details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Memory Detail Modal -->
+    <div id="memoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Memory Details</h2>
+            <div id="memoryDetails">
+                <!-- Memory details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

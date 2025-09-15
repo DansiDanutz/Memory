@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-09-13T08:55:36.045477",
+  "features": {
+    "phone_recording": "demo_only",
+    "whatsapp_monitoring": "demo_only",
+    "daily_review": "pass",
+    "contact_avatars": "pass",
+    "secret_tiers": "pass",
+    "mutual_gaming": "partial",
+    "smart_notifications": "partial",
+    "ai_voice": "partial",
+    "family_access": "pass",
+    "supabase": "demo"
+  },
+  "overall_status": "partial"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@memory-app/grok-vision",
+  "version": "1.0.0",
+  "description": "Grok vision capabilities for Memory App image analysis",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "openai": "^4.0.0",
+    "sharp": "^0.32.0",
+    "canvas": "^2.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^0.34.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "memories": [
+    {
+      "id": "e3147b96",
+      "category": "CONFIDENTIAL",
+      "timestamp": "2025-09-15T07:42:53.917600",
+      "content_preview": "My SSN is 123-45-6789",
+      "encrypted": false,
+      "tenant_id": null,
+      "department_id": null,
+      "user_phone": "+15551234567"
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "by_category": {
+      "CONFIDENTIAL": 1
+    },
+    "last_memory": "2025-09-15T07:42:53.917600",
+    "first_memory": "2025-09-15T07:42:53.917600"
+  }
+}

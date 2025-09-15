@@ -1,0 +1,14 @@
+{
+  "id": "LIVE_20250913_0003",
+  "user": "john_doe_5354",
+  "timestamp": "2025-09-13T03:43:03.917563",
+  "content": "Anniversary dinner reservation at Le Bernardin - Saturday 8 PM",
+  "category": "\u2764\ufe0f PERSONAL",
+  "ai_insights": {
+    "gpt5": "GPT-5: Romantic milestone event",
+    "claude": "Claude: Importance level HIGH",
+    "grok": "Grok: Social impact analyzed"
+  },
+  "smart_reminder": "Saturday 6 PM",
+  "status": "ACTIVE"
+}

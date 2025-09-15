@@ -1,0 +1,38 @@
+{
+  "+1234567890": {
+    "state": "new_user",
+    "current_step": "welcome",
+    "joined_at": "2025-09-13T21:29:48.191405",
+    "last_interaction": "2025-09-13T21:29:48.191412",
+    "profile": {},
+    "preferences": {},
+    "contacts": [],
+    "security_level": "standard",
+    "onboarding_data": {},
+    "step_history": []
+  },
+  "+40744602272": {
+    "state": "new_user",
+    "current_step": "welcome",
+    "joined_at": "2025-09-13T21:32:45.310916",
+    "last_interaction": "2025-09-13T21:32:45.310924",
+    "profile": {},
+    "preferences": {},
+    "contacts": [],
+    "security_level": "standard",
+    "onboarding_data": {},
+    "step_history": []
+  },
+  "+12025551234": {
+    "state": "new_user",
+    "current_step": "welcome",
+    "joined_at": "2025-09-13T21:48:05.566381",
+    "last_interaction": "2025-09-13T21:48:05.566387",
+    "profile": {},
+    "preferences": {},
+    "contacts": [],
+    "security_level": "standard",
+    "onboarding_data": {},
+    "step_history": []
+  }
+}

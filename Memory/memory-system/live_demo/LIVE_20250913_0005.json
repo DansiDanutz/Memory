@@ -1,0 +1,14 @@
+{
+  "id": "LIVE_20250913_0005",
+  "user": "john_doe_5354",
+  "timestamp": "2025-09-13T03:45:03.917563",
+  "content": "Pay mortgage by the 15th - Auto-pay scheduled",
+  "category": "\ud83d\udcb0 FINANCE",
+  "ai_insights": {
+    "gpt5": "GPT-5: Financial obligation tracked",
+    "claude": "Claude: Importance level HIGH",
+    "grok": "Grok: Social impact analyzed"
+  },
+  "smart_reminder": "Automatic",
+  "status": "ACTIVE"
+}
