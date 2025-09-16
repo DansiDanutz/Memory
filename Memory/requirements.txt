@@ -5,6 +5,8 @@ fastapi==0.115.0
 uvicorn[standard]==0.30.0
 python-multipart==0.0.9
 pydantic==2.9.0
+flask==3.1.2
+flask-cors==6.0.1
 
 # WhatsApp integration
 requests==2.32.3
@@ -62,3 +64,7 @@ opentelemetry-sdk==1.26.0
 # Input validation
 python-multipart==0.0.9
 bleach==6.1.0  # For HTML sanitization
+
+# Web scraping and MCP
+firecrawl-py==4.3.6  # Firecrawl MCP for web scraping
+nest-asyncio==1.6.0  # Required for Firecrawl async operations

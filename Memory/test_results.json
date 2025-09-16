@@ -1,0 +1,14 @@
+{
+  "server": {
+    "status": "running"
+  },
+  "claude": {
+    "status": "success"
+  },
+  "azure": {
+    "status": "success"
+  },
+  "whatsapp": {
+    "status": "success"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "firecrawl": {
+      "command": "python",
+      "args": [
+        "mcp_firecrawl_server.py"
+      ],
+      "env": {
+        "FIRECRAWL_API_KEY": "your_firecrawl_api_key_here"
+      },
+      "description": "Web scraping and content extraction"
+    }
+  },
+  "settings": {
+    "enabled": true,
+    "auto_start": true,
+    "log_level": "info"
+  }
+}

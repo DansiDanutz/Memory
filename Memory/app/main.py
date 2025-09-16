@@ -1,11 +1,23 @@
 import os, psutil
 from datetime import datetime
+from pathlib import Path
+from dotenv import load_dotenv
 from fastapi import FastAPI, Request, HTTPException, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.responses import Response, RedirectResponse
 from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
 from app.webhook import router as webhook_router
 from app.claude_router import router as claude_router
+
+# Load environment variables from .env file
+env_path = Path(__file__).parent.parent / '.env'
+load_dotenv(env_path)
+
+# Verify Claude key is loaded
+if os.getenv('CLAUDE_API_KEY'):
+    print(f"✓ Claude API key loaded (starts with {os.getenv('CLAUDE_API_KEY')[:15]}...)")
+else:
+    print("✗ Claude API key not found in environment")
 
 app = FastAPI(title="MemoApp WhatsApp Bot", version="1.0.0")
 app.include_router(webhook_router)
