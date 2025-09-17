@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import WhatsAppMemoryApp from './components/WhatsAppMemoryApp';
+import ModernMemoryApp from './components/ModernMemoryApp';
 import IntegrationTest from './components/IntegrationTest';
 import OnboardingFlow from './components/OnboardingFlow';
 import CoachMarks from './components/CoachMarks';
@@ -9,6 +10,7 @@ import onboardingService from './services/onboardingService';
 
 function App() {
   const [showTest, setShowTest] = useState(false);
+  const [showModern, setShowModern] = useState(true); // Default to modern design
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [showCoachMarks, setShowCoachMarks] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -94,23 +96,41 @@ function App() {
         {/* Main App Content */}
         {!showOnboarding && (
           <>
-            <button 
-              onClick={() => setShowTest(!showTest)}
-              style={{ 
-                position: 'fixed', 
-                top: 10, 
-                right: 10, 
-                zIndex: 9999,
-                padding: '10px',
-                background: '#007bff',
-                color: 'white',
-                border: 'none',
-                borderRadius: '5px',
-                cursor: 'pointer'
-              }}
-            >
-              {showTest ? 'Hide Test' : 'Show Integration Test'}
-            </button>
+            <div style={{
+              position: 'fixed',
+              top: 10,
+              right: 10,
+              zIndex: 9999,
+              display: 'flex',
+              gap: '10px'
+            }}>
+              <button
+                onClick={() => setShowModern(!showModern)}
+                style={{
+                  padding: '10px',
+                  background: showModern ? '#8b5cf6' : '#10b981',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '5px',
+                  cursor: 'pointer'
+                }}
+              >
+                {showModern ? 'Classic View' : 'Modern View'}
+              </button>
+              <button
+                onClick={() => setShowTest(!showTest)}
+                style={{
+                  padding: '10px',
+                  background: '#007bff',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '5px',
+                  cursor: 'pointer'
+                }}
+              >
+                {showTest ? 'Hide Test' : 'Show Integration Test'}
+              </button>
+            </div>
             
             {/* Debug buttons for testing */}
             {process.env.NODE_ENV === 'development' && (
@@ -160,7 +180,7 @@ function App() {
               </div>
             )}
             
-            {showTest ? <IntegrationTest /> : <WhatsAppMemoryApp />}
+            {showTest ? <IntegrationTest /> : (showModern ? <ModernMemoryApp /> : <WhatsAppMemoryApp />)}
           </>
         )}
         

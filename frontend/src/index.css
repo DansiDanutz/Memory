@@ -1,3 +1,8 @@
+/* Tailwind CSS Base Layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Import design system and animations */
 @import './styles/design-system.css';
 @import './styles/animations.css';
