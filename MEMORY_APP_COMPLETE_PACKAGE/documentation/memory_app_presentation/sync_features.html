@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #0D1117 0%, #161B22 50%, #21262D 100%);
+        }
+        
+        .title-text {
+            color: #E6EDF3;
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+        }
+        
+        .content-text {
+            color: #C9D1D9;
+        }
+        
+        .neon-accent {
+            color: #39FF14;
+            text-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
+        }
+        
+        .cyan-accent {
+            color: #00D9FF;
+            text-shadow: 0 0 8px rgba(0, 217, 255, 0.4);
+        }
+        
+        .sync-feature {
+            background: rgba(22, 27, 34, 0.9);
+            border: 1px solid rgba(57, 255, 20, 0.2);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .mobile-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .sync-indicator {
+            background: rgba(57, 255, 20, 0.1);
+            border: 1px solid rgba(57, 255, 20, 0.3);
+            border-radius: 8px;
+        }
+        
+        .platform-badge {
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container p-12">
+        <div class="mb-8">
+            <h1 class="title-text text-4xl font-bold mb-4">
+                <i class="fab fa-whatsapp neon-accent mr-3"></i>
+                WhatsApp Synchronization & Mobile Experience
+            </h1>
+            <p class="content-text text-xl">
+                Seamless cross-platform integration with <span class="cyan-accent">professional mobile design</span>
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-8 h-96">
+            <div class="mobile-showcase">
+                <img src="/home/ubuntu/mobile_complete_mockup.png" 
+                     alt="Memory App Mobile Interface" 
+                     class="h-80 object-contain">
+            </div>
+            
+            <div class="flex flex-col justify-center space-y-4">
+                <div class="sync-feature p-5">
+                    <h3 class="neon-accent text-lg font-semibold mb-3">
+                        <i class="fas fa-mobile-alt mr-2"></i>
+                        Mobile-First Design
+                    </h3>
+                    <p class="content-text text-sm">
+                        Optimized for mobile use with touch-friendly interface, 
+                        one-handed navigation, and responsive dark theme.
+                    </p>
+                </div>
+                
+                <div class="sync-indicator p-4">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="platform-badge px-3 py-1">
+                            <span class="cyan-accent text-sm font-medium">
+                                <i class="fas fa-mobile mr-1"></i>
+                                Memo App
+                            </span>
+                        </div>
+                        <span class="neon-accent text-lg">⟷</span>
+                        <div class="platform-badge px-3 py-1">
+                            <span class="cyan-accent text-sm font-medium">
+                                <i class="fab fa-whatsapp mr-1"></i>
+                                WhatsApp
+                            </span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-xs content-text">
+                        <div class="text-center">
+                            <i class="fas fa-comments neon-accent"></i>
+                            <div>Messages</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-phone neon-accent"></i>
+                            <div>Voice Calls</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-sync neon-accent"></i>
+                            <div>Real-time</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sync-feature p-5">
+                    <h3 class="cyan-accent text-lg font-semibold mb-3">
+                        <i class="fas fa-palette mr-2"></i>
+                        Professional Dark Theme
+                    </h3>
+                    <p class="content-text text-sm">
+                        Sophisticated neon accents maintain readability and 
+                        professional appearance across all device sizes.
+                    </p>
+                </div>
+                
+                <div class="sync-feature p-5">
+                    <h3 class="neon-accent text-lg font-semibold mb-3">
+                        <i class="fas fa-sync-alt mr-2"></i>
+                        Cross-Platform Sync
+                    </h3>
+                    <p class="content-text text-sm">
+                        Instant synchronization between desktop and mobile, 
+                        with visual indicators for connection status.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

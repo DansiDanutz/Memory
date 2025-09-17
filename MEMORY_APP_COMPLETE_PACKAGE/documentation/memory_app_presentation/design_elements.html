@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #0D1117 0%, #161B22 50%, #21262D 100%);
+        }
+        
+        .title-text {
+            color: #E6EDF3;
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+        }
+        
+        .content-text {
+            color: #C9D1D9;
+        }
+        
+        .neon-accent {
+            color: #39FF14;
+            text-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
+        }
+        
+        .cyan-accent {
+            color: #00D9FF;
+            text-shadow: 0 0 8px rgba(0, 217, 255, 0.4);
+        }
+        
+        .color-swatch {
+            width: 100%;
+            height: 50px;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .ui-element {
+            background: rgba(22, 27, 34, 0.9);
+            border: 1px solid rgba(48, 54, 61, 0.8);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .ui-button {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .primary-button {
+            background-color: #39FF14;
+            color: #0D1117;
+            box-shadow: 0 0 12px rgba(57, 255, 20, 0.3);
+        }
+        
+        .secondary-button {
+            background-color: #00D9FF;
+            color: #0D1117;
+            box-shadow: 0 0 12px rgba(0, 217, 255, 0.3);
+        }
+        
+        .outline-button {
+            background-color: transparent;
+            border: 1px solid #39FF14;
+            color: #39FF14;
+        }
+        
+        .ghost-button {
+            background-color: rgba(57, 255, 20, 0.1);
+            color: #39FF14;
+        }
+        
+        .input-field {
+            background-color: #21262D;
+            border: 1px solid #30363D;
+            border-radius: 6px;
+            padding: 8px 16px;
+            color: #E6EDF3;
+            width: 100%;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-right: 8px;
+        }
+        
+        .primary-badge {
+            background-color: rgba(57, 255, 20, 0.2);
+            color: #39FF14;
+            border: 1px solid rgba(57, 255, 20, 0.3);
+        }
+        
+        .secondary-badge {
+            background-color: rgba(0, 217, 255, 0.2);
+            color: #00D9FF;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container p-10">
+        <div class="mb-6">
+            <h1 class="title-text text-4xl font-bold mb-2">
+                <i class="fas fa-palette neon-accent mr-3"></i>
+                Professional Dark Theme Features
+            </h1>
+            <p class="content-text text-xl">
+                Sophisticated color palette with <span class="cyan-accent">subtle neon accents</span>
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-8 grid-rows-1">
+            <!-- Color Palette Column -->
+            <div class="flex flex-col justify-evenly">
+                <h3 class="neon-accent text-2xl font-semibold mb-4">Color Palette</h3>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <div class="color-swatch" style="background-color: #0D1117;"></div>
+                        <div class="flex justify-between">
+                            <span class="content-text">#0D1117</span>
+                            <span class="content-text">Dark Background</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="color-swatch" style="background-color: #161B22;"></div>
+                        <div class="flex justify-between">
+                            <span class="content-text">#161B22</span>
+                            <span class="content-text">Card Background</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="color-swatch" style="background-color: #39FF14;"></div>
+                        <div class="flex justify-between">
+                            <span class="content-text">#39FF14</span>
+                            <span class="neon-accent">Neon Green</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="color-swatch" style="background-color: #00D9FF;"></div>
+                        <div class="flex justify-between">
+                            <span class="content-text">#00D9FF</span>
+                            <span class="cyan-accent">Neon Cyan</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-element mt-4">
+                    <h4 class="content-text text-lg mb-2">Buttons</h4>
+                    <div class="flex flex-wrap justify-evenly">
+                        <button class="ui-button primary-button">
+                            <i class="fas fa-check mr-2"></i>Primary
+                        </button>
+                        <button class="ui-button secondary-button">
+                            <i class="fas fa-sync mr-2"></i>Secondary
+                        </button>
+                        <button class="ui-button outline-button">
+                            <i class="fas fa-plus mr-2"></i>Outline
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- UI Elements Column -->
+            <div class="flex flex-col justify-evenly">
+                <h3 class="cyan-accent text-2xl font-semibold mb-4">UI Elements</h3>
+                
+                <div class="ui-element">
+                    <h4 class="content-text text-lg mb-2">Input Fields</h4>
+                    <input type="text" class="input-field mb-3" placeholder="Search memories...">
+                    <div class="flex items-center">
+                        <input type="text" class="input-field" placeholder="Type a message...">
+                        <button class="ui-button primary-button ml-2">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="ui-element">
+                    <h4 class="content-text text-lg mb-2">Badges & Indicators</h4>
+                    <div class="mb-2">
+                        <span class="badge primary-badge">WhatsApp Synced</span>
+                        <span class="badge secondary-badge">Online</span>
+                        <span class="badge primary-badge">2 New</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 rounded-full bg-green-400 mr-2"></div>
+                        <span class="content-text text-sm">Active now</span>
+                        <span class="mx-2 content-text">•</span>
+                        <span class="content-text text-sm">Synced across platforms</span>
+                    </div>
+                </div>
+                
+                <div class="ui-element">
+                    <h4 class="content-text text-lg mb-2">Memory Item</h4>
+                    <div class="flex items-center p-2 bg-opacity-20 bg-green-500 rounded-lg">
+                        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center mr-3">
+                            <span class="text-black font-bold">M</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="neon-accent font-medium">Memo - Personal AI Brain</div>
+                            <div class="content-text text-sm">Your synchronized memories</div>
+                        </div>
+                        <div class="text-sm content-text">5:03 PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

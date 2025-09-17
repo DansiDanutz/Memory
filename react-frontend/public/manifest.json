@@ -1,0 +1,87 @@
+{
+  "short_name": "Memo AI",
+  "name": "Memo - Personal AI Brain",
+  "description": "AI-powered memory management with WhatsApp-like interface and professional dark neon theme",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#39FF14",
+  "background_color": "#0D1117",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "utilities", "social"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "New Memory",
+      "short_name": "New Memory",
+      "description": "Create a new memory",
+      "url": "/new-memory",
+      "icons": [
+        {
+          "src": "icons/new-memory-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Voice Record",
+      "short_name": "Voice Record",
+      "description": "Record a voice memory",
+      "url": "/voice-record",
+      "icons": [
+        {
+          "src": "icons/voice-record-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Search Memories",
+      "short_name": "Search",
+      "description": "Search through your memories",
+      "url": "/search",
+      "icons": [
+        {
+          "src": "icons/search-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/desktop-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Main chat interface with memory categories"
+    },
+    {
+      "src": "screenshots/mobile-1.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile chat interface"
+    }
+  ]
+}
+

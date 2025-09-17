@@ -1,0 +1,17 @@
+{
+  "user_phone": "+1234567890",
+  "security_level": "standard",
+  "enabled_auth_methods": [
+    "password"
+  ],
+  "master_key_hash": "JDJiJDEyJG0yVUJXNXdlZG9aUWxldGNJb1JRZi5FVmFSVVNuVzg0VWVRRFBpM0RTY3ZsNmY1SDFVdktL",
+  "salt": "685ae8e9094cb6586e61dd42177ce7677a968a5898409f70f2c98e0bcf26921e",
+  "totp_secret": null,
+  "voice_print_hash": null,
+  "biometric_hash": null,
+  "security_phrases": [],
+  "failed_attempts": 0,
+  "locked_until": null,
+  "last_access": "2025-09-13T21:29:52.459722",
+  "created_at": "2025-09-13T21:29:48.163956"
+}

@@ -1,0 +1,16 @@
+# Add at bottom of app/main.py:
+from .tenancy.model import reload_tenancy, TENANCY
+
+@app.post("/admin/tenants/reload")
+def tenants_reload():
+    reload_tenancy()
+    return {"reloaded": True}
+
+@app.get("/admin/tenants")
+def tenants_info():
+    return {"tenants": list(TENANCY.tenants.keys())}
+
+@app.get("/admin/whoami")
+def whoami_endpoint(phone: str):
+    from .tenancy.rbac import whoami
+    return {"whoami": whoami(phone)}

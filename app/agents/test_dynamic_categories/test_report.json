@@ -1,0 +1,142 @@
+{
+  "test_date": "2025-09-16T03:03:12.499825",
+  "memories_processed": 20,
+  "categories_created": 15,
+  "category_stats": {
+    "total_categories": 15,
+    "max_categories": 15,
+    "lifecycle_distribution": {
+      "birth": 15
+    },
+    "security_distribution": {
+      "confidential": 7,
+      "general": 8
+    },
+    "average_score": 0.2781666666666666,
+    "categories": [
+      {
+        "name": "Investment",
+        "score": 0.43499999999999994,
+        "memories": 3,
+        "stage": "birth",
+        "security": "confidential"
+      },
+      {
+        "name": "Bank",
+        "score": 0.43,
+        "memories": 1,
+        "stage": "birth",
+        "security": "confidential"
+      },
+      {
+        "name": "Return",
+        "score": 0.43,
+        "memories": 1,
+        "stage": "birth",
+        "security": "confidential"
+      },
+      {
+        "name": "Meetings",
+        "score": 0.41999999999999993,
+        "memories": 4,
+        "stage": "birth",
+        "security": "confidential"
+      },
+      {
+        "name": "Blood",
+        "score": 0.3975,
+        "memories": 2,
+        "stage": "birth",
+        "security": "confidential"
+      },
+      {
+        "name": "Prescription",
+        "score": 0.395,
+        "memories": 1,
+        "stage": "birth",
+        "security": "confidential"
+      },
+      {
+        "name": "Personal",
+        "score": 0.36,
+        "memories": 1,
+        "stage": "birth",
+        "security": "confidential"
+      },
+      {
+        "name": "Emergency",
+        "score": 0.255,
+        "memories": 1,
+        "stage": "birth",
+        "security": "general"
+      },
+      {
+        "name": "Ideas",
+        "score": 0.15,
+        "memories": 1,
+        "stage": "birth",
+        "security": "general"
+      },
+      {
+        "name": "Grocery",
+        "score": 0.15,
+        "memories": 1,
+        "stage": "birth",
+        "security": "general"
+      },
+      {
+        "name": "Water",
+        "score": 0.15,
+        "memories": 1,
+        "stage": "birth",
+        "security": "general"
+      },
+      {
+        "name": "Learning",
+        "score": 0.15,
+        "memories": 1,
+        "stage": "birth",
+        "security": "general"
+      },
+      {
+        "name": "Dream",
+        "score": 0.15,
+        "memories": 1,
+        "stage": "birth",
+        "security": "general"
+      },
+      {
+        "name": "Executive",
+        "score": 0.15,
+        "memories": 1,
+        "stage": "birth",
+        "security": "general"
+      },
+      {
+        "name": "Approval",
+        "score": 0.15,
+        "memories": 1,
+        "stage": "birth",
+        "security": "general"
+      }
+    ]
+  },
+  "cleaning_stats": {
+    "memories_processed": 0,
+    "memories_deleted": 0,
+    "memories_archived": 0,
+    "memories_encrypted": 0,
+    "duplicates_removed": 0,
+    "memories_consolidated": 0,
+    "categories_cleaned": 0,
+    "categories_protected": 15,
+    "high_score_categories_skipped": 0,
+    "total_space_freed_kb": 0.0,
+    "errors": [],
+    "warnings": [],
+    "start_time": "2025-09-16T03:03:12.476597",
+    "end_time": "2025-09-16T03:03:12.484603",
+    "duration_seconds": 0.008006
+  },
+  "test_status": "SUCCESS"
+}

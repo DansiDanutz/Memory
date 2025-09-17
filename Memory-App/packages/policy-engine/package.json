@@ -1,0 +1,22 @@
+{
+  "name": "@memory-app/policy-engine",
+  "version": "1.0.0",
+  "description": "YAML-based policy configuration system for Memory App",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "yaml": "^2.3.4",
+    "joi": "^17.11.0",
+    "chokidar": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^0.34.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "f75a027a-4dd3-42bb-a5d2-569770b4f9c1",
+  "memory_number": 1001,
+  "user_id": "test_user",
+  "content": "Important: Doctor appointment on Friday at 2pm",
+  "category": "general",
+  "timestamp": "2025-09-13T15:21:47.773195",
+  "platform": "api",
+  "message_type": "text",
+  "metadata": {},
+  "ai_insights": {}
+}

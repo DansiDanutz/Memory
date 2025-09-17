@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory App - Your AI-Powered Memory Vault</title>
+    
+    <!-- Self-hosted assets for maximum security -->
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/css/inter-local.css" rel="stylesheet">
+    <script src="assets/js/three.min.js"></script>
+    <script src="assets/js/vanta.net.min.js"></script>
+    
+    <!-- External CSS for CSP compliance -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Authentication Section -->
+    <div id="auth-section" class="auth-section">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1 id="auth-title">Welcome Back</h1>
+                <p id="auth-subtitle">Sign in to access your AI-powered memories</p>
+            </div>
+            
+            <!-- Login Form -->
+            <div id="login-section">
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Sign In</button>
+                </form>
+                <p class="auth-toggle-text">
+                    Don't have an account? <a href="#" class="auth-toggle">Sign up</a>
+                </p>
+            </div>
+            
+            <!-- Register Form -->
+            <div id="register-section" class="hidden">
+                <form id="register-form" class="auth-form">
+                    <div class="form-group">
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="displayName" placeholder="Display Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Create Account</button>
+                </form>
+                <p class="auth-toggle-text">
+                    Already have an account? <a href="#" class="auth-toggle">Sign in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="main-content" class="hidden">
+        <!-- Header -->
+        <header class="header earth-love-family-faith">
+            <div class="logo">
+                <div class="sacred-elements">
+                    <i class="fas fa-globe-americas earth-icon" title="Earth - Our shared home"></i>
+                    <i class="fas fa-heart love-icon" title="Love - What connects us"></i>
+                    <i class="fas fa-home family-icon" title="Family - Our foundation"></i>
+                    <i class="fas fa-pray faith-icon" title="Faith - Our guidance"></i>
+                </div>
+                <h1>Memory Keeper</h1>
+                <p class="sacred-motto">"Remember what grounds us"</p>
+            </div>
+            <div class="user-info">
+                <div class="grounding-wisdom">
+                    <span class="wisdom-text" id="daily-wisdom">
+                        🌱 "The best memories are made with the people we love most"
+                    </span>
+                </div>
+                <div class="user-stats">
+                    <div class="stat-item earth-stat">
+                        <i class="fas fa-globe"></i>
+                        <span>Connected</span>
+                    </div>
+                    <div class="stat-item love-stat">
+                        <i class="fas fa-heart"></i>
+                        <span id="user-points">0</span>
+                    </div>
+                    <div class="stat-item family-stat">
+                        <i class="fas fa-home"></i>
+                        <span id="total-memories">0</span>
+                    </div>
+                    <div class="stat-item faith-stat">
+                        <i class="fas fa-star"></i>
+                        <span>Guided</span>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar blessed-soul" id="user-avatar">🌟</div>
+                    <div class="user-details">
+                        <div class="user-name blessed-name" id="user-name">Beautiful Soul</div>
+                        <div class="connection-status grounded-status" id="connection-status">Grounded</div>
+                    </div>
+                </div>
+                <button id="logout-btn" class="btn-secondary sacred-logout">
+                    <i class="fas fa-peace"></i> Until we meet again
+                </button>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="whatsapp-nav sacred-navigation">
+            <button class="nav-tab active earth-tab" data-tab="memories" title="Preserve precious moments">
+                <i class="fas fa-seedling"></i>
+                <span>Sacred Memories</span>
+            </button>
+            <button class="nav-tab love-tab" data-tab="ai-insights" title="Wisdom from the heart">
+                <i class="fas fa-heart-circle"></i>
+                <span>Love Insights</span>
+            </button>
+            <button class="nav-tab family-tab" data-tab="social" title="Connections that matter">
+                <i class="fas fa-people-group"></i>
+                <span>Family Circle</span>
+            </button>
+            <button class="nav-tab faith-tab" data-tab="emergency" title="Legacy of love">
+                <i class="fas fa-dove"></i>
+                <span>Eternal Legacy</span>
+            </button>
+            <button class="nav-tab grounded-tab" data-tab="gamification" title="Mindful reminders">
+                <i class="fas fa-lotus"></i>
+                <span>Mindfulness</span>
+            </button>
+        </nav>
+
+        <!-- Tab Content -->
+        <div class="tab-container">
+            <!-- Memories Tab -->
+            <div id="memories-tab" class="tab-content active">
+                <div class="container">
+                    <!-- 🌟 AI Daily Reflection Card -->
+                    <div id="daily-reflection-card" class="daily-reflection-card">
+                        <div class="reflection-shimmer"></div>
+                        <div class="reflection-content">
+                            <div class="reflection-header">
+                                <div class="reflection-icon">
+                                    <i class="fas fa-sparkles"></i>
+                                </div>
+                                <h3 class="reflection-title">Your Daily Reflection</h3>
+                                <div class="reflection-date" id="reflection-date">Today</div>
+                            </div>
+                            <div class="reflection-prompt-container">
+                                <p class="reflection-prompt" id="reflection-prompt">
+                                    <span class="loading-shimmer">Loading your personalized prompt...</span>
+                                </p>
+                                <div class="reflection-context" id="reflection-context"></div>
+                            </div>
+                            <div class="reflection-actions">
+                                <button class="btn-reflection-skip" id="skip-prompt-btn">
+                                    <i class="fas fa-forward"></i> Skip for today
+                                </button>
+                                <button class="btn-reflection-answer" id="answer-prompt-btn">
+                                    <i class="fas fa-pen-fancy"></i> Share this memory
+                                </button>
+                            </div>
+                            <div class="reflection-history">
+                                <span class="history-indicator" id="prompt-history">
+                                    <i class="fas fa-history"></i> <span id="prompt-streak">0</span> reflections this week
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category Selector -->
+                    <div class="category-selector">
+                        <button class="category-btn active" data-category="general">General</button>
+                        <button class="category-btn" data-category="work">Work</button>
+                        <button class="category-btn" data-category="family">Family</button>
+                        <button class="category-btn" data-category="personal">Personal</button>
+                    </div>
+
+                    <!-- Memory Form -->
+                    <form id="memory-form" class="memory-form">
+                        <div class="form-group">
+                            <textarea name="content" placeholder="What's on your mind?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Save Memory</button>
+                    </form>
+
+                    <!-- Search -->
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search memories...">
+                        <i class="fas fa-search"></i>
+                    </div>
+
+                    <!-- Memories List -->
+                    <div id="memories-list" class="memories-list">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            Loading memories...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Insights Tab -->
+            <div id="ai-insights-tab" class="tab-content">
+                <div class="container">
+                    <div class="ai-insights-header">
+                        <h2><i class="fas fa-lightbulb"></i> AI Relationship Intelligence</h2>
+                        <p class="subtitle">Powered by advanced AI analysis of your memories</p>
+                    </div>
+                    
+                    <div id="ai-insights-content">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            Analyzing your memories with AI...
+                        </div>
+                    </div>
+                    
+                    <div class="ai-actions">
+                        <button id="refresh-insights-btn" class="btn-primary">
+                            <i class="fas fa-sync-alt"></i> Refresh Insights
+                        </button>
+                        <button id="analyze-memory-btn" class="btn-secondary">
+                            <i class="fas fa-brain"></i> Analyze Latest Memory
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Tab - Revolutionary Social Platform -->
+            <div id="social-tab" class="tab-content">
+                <div class="container">
+                    <div class="social-header">
+                        <h2><i class="fas fa-heart"></i> Social Universe</h2>
+                        <p class="subtitle">Connect • Share • Discover meaningful relationships</p>
+                    </div>
+                    
+                    <!-- Social Dashboard -->
+                    <div class="social-dashboard">
+                        <div class="social-stats">
+                            <div class="stat-card">
+                                <i class="fas fa-users"></i>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="connection-count">0</span>
+                                    <span class="stat-label">Connections</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-share-alt"></i>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="shared-memories">0</span>
+                                    <span class="stat-label">Memories Shared</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-heart"></i>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="mutual-matches">0</span>
+                                    <span class="stat-label">Mutual Matches</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Actions -->
+                    <div class="social-actions">
+                        <button class="social-action-btn" onclick="showFindConnections()">
+                            <i class="fas fa-search"></i>
+                            <span>Find Connections</span>
+                        </button>
+                        <button class="social-action-btn" onclick="showShareMemory()">
+                            <i class="fas fa-share"></i>
+                            <span>Share Memory</span>
+                        </button>
+                        <button class="social-action-btn" onclick="showMutualFeelings()">
+                            <i class="fas fa-heart"></i>
+                            <span>Mutual Feelings</span>
+                        </button>
+                        <button class="social-action-btn" onclick="showAvatarChat()">
+                            <i class="fas fa-robot"></i>
+                            <span>Avatar Chat</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Find Connections Section -->
+                    <div id="find-connections-section" class="social-section hidden">
+                        <div class="section-header">
+                            <h3><i class="fas fa-search"></i> Discover Connections</h3>
+                            <p>Find people who share your interests and values</p>
+                        </div>
+                        
+                        <div class="connection-search">
+                            <input type="text" id="connection-search-input" placeholder="Search by interests, location, or values...">
+                            <button onclick="searchConnections()" class="btn-primary">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                        
+                        <div id="connection-results" class="connection-grid">
+                            <!-- Connection results will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Share Memory Section -->
+                    <div id="share-memory-section" class="social-section hidden">
+                        <div class="section-header">
+                            <h3><i class="fas fa-share"></i> Share a Memory</h3>
+                            <p>Share a meaningful moment with your connections</p>
+                        </div>
+                        
+                        <div class="memory-sharing-form">
+                            <div class="form-group">
+                                <label for="memory-to-share">Select Memory to Share</label>
+                                <select id="memory-to-share" class="form-control">
+                                    <option value="">Loading your memories...</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="share-with">Share With</label>
+                                <select id="share-with" class="form-control">
+                                    <option value="public">Public - Anyone can see</option>
+                                    <option value="connections">Connections Only</option>
+                                    <option value="close">Close Friends Only</option>
+                                    <option value="specific">Specific People</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="share-message">Optional Message</label>
+                                <textarea id="share-message" class="form-control" rows="3" placeholder="Add a personal message..."></textarea>
+                            </div>
+                            
+                            <button onclick="shareSelectedMemory()" class="btn-primary">
+                                <i class="fas fa-share"></i> Share Memory
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Mutual Feelings Section -->
+                    <div id="mutual-feelings-section" class="social-section hidden">
+                        <div class="section-header">
+                            <h3><i class="fas fa-heart"></i> Mutual Feelings Discovery</h3>
+                            <p>Discover if someone special feels the same way</p>
+                        </div>
+                        
+                        <div class="mutual-feelings-content">
+                            <div class="feelings-status" id="feelings-status">
+                                <div class="loading">
+                                    <div class="spinner"></div>
+                                    Checking for mutual feelings...
+                                </div>
+                            </div>
+                            
+                            <div class="feelings-actions">
+                                <button onclick="checkMutualFeelings()" class="btn-primary">
+                                    <i class="fas fa-sync-alt"></i> Refresh Mutual Feelings
+                                </button>
+                                <button onclick="expressFeelings()" class="btn-secondary">
+                                    <i class="fas fa-heart"></i> Express New Feelings
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Avatar Chat Section -->
+                    <div id="avatar-chat-section" class="social-section hidden">
+                        <div class="section-header">
+                            <h3><i class="fas fa-robot"></i> Avatar Communication</h3>
+                            <p>Let your AI Avatar connect with others</p>
+                        </div>
+                        
+                        <div class="avatar-chat-content">
+                            <div class="avatar-status">
+                                <div class="avatar-info">
+                                    <div class="avatar-icon">🤖</div>
+                                    <div class="avatar-details">
+                                        <h4>Your AI Avatar</h4>
+                                        <p id="avatar-status-text">Ready to connect</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="avatar-controls">
+                                    <button onclick="toggleAvatarMode()" class="btn-primary" id="avatar-toggle">
+                                        <i class="fas fa-play"></i> Activate Avatar
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div id="avatar-conversations" class="avatar-conversations">
+                                <!-- Avatar conversation history will load here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- My Connections -->
+                    <div class="my-connections">
+                        <h3><i class="fas fa-users"></i> My Connections</h3>
+                        <div id="connections-list" class="connections-grid">
+                            <div class="loading">
+                                <div class="spinner"></div>
+                                Loading your connections...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Contacts & Memory Legacy Tab -->
+            <div id="emergency-tab" class="tab-content">
+                <div class="container">
+                    <!-- Emergency Contacts Header -->
+                    <div class="emergency-header">
+                        <h2><i class="fas fa-shield-alt"></i> Memory Legacy & Emergency Contacts</h2>
+                        <p class="subtitle">Preserve your memories • Protect your loved ones • Plan for the future</p>
+                        <p class="motto">"Remember what grounds us" - ensuring your memories live on</p>
+                    </div>
+                    
+                    <!-- Emergency Status Dashboard -->
+                    <div class="emergency-dashboard">
+                        <div class="status-cards">
+                            <div class="status-card">
+                                <div class="status-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="status-info">
+                                    <h4 id="emergency-contacts-count">0</h4>
+                                    <p>Emergency Contacts</p>
+                                </div>
+                            </div>
+                            
+                            <div class="status-card">
+                                <div class="status-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="status-info">
+                                    <h4 id="protected-memories-count">0</h4>
+                                    <p>Protected Memories</p>
+                                </div>
+                            </div>
+                            
+                            <div class="status-card">
+                                <div class="status-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="status-info">
+                                    <h4 id="inheritance-plan-status">Not Set</h4>
+                                    <p>Inheritance Plan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div class="emergency-actions">
+                        <button class="emergency-action-btn primary" onclick="showAddEmergencyContact()">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Add Emergency Contact</span>
+                        </button>
+                        <button class="emergency-action-btn" onclick="showMemoryInheritance()">
+                            <i class="fas fa-gift"></i>
+                            <span>Set Memory Inheritance</span>
+                        </button>
+                        <button class="emergency-action-btn" onclick="showCrisisProtocol()">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Crisis Protocol</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Emergency Contacts Section -->
+                    <div id="emergency-contacts-section" class="emergency-section">
+                        <div class="section-header">
+                            <h3><i class="fas fa-users"></i> My Emergency Contacts</h3>
+                            <p>Trusted people who can access your memories during crisis situations</p>
+                        </div>
+                        
+                        <div id="emergency-contacts-list" class="emergency-contacts-list">
+                            <div class="loading">
+                                <div class="spinner"></div>
+                                Loading emergency contacts...
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Add Emergency Contact Form -->
+                    <div id="add-emergency-contact-section" class="emergency-section hidden">
+                        <div class="section-header">
+                            <h3><i class="fas fa-user-plus"></i> Add Emergency Contact</h3>
+                            <p>Add a trusted person who can access your memories in crisis</p>
+                        </div>
+                        
+                        <div class="emergency-contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" class="form-control" placeholder="e.g., Sarah Johnson" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-relationship">Relationship *</label>
+                                <select id="contact-relationship" class="form-control" required>
+                                    <option value="">Select relationship...</option>
+                                    <option value="spouse">Spouse/Partner</option>
+                                    <option value="parent">Parent</option>
+                                    <option value="child">Child</option>
+                                    <option value="sibling">Sibling</option>
+                                    <option value="friend">Close Friend</option>
+                                    <option value="other">Other Family</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number *</label>
+                                <input type="tel" id="contact-phone" class="form-control" placeholder="+1 (555) 123-4567" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" class="form-control" placeholder="sarah@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="access-level">Memory Access Level *</label>
+                                <select id="access-level" class="form-control" required>
+                                    <option value="">Select access level...</option>
+                                    <option value="essential">Essential Memories Only</option>
+                                    <option value="general">General Memories</option>
+                                    <option value="personal">Personal & Family Memories</option>
+                                    <option value="full">Full Access (excluding Super Secret)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="crisis-conditions">Crisis Conditions</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="medical-emergency" value="medical">
+                                        <span>Medical Emergency</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="missing-person" value="missing">
+                                        <span>Missing Person (72+ hours)</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="legal-guardian" value="legal">
+                                        <span>Legal Guardian Decision</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="end-of-life" value="eol">
+                                        <span>End of Life Planning</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button onclick="saveEmergencyContact()" class="btn-primary">
+                                    <i class="fas fa-shield-alt"></i> Add Emergency Contact
+                                </button>
+                                <button onclick="hideAddEmergencyContact()" class="btn-secondary">
+                                    <i class="fas fa-times"></i> Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Memory Inheritance Section -->
+                    <div id="memory-inheritance-section" class="emergency-section hidden">
+                        <div class="section-header">
+                            <h3><i class="fas fa-gift"></i> Memory Inheritance Planning</h3>
+                            <p>Choose which memories to preserve and who should receive them</p>
+                        </div>
+                        
+                        <div class="inheritance-planning">
+                            <div class="inheritance-options">
+                                <h4>Inheritance Options</h4>
+                                
+                                <div class="inheritance-option">
+                                    <div class="option-header">
+                                        <input type="radio" id="inherit-essential" name="inheritance-type" value="essential">
+                                        <label for="inherit-essential">
+                                            <strong>Essential Memories Only</strong>
+                                            <p>Key life moments, family milestones, important relationships</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="inheritance-option">
+                                    <div class="option-header">
+                                        <input type="radio" id="inherit-family" name="inheritance-type" value="family">
+                                        <label for="inherit-family">
+                                            <strong>Family & Personal Memories</strong>
+                                            <p>All family memories, personal moments, relationship history</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="inheritance-option">
+                                    <div class="option-header">
+                                        <input type="radio" id="inherit-full" name="inheritance-type" value="full">
+                                        <label for="inherit-full">
+                                            <strong>Complete Memory Archive</strong>
+                                            <p>All memories except Super Secret category</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="inheritance-recipients">
+                                <h4>Inheritance Recipients</h4>
+                                <div id="inheritance-recipients-list">
+                                    <!-- Recipients will be loaded from emergency contacts -->
+                                </div>
+                            </div>
+                            
+                            <div class="inheritance-timeline">
+                                <h4>Activation Timeline</h4>
+                                <select id="inheritance-timeline" class="form-control">
+                                    <option value="immediate">Immediate (upon crisis verification)</option>
+                                    <option value="72hours">72 hours after crisis</option>
+                                    <option value="1week">1 week after crisis</option>
+                                    <option value="1month">1 month after crisis</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button onclick="saveInheritancePlan()" class="btn-primary">
+                                <i class="fas fa-heart"></i> Save Inheritance Plan
+                            </button>
+                            <button onclick="hideMemoryInheritance()" class="btn-secondary">
+                                <i class="fas fa-times"></i> Cancel
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Crisis Protocol Section -->
+                    <div id="crisis-protocol-section" class="emergency-section hidden">
+                        <div class="section-header">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Crisis Protocol</h3>
+                            <p>How emergency contacts can access memories during crisis</p>
+                        </div>
+                        
+                        <div class="crisis-protocol-info">
+                            <div class="protocol-steps">
+                                <div class="protocol-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Crisis Declaration</h4>
+                                        <p>Emergency contact submits crisis request with required documentation</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="protocol-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Identity Verification</h4>
+                                        <p>Multi-factor authentication and identity confirmation process</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="protocol-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Crisis Validation</h4>
+                                        <p>24-48 hour verification period with backup contact confirmation</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="protocol-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Memory Access Grant</h4>
+                                        <p>Temporary access granted based on inheritance plan settings</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="emergency-info">
+                                <h4>Emergency Access Information</h4>
+                                <div class="info-card">
+                                    <p><strong>Crisis Hotline:</strong> 1-800-MEMORY-HELP</p>
+                                    <p><strong>Emergency Email:</strong> crisis@memoryapp.com</p>
+                                    <p><strong>Required Documents:</strong> Medical certificate, police report, or legal documentation</p>
+                                    <p><strong>Response Time:</strong> 24-48 hours for crisis verification</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gamification Tab - Smart Notifications & Achievements -->
+            <div id="gamification-tab" class="tab-content">
+                <div class="container">
+                    <!-- Smart Notification System -->
+                    <div class="notifications-section">
+                        <div class="section-header">
+                            <h2><i class="fas fa-bell"></i> Smart Notifications</h2>
+                            <p class="subtitle">AI-powered alerts and intelligent memory reminders</p>
+                        </div>
+                        
+                        <!-- Notification Settings -->
+                        <div class="notification-settings">
+                            <h3><i class="fas fa-cog"></i> Notification Preferences</h3>
+                            <div class="settings-grid">
+                                <div class="setting-card">
+                                    <div class="setting-info">
+                                        <h4>Memory Reminders</h4>
+                                        <p>Get reminded of important anniversaries and milestones</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="memory-reminders" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="setting-card">
+                                    <div class="setting-info">
+                                        <h4>Relationship Insights</h4>
+                                        <p>AI alerts about relationship patterns and opportunities</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="relationship-insights" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="setting-card">
+                                    <div class="setting-info">
+                                        <h4>Social Updates</h4>
+                                        <p>Notifications about connections and shared memories</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="social-updates" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="setting-card">
+                                    <div class="setting-info">
+                                        <h4>Avatar Activity</h4>
+                                        <p>Updates when your avatar connects with others</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="avatar-activity" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="setting-card">
+                                    <div class="setting-info">
+                                        <h4>Emergency Alerts</h4>
+                                        <p>Critical notifications for emergency contacts</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="emergency-alerts" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Active Notifications -->
+                        <div class="active-notifications">
+                            <h3><i class="fas fa-inbox"></i> Recent Notifications</h3>
+                            <div id="notifications-list" class="notifications-list">
+                                <div class="loading">
+                                    <div class="spinner"></div>
+                                    Loading smart notifications...
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Smart Reminders -->
+                        <div class="smart-reminders">
+                            <h3><i class="fas fa-clock"></i> Upcoming Reminders</h3>
+                            <div id="reminders-list" class="reminders-list">
+                                <!-- Smart reminders will be loaded here -->
+                            </div>
+                            
+                            <div class="reminder-actions">
+                                <button onclick="createCustomReminder()" class="btn-primary">
+                                    <i class="fas fa-plus"></i> Create Custom Reminder
+                                </button>
+                                <button onclick="analyzeMemoryPatterns()" class="btn-secondary">
+                                    <i class="fas fa-brain"></i> AI Memory Analysis
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Achievements Section -->
+                    <div class="achievements-section">
+                        <h3><i class="fas fa-trophy"></i> Your Achievements</h3>
+                        <div id="achievements-grid" class="achievements-grid">
+                            <div class="loading">
+                                <div class="spinner"></div>
+                                Loading achievements...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="typing-indicator" class="typing-indicator hidden"></div>
+
+    <!-- Socket.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <!-- Main Application JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{
+  "name": "Kids",
+  "category_id": "15fdfe25",
+  "created_at": "2025-09-16T03:03:12.329991",
+  "score": {
+    "sensitivity": 0.0,
+    "importance": 0.5,
+    "frequency": 0.1,
+    "criticality": 0.0,
+    "total_score": 0.15,
+    "security_level": "general"
+  },
+  "slots": [
+    {
+      "type": "recent",
+      "content": null,
+      "memory_id": null,
+      "timestamp": null,
+      "score": 0.0,
+      "metadata": {}
+    },
+    {
+      "type": "important",
+      "content": null,
+      "memory_id": null,
+      "timestamp": null,
+      "score": 0.0,
+      "metadata": {}
+    },
+    {
+      "type": "referenced",
+      "content": null,
+      "memory_id": null,
+      "timestamp": null,
+      "score": 0.0,
+      "metadata": {}
+    }
+  ],
+  "memory_count": 1,
+  "last_accessed": "2025-09-16T03:03:12.329997",
+  "lifecycle_stage": "birth",
+  "ai_description": "Category for kids related memories",
+  "keywords": [
+    "kids",
+    "soccer",
+    "practice",
+    "moved",
+    "saturday"
+  ],
+  "similar_categories": [],
+  "num_slots": 3,
+  "cleaning_policy": {
+    "cleanable": true,
+    "reason": "Low-priority category",
+    "retention_days": 30
+  }
+}

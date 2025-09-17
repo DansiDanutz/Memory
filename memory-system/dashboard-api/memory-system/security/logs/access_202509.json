@@ -1,0 +1,92 @@
+[
+  {
+    "user_phone": "+1234567890",
+    "timestamp": "2025-09-13T21:29:48.468135",
+    "method": "password",
+    "success": true,
+    "access_level": "private",
+    "ip_address": null,
+    "user_agent": null,
+    "failure_reason": null
+  },
+  {
+    "user_phone": "+1234567890",
+    "timestamp": "2025-09-13T21:29:48.775982",
+    "method": "password",
+    "success": true,
+    "access_level": "private",
+    "ip_address": null,
+    "user_agent": null,
+    "failure_reason": null
+  },
+  {
+    "user_phone": "+1234567890",
+    "timestamp": "2025-09-13T21:29:52.459107",
+    "method": "password",
+    "success": true,
+    "access_level": "private",
+    "ip_address": null,
+    "user_agent": null,
+    "failure_reason": null
+  },
+  {
+    "user_phone": "+40744602272",
+    "timestamp": "2025-09-13T21:32:51.075142",
+    "method": "password",
+    "success": true,
+    "access_level": "private",
+    "ip_address": null,
+    "user_agent": null,
+    "failure_reason": null
+  },
+  {
+    "user_phone": "+40744602272",
+    "timestamp": "2025-09-13T21:33:14.594795",
+    "method": "password",
+    "success": true,
+    "access_level": "private",
+    "ip_address": null,
+    "user_agent": null,
+    "failure_reason": null
+  },
+  {
+    "user_phone": "+12025551234",
+    "timestamp": "2025-09-13T21:48:05.835737",
+    "method": "password",
+    "success": true,
+    "access_level": "private",
+    "ip_address": null,
+    "user_agent": null,
+    "failure_reason": null
+  },
+  {
+    "user_phone": "+40744602272",
+    "timestamp": "2025-09-13T21:50:21.545187",
+    "method": "password",
+    "success": true,
+    "access_level": "private",
+    "ip_address": null,
+    "user_agent": null,
+    "failure_reason": null
+  },
+  {
+    "user_phone": "+40744602272",
+    "timestamp": "2025-09-13T21:53:16.222966",
+    "method": "password",
+    "success": true,
+    "access_level": "private",
+    "ip_address": null,
+    "user_agent": null,
+    "failure_reason": null
+  },
+  {
+    "user_phone": "+40744602272",
+    "timestamp": "2025-09-13T22:11:14.215378",
+    "method": "password",
+    "success": true,
+    "access_level": "private",
+    "ip_address": null,
+    "user_agent": null,
+    "failure_reason": null
+  }
+]

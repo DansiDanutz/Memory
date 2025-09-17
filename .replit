@@ -1,0 +1,97 @@
+entrypoint = "main.py"
+modules = ["python-3.11", "nodejs-20", "python3", "postgresql-16"]
+
+[nix]
+channel = "stable-25_05"
+packages = ["cargo", "ffmpeg", "ffmpeg-full", "freetype", "gh", "glibcLocales", "lcms2", "libiconv", "libimagequant", "libjpeg", "libsndfile", "libtiff", "libuuid", "libwebp", "libxcrypt", "libyaml", "openjpeg", "openssl", "pkg-config", "rustc", "tcl", "tesseract", "tk", "unzip", "zlib", "chromium", "glib", "nss", "nspr", "atk", "gtk3", "xorg.libX11", "xorg.libXcomposite", "xorg.libXcursor", "xorg.libXdamage", "xorg.libXext", "xorg.libXfixes", "xorg.libXi", "xorg.libXrandr", "xorg.libXrender", "xorg.libXtst", "xorg.libxcb", "pango", "cairo", "alsa-lib", "at-spi2-atk", "cups", "dbus", "expat", "libdrm", "mesa", "libgbm", "fontconfig", "xorg.libxshmfence", "libxkbcommon"]
+
+[unitTest]
+language = "python3"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[deployment]
+run = ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5000"]
+deploymentTarget = "autoscale"
+build = ["npm", "install", "--prefix", "web-interface"]
+
+[agent]
+expertMode = true
+integrations = ["javascript_openai:1.0.0", "javascript_anthropic:1.0.0", "javascript_xai:1.0.0", "javascript_supabase:1.0.0", "python_openai:1.0.0", "flask_stripe:1.0.0", "javascript_websocket:1.0.0", "flask_supabase:1.0.0", "python_anthropic:1.0.0"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "WhatsApp API Server"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Main API Server"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "WhatsApp Frontend"
+
+[[workflows.workflow]]
+name = "WhatsApp API Server"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node app/services/whatsapp_server.js"
+waitForPort = 3001
+
+[[workflows.workflow]]
+name = "Main API Server"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+waitForPort = 8000
+
+[[workflows.workflow]]
+name = "WhatsApp Frontend"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd frontend && npm run dev -- --host 0.0.0.0 --port 5000"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[ports]]
+localPort = 3000
+externalPort = 3000
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 5001
+externalPort = 3002
+
+[[ports]]
+localPort = 8000
+externalPort = 8000

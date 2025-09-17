@@ -1,0 +1,14 @@
+{
+  "id": "LIVE_20250913_0002",
+  "user": "john_doe_5354",
+  "timestamp": "2025-09-13T03:42:03.917563",
+  "content": "Emma's school play tomorrow at 3 PM - She's playing the lead role",
+  "category": "\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67 FAMILY",
+  "ai_insights": {
+    "gpt5": "GPT-5: High-priority family event",
+    "claude": "Claude: Importance level HIGH",
+    "grok": "Grok: Social impact analyzed"
+  },
+  "smart_reminder": "Tomorrow 2 PM",
+  "status": "ACTIVE"
+}

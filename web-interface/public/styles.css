@@ -1,0 +1,2574 @@
+/* Memory App - External Styles for CSP Compliance */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brand: #25D366;
+    --brand-dark: #128C7E;
+    --brand-deeper: #075E54;
+    --accent-warm: #FFD166;
+    --ink: #0F172A;
+    --surface: #FFFFFF;
+    --bg-earth: #F0F5F2;
+    --text-muted: #667781;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg-earth);
+    background-image: 
+        linear-gradient(180deg, rgba(15,23,42,0.04) 0%, rgba(15,23,42,0.08) 100%),
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23128C7E' stroke-width='0.5' opacity='0.1'%3E%3Ccircle cx='50' cy='50' r='40'/%3E%3Ccircle cx='20' cy='20' r='15'/%3E%3Ccircle cx='80' cy='80' r='12'/%3E%3Cpath d='M10 50 Q50 10 90 50 Q50 90 10 50'/%3E%3Cpath d='M50 10 Q90 50 50 90 Q10 50 50 10'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 200px 200px, 150px 150px;
+    background-repeat: repeat, repeat;
+    min-height: 100vh;
+    color: var(--ink);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    background: var(--brand);
+    color: white;
+    padding: 15px 20px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo .brand-icon {
+    width: 28px;
+    height: 28px;
+    fill: white;
+    stroke: white;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    color: var(--text-muted);
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--brand);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Notification system */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    background: white;
+    border-left: 4px solid var(--brand);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 10px;
+    padding: 16px;
+    min-width: 300px;
+    animation: slideIn 0.3s ease;
+}
+
+.notification.error {
+    border-color: #dc3545;
+}
+
+.notification.warning {
+    border-color: #ffc107;
+}
+
+.notification.success {
+    border-color: #28a745;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Auth section */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.auth-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Password strength indicator */
+.password-strength {
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.strength-weak {
+    background: #fee;
+    color: #c53030;
+}
+
+.strength-fair {
+    background: #ffeaa7;
+    color: #d68910;
+}
+
+.strength-good {
+    background: #d4edda;
+    color: #155724;
+}
+
+.strength-strong {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Utility classes for CSP compliance */
+.hidden {
+    display: none !important;
+}
+
+.nav-tab {
+    flex: 1;
+    padding: 15px 10px;
+    background: transparent;
+    border: none;
+    color: #aebac1;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.nav-tab.active {
+    color: var(--brand);
+    border-bottom-color: var(--brand);
+    background: rgba(37, 211, 102, 0.1);
+}
+
+.nav-tab:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-tab i {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.nav-tab span {
+    display: block;
+    font-weight: 500;
+}
+
+/* CSP-compliant progress indicators */
+.progress-bar {
+    transition: width 0.3s ease;
+}
+
+/* Progress percentage classes for CSP compliance */
+.progress-0 { width: 0%; }
+.progress-5 { width: 5%; }
+.progress-10 { width: 10%; }
+.progress-15 { width: 15%; }
+.progress-20 { width: 20%; }
+.progress-25 { width: 25%; }
+.progress-30 { width: 30%; }
+.progress-35 { width: 35%; }
+.progress-40 { width: 40%; }
+.progress-45 { width: 45%; }
+.progress-50 { width: 50%; }
+.progress-55 { width: 55%; }
+.progress-60 { width: 60%; }
+.progress-65 { width: 65%; }
+.progress-70 { width: 70%; }
+.progress-75 { width: 75%; }
+.progress-80 { width: 80%; }
+.progress-85 { width: 85%; }
+.progress-90 { width: 90%; }
+.progress-95 { width: 95%; }
+.progress-100 { width: 100%; }
+
+/* CSP-compliant visibility controls */
+.show {
+    display: block !important;
+}
+
+.flex-show {
+    display: flex !important;
+}
+
+/* Progress bars and width controls */
+.progress-0 { width: 0%; }
+.progress-10 { width: 10%; }
+.progress-20 { width: 20%; }
+.progress-30 { width: 30%; }
+.progress-40 { width: 40%; }
+.progress-50 { width: 50%; }
+.progress-60 { width: 60%; }
+.progress-70 { width: 70%; }
+.progress-80 { width: 80%; }
+.progress-90 { width: 90%; }
+.progress-100 { width: 100%; }
+
+/* Animation delays */
+.anim-delay-1 { animation-delay: 0.1s; }
+.anim-delay-2 { animation-delay: 0.2s; }
+.anim-delay-3 { animation-delay: 0.3s; }
+.anim-delay-4 { animation-delay: 0.4s; }
+.anim-delay-5 { animation-delay: 0.5s; }
+
+/* Position utilities */
+.relative { position: relative; }
+.absolute { position: absolute; }
+
+/* Memory card styles */
+.memory-card {
+    position: relative;
+}
+
+.memory-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.reaction-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 12px;
+    transition: all 0.2s;
+}
+
+.reaction-btn.hover-pink {
+    background: rgba(255, 182, 193, 0.3);
+}
+
+.reaction-btn.hover-green {
+    background: rgba(37, 211, 102, 0.3);
+}
+
+.reaction-btn.hover-orange {
+    background: rgba(255, 140, 0, 0.3);
+}
+
+.reaction-btn.hover-purple {
+    background: rgba(147, 112, 219, 0.3);
+}
+
+.timestamp {
+    margin-left: auto;
+    font-size: 11px;
+    color: #8696a0;
+}
+
+.reactions-hidden {
+    display: none;
+}
+
+/* Search suggestions */
+.suggestion-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: rgba(37, 211, 102, 0.08);
+    margin: 2px 0;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.suggestion-item:hover {
+    background: rgba(37, 211, 102, 0.15);
+    border-left-color: var(--brand);
+    transform: translateX(4px);
+}
+
+.suggestion-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Secret items */
+.secret-item {
+    background: rgba(255,255,255,0.05);
+    margin: 8px 0;
+    padding: 16px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-warm);
+    transition: all 0.3s ease;
+}
+
+.secret-item:hover {
+    background: rgba(255,255,255,0.08);
+    transform: translateX(4px);
+    box-shadow: 0 4px 20px rgba(255, 209, 102, 0.2);
+}
+
+.secret-title {
+    color: var(--accent-warm);
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.secret-content {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.romantic-badge {
+    background: #ff6b9d;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    color: #666;
+    padding: 40px;
+}
+
+/* Typing indicator animations */
+.typing-fade-out {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-15px) scale(0.95);
+}
+
+.typing-quick-fade {
+    transition: all 0.2s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Notification styles */
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification-slide-out {
+    animation: slideIn 0.3s ease reverse;
+}
+
+/* Auth page display utilities */
+.auth-page-shown #auth-page {
+    display: block;
+}
+
+.auth-page-shown #main-app {
+    display: none;
+}
+
+.main-app-shown #auth-page {
+    display: none;
+}
+
+.main-app-shown #main-app {
+    display: block;
+}
+
+/* Clear button visibility */
+.clear-btn-visible {
+    display: block;
+}
+
+.clear-btn-hidden {
+    display: none;
+}
+
+/* Slide in animation for memory cards */
+.slide-in {
+    animation: slideInUp 0.5s ease-out forwards;
+}
+
+/* Memory highlighting */
+.highlight-memory {
+    background: rgba(37, 211, 102, 0.2) !important;
+    transition: background 0.3s ease;
+}
+
+/* Additional classes for CSP compliance */
+.romantic-indicator {
+    color: #ff6b9d;
+    font-weight: bold;
+}
+
+.secret-owner {
+    font-size: 12px;
+}
+
+.owner-secret {
+    color: #667eea;
+}
+
+.received-secret {
+    color: #764ba2;
+}
+
+.achievement-status {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.achievement-unlocked {
+    color: #ffd700;
+}
+
+.achievement-locked {
+    color: #999;
+}
+
+.dots-container {
+    display: flex;
+    gap: 4px;
+    margin-left: 8px;
+}
+
+.typing-fade-out {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-15px) scale(0.95);
+}
+
+.typing-quick-fade {
+    transition: all 0.2s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification-slide-out {
+    animation: slideIn 0.3s ease reverse;
+}            box-sizing: border-box;
+        }
+
+        :root {
+            --brand: #25D366;
+            --brand-dark: #128C7E;
+            --brand-deeper: #075E54;
+            --accent-warm: #FFD166;
+            --ink: #0F172A;
+            --surface: #FFFFFF;
+            --bg-earth: #F0F5F2;
+            --text-muted: #667781;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-earth);
+            background-image: 
+                linear-gradient(180deg, rgba(15,23,42,0.04) 0%, rgba(15,23,42,0.08) 100%),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23128C7E' stroke-width='0.5' opacity='0.1'%3E%3Ccircle cx='50' cy='50' r='40'/%3E%3Ccircle cx='20' cy='20' r='15'/%3E%3Ccircle cx='80' cy='80' r='12'/%3E%3Cpath d='M10 50 Q50 10 90 50 Q50 90 10 50'/%3E%3Cpath d='M50 10 Q90 50 50 90 Q10 50 50 10'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 200px 200px, 150px 150px;
+            background-repeat: repeat, repeat;
+            min-height: 100vh;
+            color: var(--ink);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            background: var(--brand);
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo .brand-icon {
+            width: 28px;
+            height: 28px;
+            fill: white;
+            stroke: white;
+        }
+
+        .logo h1 {
+            font-size: 22px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 15px;
+            font-weight: 500;
+        }
+
+        /* WhatsApp-Style Navigation */
+        .whatsapp-nav {
+            display: flex;
+            background: #202c33;
+            border-bottom: 1px solid #2a3942;
+            margin-bottom: 0;
+        }
+
+        .nav-tab {
+            flex: 1;
+            padding: 16px 12px;
+            text-align: center;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #8696a0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-tab i {
+            font-size: 20px;
+            margin-bottom: 2px;
+        }
+
+        .nav-tab span {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .nav-tab.active {
+            color: #00a884;
+            border-bottom-color: #00a884;
+        }
+
+        .nav-tab:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* WhatsApp Header */
+        .whatsapp-header {
+            background: #202c33;
+            padding: 16px 20px;
+            border-bottom: 1px solid #2a3942;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #00a884;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+        }
+
+        .user-info h3 {
+            color: #e9edef;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .user-info p {
+            color: #8696a0;
+            margin: 0;
+            font-size: 13px;
+        }
+
+        /* Chat List */
+        .chat-list {
+            background: #0b141a;
+        }
+
+        .chat-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chat-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(8px);
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.15);
+        }
+        
+        .chat-item:active {
+            transform: translateX(4px) scale(0.98);
+            transition: all 0.1s ease;
+        }
+        
+        .chat-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: #25D366;
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .chat-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        .chat-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #2a3942;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 12px;
+        }
+
+        .chat-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .chat-name {
+            color: #e9edef;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .chat-last-message {
+            color: #8696a0;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .chat-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+        }
+
+        .chat-time {
+            color: #8696a0;
+            font-size: 12px;
+        }
+
+        .chat-badge {
+            background: #00a884;
+            color: white;
+            border-radius: 10px;
+            padding: 2px 6px;
+            font-size: 12px;
+            font-weight: 600;
+            min-width: 18px;
+            text-align: center;
+        }
+
+        .secret-badge {
+            background: #ff6b9d;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #00a884;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        /* WhatsApp-Style Content Sections */
+        .content-section {
+            display: none;
+            background: #0b141a;
+            min-height: calc(100vh - 140px);
+            color: #e9edef;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        /* Main Container Override */
+        .container {
+            background: #0b141a;
+            min-height: 100vh;
+        }
+
+        /* Unified Beautiful Background Layout */
+        .unified-auth-container {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .auth-layout {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 100px;
+            align-items: center;
+            max-width: 1400px;
+            width: 100%;
+            padding: 60px;
+        }
+
+        /* Vanta Background - Now covers entire page */
+        #vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+
+        /* Hero content styling for unified layout */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.9) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideInUp 1s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 32px;
+            color: rgba(255, 255, 255, 0.9);
+            animation: slideInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-features {
+            list-style: none;
+            margin-bottom: 40px;
+            animation: slideInUp 1s ease-out 0.4s both;
+        }
+
+        .hero-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .hero-features .icon {
+            width: 24px;
+            height: 24px;
+            background: var(--accent-warm);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            animation: slideInUp 1s ease-out 0.6s both;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-warm);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Floating Auth Card on Beautiful Background */
+        .auth-container {
+            position: relative;
+            width: 420px;
+            z-index: 10;
+        }
+
+        /* Ultra-Premium Floating Glass Card */
+        .auth-content {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(40px) saturate(180%);
+            border-radius: 24px;
+            padding: 24px 28px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 
+                0 32px 120px rgba(0, 0, 0, 0.12),
+                0 8px 32px rgba(255, 255, 255, 0.1) inset,
+                0 1px 0 rgba(255, 255, 255, 0.2) inset;
+            transform: translateY(0);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            animation: glassFloat 8s ease-in-out infinite;
+            max-height: 75vh;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .auth-content:hover {
+            transform: translateY(-8px) rotateX(2deg);
+            box-shadow: 
+                0 48px 160px rgba(0, 0, 0, 0.16),
+                0 8px 32px rgba(255, 255, 255, 0.15) inset,
+                0 1px 0 rgba(255, 255, 255, 0.3) inset;
+        }
+
+        @keyframes glassFloat {
+            0%, 100% { transform: translateY(0px) rotateY(0deg); }
+            25% { transform: translateY(-4px) rotateY(0.5deg); }
+            50% { transform: translateY(-8px) rotateY(0deg); }
+            75% { transform: translateY(-4px) rotateY(-0.5deg); }
+        }
+
+        /* Beautiful Form Styling */
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* SSO Section */
+        .sso-section {
+            margin-bottom: 32px;
+        }
+
+        .sso-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .sso-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 18px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sso-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Auth Divider */
+        .auth-divider {
+            display: flex;
+            align-items: center;
+            margin: 32px 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .auth-divider::before,
+        .auth-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .auth-divider span {
+            padding: 0 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Perfect Form Components */
+        .form-group label {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 15px;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Beautiful Auth Buttons */
+        .auth-btn {
+            width: 100%;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .auth-btn-primary {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.25) 0%, 
+                rgba(255, 255, 255, 0.15) 50%, 
+                rgba(255, 255, 255, 0.1) 100%);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.3), 
+                transparent);
+            transition: left 0.6s ease;
+        }
+
+        .auth-btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 
+                0 15px 45px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.3) 0%, 
+                rgba(255, 255, 255, 0.2) 50%, 
+                rgba(255, 255, 255, 0.15) 100%);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .auth-btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .auth-btn-primary:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+        .auth-btn-secondary {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                rgba(255, 255, 255, 0.05) 50%, 
+                rgba(255, 255, 255, 0.08) 100%);
+            color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 
+                0 4px 20px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .auth-btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.2), 
+                transparent);
+            transition: left 0.5s ease;
+        }
+
+        .auth-btn-secondary:hover {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.15) 0%, 
+                rgba(255, 255, 255, 0.1) 50%, 
+                rgba(255, 255, 255, 0.12) 100%);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .auth-btn-secondary:hover::before {
+            left: 100%;
+        }
+
+        .auth-btn-secondary:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .btn-primary {
+            background: var(--brand);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--brand-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f0f2f5;
+            color: #667781;
+            border: 1px solid #d1d7db;
+        }
+
+        .btn-secondary:hover {
+            background: #e4e6ea;
+        }
+
+        /* WhatsApp-Style Chat Interface */
+        .memory-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 20px;
+            max-height: 60vh;
+            overflow-y: auto;
+            background: #0b141a;
+            padding: 16px;
+        }
+
+        .memory-card {
+            max-width: 65%;
+            margin-bottom: 12px;
+            position: relative;
+            word-wrap: break-word;
+            background: #005c4b;
+            border-radius: 12px 12px 4px 12px;
+            padding: 8px 12px;
+            color: #e9edef;
+            margin-left: auto;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .memory-card.system {
+            background: #202c33;
+            border-radius: 12px 12px 12px 4px;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .memory-card .timestamp {
+            font-size: 11px;
+            color: #8696a0;
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        .memory-card.system .timestamp {
+            text-align: left;
+        }
+
+        /* Enhanced Animations */
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        @keyframes slideInUp {
+            0% { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            100% { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+        
+        @keyframes messageAppear {
+            0% { 
+                opacity: 0; 
+                transform: scale(0.8) translateY(20px); 
+            }
+            100% { 
+                opacity: 1; 
+                transform: scale(1) translateY(0); 
+            }
+        }
+        
+        @keyframes reaction-pop {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+
+        .live-indicator {
+            animation: pulse 2s infinite;
+            color: #25D366;
+            font-weight: bold;
+        }
+        
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: #202c33;
+            border-radius: 18px;
+            margin: 10px 0;
+            width: fit-content;
+            color: #8696a0;
+            font-size: 14px;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            animation: slideInUp 0.3s ease;
+        }
+        
+        .typing-dot {
+            width: 4px;
+            height: 4px;
+            background: #8696a0;
+            border-radius: 50%;
+            animation: typing 1.4s infinite;
+        }
+        
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+        
+        .message-reactions {
+            position: absolute;
+            bottom: -8px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            padding: 2px 6px;
+            font-size: 12px;
+            animation: reaction-pop 0.3s ease;
+        }
+        
+        .memory-card {
+            animation: messageAppear 0.4s ease;
+        }
+        
+        .slide-in {
+            animation: slideInUp 0.5s ease;
+        }
+
+        .memory-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .memory-category {
+            background: #25D366;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .memory-date {
+            color: #667781;
+            font-size: 11px;
+        }
+
+        .memory-content {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Secret Memory Cards */
+        .secret-card {
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(255, 160, 160, 0.2));
+            border: 2px solid rgba(255, 105, 135, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .secret-card::before {
+            content: '🔐';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            opacity: 0.7;
+        }
+
+        .mutual-match-alert {
+            background: linear-gradient(45deg, #ff6b9d, #ffa7c4);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Gamification Panel - WhatsApp Style */
+        .gamification-panel {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e9edef;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .level-display {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .level-number {
+            font-size: 36px;
+            font-weight: 600;
+            color: #25D366;
+        }
+
+        .experience-bar {
+            width: 100%;
+            height: 12px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .experience-fill {
+            height: 100%;
+            background: #25D366;
+            border-radius: 6px;
+            transition: width 0.3s ease;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card.unlocked {
+            border-color: #ffd700;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 223, 0, 0.1));
+        }
+
+        .achievement-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        /* Notifications - WhatsApp Style */
+        .notification {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* Loading States */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #e1e5e9;
+            border-top: 2px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .memory-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+
+        /* Beautiful Auth Footer */
+        .auth-footer {
+            text-align: center;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.4s;
+        }
+
+        .footer-link:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-link:hover::before {
+            left: 100%;
+        }
+
+        .footer-link i {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        .footer-link:hover i {
+            opacity: 1;
+        }
+
+        .divider {
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        @media (max-width: 480px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .divider {
+                display: none;
+            }
+            
+            .footer-link {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Responsive Design for Unified Layout */
+        @media (max-width: 1024px) {
+            .auth-layout {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                padding: 40px;
+                text-align: center;
+            }
+            
+            .auth-container {
+                width: 100%;
+                max-width: 420px;
+                margin: 0 auto;
+            }
+            
+            .hero-title {
+                font-size: 40px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            
+            .hero-features {
+                margin-bottom: 24px;
+            }
+            
+            .social-proof {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .auth-container {
+                padding: 40px 20px;
+            }
+        }
+
+        /* Loading States */
+        .loading {
+            position: relative;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 2px solid #ffffff;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Spectacular Auth Header */
+        .auth-header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .auth-logo {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 12px;
+            background: linear-gradient(135deg, #ff7b54 0%, #ff9478 50%, #ffad94 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 12px 48px rgba(255, 123, 84, 0.4),
+                0 3px 12px rgba(255, 255, 255, 0.1) inset;
+            animation: logoFloat 6s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, scale 0.3s ease;
+            cursor: pointer;
+        }
+
+        .auth-logo:hover {
+            transform: translateY(-8px) rotateY(10deg) scale(1.1);
+            box-shadow: 
+                0 24px 80px rgba(255, 123, 84, 0.5),
+                0 8px 24px rgba(255, 255, 255, 0.2) inset;
+        }
+
+        .auth-logo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px) rotateY(0deg); }
+            50% { transform: translateY(-12px) rotateY(5deg); }
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .auth-title {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.95) 0%, 
+                rgba(255, 255, 255, 0.8) 25%,
+                rgba(37, 211, 102, 0.9) 50%,
+                rgba(255, 255, 255, 0.8) 75%,
+                rgba(255, 255, 255, 0.95) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 300% 300%;
+            animation: gradientShift 4s ease-in-out infinite;
+            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .auth-subtitle {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Authentication Page -->
+    <div id="auth-page">
+        <!-- Unified Beautiful Background -->
+        <div class="unified-auth-container">
+            <div id="vanta-bg"></div>
+            <div class="auth-layout">
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-sparkles"></i>
+                        <span>Powered by Advanced AI</span>
+                    </div>
+                    
+                    <h1 class="hero-title">Your Second Brain<br>for Life's Moments</h1>
+                    
+                    <p class="hero-subtitle">
+                        Capture everything. Recall anything. Connect your memories across Earth, Love, Family, and Faith with AI-powered intelligence.
+                    </p>
+                    
+                    <ul class="hero-features">
+                        <li>
+                            <div class="icon"><i class="fas fa-brain"></i></div>
+                            <span><strong>AI-Powered Memory</strong> - Never forget important moments</span>
+                        </li>
+                        <li>
+                            <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                            <span><strong>Voice-Secured Vault</strong> - Biometric protection for secrets</span>
+                        </li>
+                        <li>
+                            <div class="icon"><i class="fas fa-heart"></i></div>
+                            <span><strong>Mutual Feelings</strong> - AI detects romantic connections</span>
+                        </li>
+                        <li>
+                            <div class="icon"><i class="fas fa-globe"></i></div>
+                            <span><strong>Global Community</strong> - Connect with Earth's memory network</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="social-proof">
+                        <div class="stat">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Active Users</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2M+</span>
+                            <span class="stat-label">Memories Stored</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Auth Card -->
+                <div class="auth-container">
+                    <div class="auth-content">
+                    <!-- Auth Header -->
+                    <div class="auth-header">
+                    <div class="auth-logo">
+                        <svg class="brand-icon" viewBox="0 0 24 24" style="width: 28px; height: 28px; fill: white;">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9C15 10.1 14.1 11 13 11S11 10.1 11 9V7.5L5 7V9C5 10.1 4.1 11 3 11V13C4.1 13 5 13.9 5 15V17L11 16.5V15C11 13.9 11.9 13 13 13S15 13.9 15 15V16.5L21 17V15C21 13.9 21.9 13 23 13V11C21.9 11 21 10.1 21 9Z"/>
+                            <circle cx="12" cy="10" r="1.5" fill="white"/>
+                        </svg>
+                    </div>
+                    <h1 class="auth-title" id="auth-title">Welcome Back</h1>
+                    <p class="auth-subtitle" id="auth-subtitle">Sign in to access your AI-powered memories</p>
+                </div>
+
+                <!-- SSO Section -->
+                <div class="sso-section">
+                    <div class="sso-buttons">
+                        <button class="sso-btn" onclick="ssoLogin('google')">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyNTYgMjYyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yNTUuODc4IDEzMy40NTFDMjU1Ljg3OCA4OC4wODUgMjE2LjAwNCA0OC4xNTIgMTcwLjYzOSA0OC4xNTJIODUuOTY3VjQ4LjE1MkM4NS45NjcgNDguMTUyIDg1Ljk2NyAyMS4zMzYgODUuOTY3IDIxLjMzNkMzOC4zOTggMjEuMzM2IDAgNTkuNzM0IDAgMTA3LjMwM1YxNTQuODRWMjA3LjI5N0MwIDI1NC44NjcgMzguMzk4IDI5My4yNjUgODUuOTY3IDI5My4yNjVIMTcwLjY0N0MyMTYuMDEzIDI5My4yNjUgMjU1LjkzOCAyNTMuMzMyIDI1NS45MzggMjA3Ljk2NlYxMzMuNDUxWiIgZmlsbD0iIzQyODVGNCIvPjxwYXRoIGQ9Ik0xNDIuOTY5IDEwNy4yODNWNzQuNjE4SDE3MC42NEMyMTYuMDA1IDc0LjYxOCAyNTUuODc5IDExNC41NTEgMjU1Ljg3OSAxNTkuOTE3VjIwNy4yOTdDMjU1Ljg3OSAyMjkuMzg1IDI0NC44MjIgMjQ5LjIyIDIyOC40MDMgMjYzLjQ5MkwyMDcuMjQ2IDI0Mi4zMzRDMjE4LjMwMyAyMzUuMzU3IDIyNS43NzMgMjIyLjMyNCAyMjUuNzczIDIwNy4yOTdWMTU5LjkxN0MyMjUuNzczIDEzMS4wMDQgMjAyLjU5NCAxMDcuMjgzIDE3My4zOTEgMTA3LjI4M0gxNDIuOTY5WiIgZmlsbD0iIzM0QTg1MyIvPjwvc3ZnPg==" alt="Google">
+                            Continue with Google
+                        </button>
+                        <button class="sso-btn" onclick="ssoLogin('apple')">
+                            <i class="fab fa-apple" style="font-size: 20px;"></i>
+                            Continue with Apple
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="auth-divider">
+                    <span>or continue with email</span>
+                </div>
+                
+                <!-- Login Form -->
+                <div id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="login-username" placeholder="Enter your username" required autocomplete="username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="login-password" placeholder="Enter your password" required autocomplete="current-password">
+                        </div>
+                    </div>
+                    <button class="auth-btn auth-btn-primary" onclick="login()">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </button>
+                    <button class="auth-btn auth-btn-secondary" onclick="showRegister()">
+                        <i class="fas fa-user-plus"></i>
+                        New here? Create Account
+                    </button>
+                </div>
+
+                <!-- Register Form -->
+                <div id="register-form" class="auth-form hidden">
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="register-username" placeholder="Choose a username" required autocomplete="username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-display-name">Display Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="register-display-name" placeholder="Your full name" required autocomplete="name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="register-email" placeholder="your.email@example.com" autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="register-password" placeholder="Create a strong password" required autocomplete="new-password" oninput="checkPasswordStrength(this.value)">
+                        </div>
+                        <div class="password-strength" id="password-strength">
+                            <div class="strength-bar">
+                                <div class="strength-fill"></div>
+                            </div>
+                            <div class="strength-text">Password strength: <span id="strength-level">Weak</span></div>
+                        </div>
+                    </div>
+                    <button class="auth-btn auth-btn-primary" onclick="register()">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
+                    <button class="auth-btn auth-btn-secondary" onclick="showLogin()">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Already have an account? Sign In
+                    </button>
+                </div>
+
+                    <!-- Footer -->
+                    <div class="auth-footer">
+                        <div class="footer-links">
+                            <a href="#" class="footer-link" onclick="showMagicLink()">
+                                <i class="fas fa-magic"></i>
+                                Send Magic Link Instead
+                            </a>
+                            <div class="divider">•</div>
+                            <a href="#" class="footer-link" onclick="showWebAuthn()">
+                                <i class="fas fa-fingerprint"></i>
+                                Use Passkey
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="main-app" class="hidden">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">
+                    <svg class="brand-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9C15 10.1 14.1 11 13 11S11 10.1 11 9V7.5L5 7V9C5 10.1 4.1 11 3 11V13C4.1 13 5 13.9 5 15V17L11 16.5V15C11 13.9 11.9 13 13 13S15 13.9 15 15V16.5L21 17V15C21 13.9 21.9 13 23 13V11C21.9 11 21 10.1 21 9Z"/>
+                        <circle cx="12" cy="10" r="1.5" fill="white"/>
+                    </svg>
+                    <h1>Memory App</h1>
+                </div>
+                <div class="user-info">
+                    <div class="user-stats" id="user-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <span id="user-level">Level 1</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-fire"></i>
+                            <span id="user-streak">0 day streak</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-brain"></i>
+                            <span id="memory-count">0 memories</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+
+            <!-- WhatsApp-Style Navigation -->
+            <div class="whatsapp-nav">
+                <div class="nav-tab active" onclick="showSection('dashboard')">
+                    <i class="fas fa-home"></i>
+                    <span>Chats</span>
+                </div>
+                <div class="nav-tab" onclick="showSection('memories')">
+                    <i class="fas fa-brain"></i>
+                    <span>Memories</span>
+                </div>
+                <div class="nav-tab" onclick="showSection('secrets')">
+                    <i class="fas fa-lock"></i>
+                    <span>Secrets</span>
+                </div>
+                <div class="nav-tab" onclick="showSection('achievements')">
+                    <i class="fas fa-star"></i>
+                    <span>Status</span>
+                </div>
+            </div>
+
+            <!-- WhatsApp-Style Dashboard (Chats) -->
+            <div id="dashboard-section" class="content-section active">
+                <!-- WhatsApp Header -->
+                <div class="whatsapp-header">
+                    <div class="user-avatar" id="user-avatar">DU</div>
+                    <div class="user-info">
+                        <h3 id="user-display-name">Demo User</h3>
+                        <p><span id="user-level">Level 1</span> • <span id="memory-count">0 memories</span> • <span id="user-streak">0 day streak</span></p>
+                    </div>
+                </div>
+
+                <!-- Chat List -->
+                <div class="chat-list">
+                    <div class="chat-item" onclick="showMemoriesAsChat()">
+                        <div class="chat-avatar">🧠</div>
+                        <div class="chat-info">
+                            <div class="chat-name">Memory Assistant</div>
+                            <div class="chat-last-message">💭 Remember to call mom about Sunday dinner</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="chat-time">2h ago</div>
+                            <div class="chat-badge" id="memory-badge">0</div>
+                        </div>
+                    </div>
+
+                    <div class="chat-item" onclick="showSecretsAsChat()">
+                        <div class="chat-avatar">🔐</div>
+                        <div class="chat-info">
+                            <div class="chat-name">Secret Vault</div>
+                            <div class="chat-last-message">🔐 3 secret memories stored securely</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="chat-time">1d ago</div>
+                            <div class="chat-badge secret-badge">3</div>
+                        </div>
+                    </div>
+
+                    <div class="chat-item" onclick="showMutualFeelingsAsChat()">
+                        <div class="chat-avatar">💕</div>
+                        <div class="chat-info">
+                            <div class="chat-name">Mutual Feelings</div>
+                            <div class="chat-last-message">💕 AI analyzing connections...</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="chat-time">now</div>
+                            <div class="pulse-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memories Section -->
+            <div id="memories-section" class="content-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2><i class="fas fa-brain"></i> Your Memories</h2>
+                    <button class="btn btn-primary" onclick="showCreateMemory()">
+                        <i class="fas fa-plus"></i>
+                        Add Memory
+                    </button>
+                </div>
+
+                <!-- Smart Search -->
+                <div class="search-container" style="margin-bottom: 20px; position: relative;">
+                    <div style="position: relative;">
+                        <input type="text" id="memory-search" placeholder="🔍 Search your memories..." 
+                               style="width: 100%; padding: 12px 45px 12px 16px; border: 2px solid #25D366; border-radius: 25px; background: rgba(255,255,255,0.1); color: white; font-size: 14px; outline: none;"
+                               oninput="searchMemories(this.value)"
+                               onkeydown="handleSearchKeydown(event)"
+                               onfocus="showSearchSuggestions(true)"
+                               onblur="hideSearchSuggestions()">
+                        <i class="fas fa-search" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: #25D366;"></i>
+                        <button onclick="clearSearch()" style="position: absolute; right: 45px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #8696a0; font-size: 16px; cursor: pointer; display: none;" id="clear-search">×</button>
+                    </div>
+                    <div id="search-suggestions" class="search-suggestions" style="display: none; position: absolute; top: 100%; left: 0; right: 0; background: #2a3942; border-radius: 0 0 15px 15px; border: 1px solid #25D366; border-top: none; max-height: 200px; overflow-y: auto; z-index: 1000;"></div>
+                </div>
+
+                <!-- Create Memory Form -->
+                <div id="create-memory-form" class="hidden" style="background: rgba(102, 126, 234, 0.1); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                    <h3>Create New Memory</h3>
+                    <div class="form-group">
+                        <label for="memory-content">Memory Content</label>
+                        <textarea id="memory-content" rows="4" placeholder="Describe what you want to remember..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="memory-category">Category</label>
+                        <select id="memory-category">
+                            <option value="general">General</option>
+                            <option value="work">Work</option>
+                            <option value="family">Family</option>
+                            <option value="friends">Friends</option>
+                            <option value="personal">Personal</option>
+                            <option value="health">Health</option>
+                            <option value="finance">Finance</option>
+                        </select>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-primary" onclick="createMemory()">
+                            <i class="fas fa-save"></i>
+                            Save Memory
+                        </button>
+                        <button class="btn btn-secondary" onclick="hideCreateMemory()">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+
+                <div id="memories-list" class="memory-grid">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        Loading memories...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secrets Section -->
+            <div id="secrets-section" class="content-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2><i class="fas fa-lock"></i> Secret Vault</h2>
+                    <button class="btn btn-primary" onclick="showCreateSecret()">
+                        <i class="fas fa-plus"></i>
+                        Add Secret
+                    </button>
+                </div>
+
+                <!-- Create Secret Form -->
+                <div id="create-secret-form" class="hidden" style="background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(255, 160, 160, 0.1)); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                    <h3>Create Super Secret Memory</h3>
+                    <div class="form-group">
+                        <label for="secret-title">Secret Title</label>
+                        <input type="text" id="secret-title" placeholder="Give your secret a title...">
+                    </div>
+                    <div class="form-group">
+                        <label for="secret-content">Secret Content</label>
+                        <textarea id="secret-content" rows="4" placeholder="Your most personal thoughts and feelings..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="designated-person">Designated Person (optional)</label>
+                        <input type="text" id="designated-person" placeholder="Name of someone special...">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="is-romantic" style="margin-right: 8px;">
+                            This is about romantic feelings
+                        </label>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-primary" onclick="createSecret()">
+                            <i class="fas fa-lock"></i>
+                            Save Secret
+                        </button>
+                        <button class="btn btn-secondary" onclick="hideCreateSecret()">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+
+                <div id="secrets-list">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        Loading secrets...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements/Status Section -->
+            <div id="achievements-section" class="content-section">
+                <h2><i class="fas fa-star"></i> Your Status</h2>
+                
+                <!-- User Level Display -->
+                <div class="status-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                    <h3>Level <span id="dashboard-level">1</span> Memory Keeper</h3>
+                    <p id="experience-text">0 / 100 XP</p>
+                    <div style="background: rgba(255,255,255,0.2); height: 8px; border-radius: 4px; margin-top: 10px;">
+                        <div id="experience-bar" style="background: #FFD166; height: 100%; border-radius: 4px; width: 0%; transition: width 0.3s ease;"></div>
+                    </div>
+                </div>
+
+                <!-- Mutual Feelings Status -->
+                <div class="status-card" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                    <h3>💕 Mutual Feelings</h3>
+                    <div id="mutual-feelings-status">No mutual matches yet</div>
+                </div>
+
+                <!-- Achievements Grid -->
+                <h3 style="margin-bottom: 15px;">🏆 Achievements</h3>
+                <div id="achievements-list" class="achievements-grid">
+                    <div class="loading">
+
+/* 🧠 AI INSIGHTS STYLES - Revolutionary Interface */
+.ai-insights-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ai-insights-header h2 {
+    color: var(--primary-color, #2196F3);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.insight-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2196F3;
+}
+
+.insight-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #2196F3;
+}
+
+.health-score {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.score-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(#2196F3 0deg 0deg, #f0f0f0 0deg 360deg);
+    position: relative;
+}
+
+.score-circle::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.score-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2196F3;
+    z-index: 2;
+}
+
+.insights-list .insight-item,
+.advice-list .advice-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* 🌟 Daily Reflection Card Styles */
+.daily-reflection-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 2px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    animation: cardGlow 3s ease-in-out infinite;
+    display: none;
+}
+
+@keyframes cardGlow {
+    0%, 100% { box-shadow: 0 5px 30px rgba(102, 126, 234, 0.3); }
+    50% { box-shadow: 0 5px 40px rgba(118, 75, 162, 0.4); }
+}
+
+.reflection-shimmer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    100% { left: 100%; }
+}
+
+.reflection-content {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    position: relative;
+}
+
+.reflection-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.reflection-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(5deg); }
+}
+
+.reflection-title {
+    flex: 1;
+    margin: 0 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.reflection-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.reflection-prompt-container {
+    margin: 20px 0;
+}
+
+.reflection-prompt {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--ink);
+    font-weight: 500;
+    margin: 0;
+    transition: opacity 0.5s ease;
+}
+
+.loading-shimmer {
+    display: inline-block;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    color: transparent;
+    border-radius: 4px;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.reflection-context {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: rgba(102, 126, 234, 0.05);
+    border-left: 3px solid #667eea;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #667eea;
+    display: none;
+}
+
+.reflection-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-reflection-skip,
+.btn-reflection-answer {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-reflection-skip {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.btn-reflection-skip:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+.btn-reflection-answer {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.btn-reflection-answer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.reflection-history {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.history-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Prompt type variations */
+.daily-reflection-card.anniversary-prompt {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.daily-reflection-card.anniversary-prompt .reflection-icon {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.daily-reflection-card.reengagement-prompt {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.daily-reflection-card.reengagement-prompt .reflection-icon {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.daily-reflection-card.exploration-prompt {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.daily-reflection-card.exploration-prompt .reflection-icon {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+/* Animations */
+.slide-in-top {
+    animation: slideInTop 0.5s ease-out;
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+.daily-reflection-card.answering-mode {
+    opacity: 0.6;
+    transform: scale(0.98);
+    transition: all 0.5s ease;
+}
+

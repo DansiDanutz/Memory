@@ -1,0 +1,11 @@
+{
+  "user_id": "user_20250913_033840",
+  "name": "Digital Human",
+  "enrolled": "2025-09-13T03:38:40.381200",
+  "voice_samples": [
+    "sample1.wav",
+    "sample2.wav",
+    "sample3.wav"
+  ],
+  "credits": 50
+}

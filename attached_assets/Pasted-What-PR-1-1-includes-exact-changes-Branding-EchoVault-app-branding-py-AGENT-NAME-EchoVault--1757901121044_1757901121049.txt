@@ -1,0 +1,44 @@
+What PR‑1.1 includes (exact changes)
+Branding (EchoVault)
+app/branding.py
+AGENT_NAME = "EchoVault" (you can change it)
+WELCOME message (auto‑sent on first contact)
+Webhook behavior: on a user’s first message, the bot sends the branded welcome in WhatsApp.
+ULTRA‑SECRET → self‑scope only
+app/memory/search_v2.py now takes scope='self' and skips ULTRA_SECRET unless scope=='self'.
+app/webhook.py always calls search with scope='self', so ULTRA_SECRET stays private even when you later re‑enable department/tenant search.
+Chronological append (better time recall)
+app/memory/storage.py now writes each saved memory to both:
+the category file (e.g., SECRET/secret.md), and
+the dated CHRONOLOGICAL file (e.g., CHRONOLOGICAL/2025‑09‑15.md).
+The index does not leak secret previews.
+Minimal 5‑tier classifier (so it runs even if yours is a stub)
+app/memory/classifier.py (MessageClassifier) with explicit tags + heuristics.
+Backup script
+scripts/backup_data.sh — archives memory-system/users/ into a timestamped tar.gz.
+./scripts/backup_data.sh               # defaults
+./scripts/backup_data.sh mydir out.tgz # custom
+Updated webhook
+app/webhook.py integrates branding welcome, uses classifier, and calls search with scope='self'.
+PR‑1.1 is designed to sit on top of PR‑1. Together they give you a production‑safe Phase‑1 core: WhatsApp‑only, Markdown memories, voice enrollment & verification, encryption for secret tiers, voice Q&A, no secret leakage, and now proper branding + self‑locked ultra‑secret.
+Apply in Replit (Agent‑ready)
+If not already, apply PR‑1 first: unzip memory4-pr1-overlay.zip at repo root → overwrite when asked.
+Unzip memory4-pr1.1-overlay.zip at repo root → overwrite when asked.
+(Optional) Edit brand name in app/branding.py (e.g., to MemoStack or Auri).
+Ensure secrets are set:
+WEBHOOK_VERIFY_TOKEN
+WHATSAPP_ACCESS_TOKEN, WHATSAPP_PHONE_NUMBER_ID
+AZURE_SPEECH_KEY, AZURE_SPEECH_REGION
+ENCRYPTION_MASTER_KEY (Fernet base64)
+REDIS_URL (recommended)
+Run: bash scripts/dev_run.sh
+WhatsApp webhook: https://<your-repl>/webhook + WEBHOOK_VERIFY_TOKEN.
+Quick acceptance test (Phase‑1)
+Branding: First-time chat to the bot → “👋 Hi, I’m EchoVault…”
+Store & classify: Send My card is 4111 1111 1111 1111 → SECRET
+No leak: Inspect memory-system/users/<phone>/index.json → content_preview empty for secret.
+Verify gate: search: 4111 before verify → no results.
+Unlock: verify: <passphrase> → “Verified … 10 minutes” → search: 4111 returns matches.
+Chrono file: Find today’s entry in CHRONOLOGICAL/<today>.md.
+ULTRA‑SECRET lock: (If you add dept/tenant search later) ULTRA_SECRET will not appear outside self‑scope.
+Voice Q&A: Send a voice note (“what’s my card”) → text + audio reply.

@@ -1,0 +1,17 @@
+{
+  "user_phone": "+40744602272",
+  "security_level": "standard",
+  "enabled_auth_methods": [
+    "password"
+  ],
+  "master_key_hash": "JDJiJDEyJDZGRkFuc3d2ZzZ2c2lPZFEuRmppWE96S2V4MU1jbjBzRG4wdGRiM292UWlDRnF4L0Ezdy95",
+  "salt": "b2256b54b2572d82f5fe12fc2ce771a3463ccdcc1c2bb7ee533cea8dd26bf472",
+  "totp_secret": null,
+  "voice_print_hash": null,
+  "biometric_hash": null,
+  "security_phrases": [],
+  "failed_attempts": 0,
+  "locked_until": null,
+  "last_access": "2025-09-13T22:11:14.216065",
+  "created_at": "2025-09-13T21:32:45.290935"
+}

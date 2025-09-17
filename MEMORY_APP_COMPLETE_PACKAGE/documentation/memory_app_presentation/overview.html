@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #0D1117 0%, #161B22 50%, #21262D 100%);
+        }
+        
+        .title-text {
+            color: #E6EDF3;
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+        }
+        
+        .content-text {
+            color: #C9D1D9;
+        }
+        
+        .neon-accent {
+            color: #39FF14;
+            text-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
+        }
+        
+        .cyan-accent {
+            color: #00D9FF;
+            text-shadow: 0 0 8px rgba(0, 217, 255, 0.4);
+        }
+        
+        .feature-box {
+            background: rgba(22, 27, 34, 0.8);
+            border: 1px solid rgba(57, 255, 20, 0.2);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .interface-image {
+            border: 2px solid rgba(57, 255, 20, 0.3);
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(57, 255, 20, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container p-12">
+        <div class="mb-8">
+            <h1 class="title-text text-4xl font-bold mb-4">
+                <i class="fas fa-comments cyan-accent mr-3"></i>
+                WhatsApp-Like Interface Overview
+            </h1>
+            <p class="content-text text-xl">
+                Familiar messaging experience with <span class="neon-accent">professional dark aesthetics</span>
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-8 h-96">
+            <div class="flex flex-col justify-center">
+                <img src="/home/ubuntu/memory_app_dark_main.png" 
+                     alt="Memory App Dark Interface" 
+                     class="interface-image w-full h-80 object-cover">
+            </div>
+            
+            <div class="flex flex-col justify-center space-y-6">
+                <div class="feature-box p-6">
+                    <h3 class="neon-accent text-xl font-semibold mb-3">
+                        <i class="fas fa-sidebar mr-2"></i>
+                        Memory Categories Sidebar
+                    </h3>
+                    <p class="content-text">
+                        Organized memory sections including Work Notes, Personal Ideas, 
+                        Family Memories, and Learning Notes with intuitive navigation.
+                    </p>
+                </div>
+                
+                <div class="feature-box p-6">
+                    <h3 class="cyan-accent text-xl font-semibold mb-3">
+                        <i class="fas fa-robot mr-2"></i>
+                        Memo - Personal AI Brain
+                    </h3>
+                    <p class="content-text">
+                        Direct chat interface with your AI memory assistant, 
+                        featuring real-time synchronization across platforms.
+                    </p>
+                </div>
+                
+                <div class="feature-box p-6">
+                    <h3 class="neon-accent text-xl font-semibold mb-3">
+                        <i class="fas fa-sync mr-2"></i>
+                        WhatsApp Integration
+                    </h3>
+                    <p class="content-text">
+                        Seamless synchronization between Memory App and WhatsApp 
+                        for unified memory management experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

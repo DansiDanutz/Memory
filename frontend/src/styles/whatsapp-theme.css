@@ -1,0 +1,436 @@
+/* ================================= */
+/* WHATSAPP-INSPIRED THEME SYSTEM */
+/* Pixel-perfect recreation of WhatsApp Web */
+/* ================================= */
+
+:root {
+  /* WhatsApp Official Colors */
+  --wa-primary-green: #00a884;
+  --wa-primary-green-dark: #008069;
+  --wa-secondary-green: #d9fdd3;
+  --wa-light-green: #e7ffdb;
+  --wa-teal: #128c7e;
+  --wa-teal-dark: #075e54;
+  
+  /* WhatsApp Background Colors */
+  --wa-background: #f0f2f5;
+  --wa-chat-background: #efeae2;
+  --wa-panel-background: #ffffff;
+  --wa-sidebar-background: #f8f9fa;
+  --wa-search-background: #f6f6f6;
+  
+  /* WhatsApp Message Colors */
+  --wa-message-out: #d9fdd3;
+  --wa-message-in: #ffffff;
+  --wa-message-border: #e1f3fb;
+  --wa-system-message: #e1f3fb;
+  
+  /* WhatsApp Text Colors */
+  --wa-text-primary: #111b21;
+  --wa-text-secondary: #667781;
+  --wa-text-tertiary: #8696a0;
+  --wa-text-white: #ffffff;
+  --wa-text-green: #00a884;
+  
+  /* WhatsApp Border & Divider Colors */
+  --wa-border-light: #e9edef;
+  --wa-border-medium: #d1d7db;
+  --wa-divider: #e9edef;
+  
+  /* WhatsApp Status Colors */
+  --wa-online: #00a884;
+  --wa-away: #ffb300;
+  --wa-offline: #8696a0;
+  --wa-unread: #00a884;
+  
+  /* WhatsApp Hover & Active States */
+  --wa-hover-light: #f5f6f6;
+  --wa-hover-medium: #e9edef;
+  --wa-active-light: #e5edea;
+  --wa-selected: #e5edea;
+  
+  /* WhatsApp Shadows */
+  --wa-shadow-light: 0 1px 3px rgba(11, 20, 26, 0.1);
+  --wa-shadow-medium: 0 2px 8px rgba(11, 20, 26, 0.15);
+  --wa-shadow-heavy: 0 4px 16px rgba(11, 20, 26, 0.2);
+  
+  /* WhatsApp Typography */
+  --wa-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  --wa-font-size-xs: 11px;
+  --wa-font-size-sm: 12px;
+  --wa-font-size-base: 14px;
+  --wa-font-size-md: 15px;
+  --wa-font-size-lg: 16px;
+  --wa-font-size-xl: 18px;
+  --wa-font-size-2xl: 20px;
+  
+  /* WhatsApp Spacing */
+  --wa-space-xs: 4px;
+  --wa-space-sm: 8px;
+  --wa-space-md: 12px;
+  --wa-space-lg: 16px;
+  --wa-space-xl: 20px;
+  --wa-space-2xl: 24px;
+  --wa-space-3xl: 32px;
+  
+  /* WhatsApp Border Radius */
+  --wa-radius-sm: 4px;
+  --wa-radius-md: 7.5px;
+  --wa-radius-lg: 12px;
+  --wa-radius-message: 7.5px;
+  --wa-radius-button: 24px;
+  
+  /* WhatsApp Transitions */
+  --wa-transition-fast: 0.15s ease-out;
+  --wa-transition-normal: 0.2s ease-out;
+  --wa-transition-slow: 0.3s ease-out;
+}
+
+/* Dark Theme - WhatsApp Dark Mode */
+[data-theme="dark"] {
+  --wa-background: #111b21;
+  --wa-chat-background: #0b141a;
+  --wa-panel-background: #202c33;
+  --wa-sidebar-background: #111b21;
+  --wa-search-background: #2a3942;
+  
+  --wa-message-out: #005c4b;
+  --wa-message-in: #202c33;
+  --wa-message-border: #2a3942;
+  --wa-system-message: #182229;
+  
+  --wa-text-primary: #e9edef;
+  --wa-text-secondary: #8696a0;
+  --wa-text-tertiary: #667781;
+  --wa-text-white: #ffffff;
+  --wa-text-green: #00a884;
+  
+  --wa-border-light: #2a3942;
+  --wa-border-medium: #3b4a54;
+  --wa-divider: #2a3942;
+  
+  --wa-hover-light: #2a3942;
+  --wa-hover-medium: #3b4a54;
+  --wa-active-light: #233329;
+  --wa-selected: #2a3942;
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--wa-font-family);
+  font-size: var(--wa-font-size-base);
+  line-height: 1.4;
+  color: var(--wa-text-primary);
+  background: var(--wa-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Styling - WhatsApp Style */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--wa-text-tertiary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--wa-text-secondary);
+}
+
+/* Button Base Styles */
+.wa-button {
+  background: var(--wa-primary-green);
+  color: var(--wa-text-white);
+  border: none;
+  border-radius: var(--wa-radius-button);
+  padding: var(--wa-space-sm) var(--wa-space-lg);
+  font-family: inherit;
+  font-size: var(--wa-font-size-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--wa-transition-fast);
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--wa-space-sm);
+}
+
+.wa-button:hover {
+  background: var(--wa-primary-green-dark);
+}
+
+.wa-button:active {
+  transform: scale(0.98);
+}
+
+.wa-button-secondary {
+  background: transparent;
+  color: var(--wa-primary-green);
+  border: 1px solid var(--wa-primary-green);
+}
+
+.wa-button-secondary:hover {
+  background: var(--wa-primary-green);
+  color: var(--wa-text-white);
+}
+
+/* Input Styles */
+.wa-input {
+  background: var(--wa-panel-background);
+  border: 1px solid var(--wa-border-light);
+  border-radius: var(--wa-radius-md);
+  padding: var(--wa-space-sm) var(--wa-space-md);
+  font-family: inherit;
+  font-size: var(--wa-font-size-base);
+  color: var(--wa-text-primary);
+  outline: none;
+  transition: border-color var(--wa-transition-fast);
+  width: 100%;
+}
+
+.wa-input:focus {
+  border-color: var(--wa-primary-green);
+}
+
+.wa-input::placeholder {
+  color: var(--wa-text-tertiary);
+}
+
+/* Search Input */
+.wa-search {
+  background: var(--wa-search-background);
+  border: none;
+  border-radius: var(--wa-radius-lg);
+  padding: var(--wa-space-sm) var(--wa-space-3xl);
+  position: relative;
+}
+
+/* Avatar Styles */
+.wa-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--wa-text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wa-text-white);
+  font-weight: 500;
+  font-size: var(--wa-font-size-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.wa-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wa-avatar-sm {
+  width: 32px;
+  height: 32px;
+  font-size: var(--wa-font-size-xs);
+}
+
+.wa-avatar-lg {
+  width: 56px;
+  height: 56px;
+  font-size: var(--wa-font-size-lg);
+}
+
+/* Status Indicators */
+.wa-status {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--wa-panel-background);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.wa-status-online {
+  background: var(--wa-online);
+}
+
+.wa-status-away {
+  background: var(--wa-away);
+}
+
+.wa-status-offline {
+  background: var(--wa-offline);
+}
+
+/* Badge/Counter */
+.wa-badge {
+  background: var(--wa-primary-green);
+  color: var(--wa-text-white);
+  border-radius: var(--wa-radius-button);
+  padding: 2px var(--wa-space-xs);
+  font-size: var(--wa-font-size-xs);
+  font-weight: 600;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Dividers */
+.wa-divider {
+  height: 1px;
+  background: var(--wa-divider);
+  margin: 0;
+}
+
+.wa-divider-vertical {
+  width: 1px;
+  height: 100%;
+  background: var(--wa-divider);
+}
+
+/* Loading Spinner */
+.wa-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--wa-border-light);
+  border-top: 2px solid var(--wa-primary-green);
+  border-radius: 50%;
+  animation: wa-spin 1s linear infinite;
+}
+
+@keyframes wa-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.wa-text-primary {
+  color: var(--wa-text-primary);
+}
+
+.wa-text-secondary {
+  color: var(--wa-text-secondary);
+}
+
+.wa-text-tertiary {
+  color: var(--wa-text-tertiary);
+}
+
+.wa-text-green {
+  color: var(--wa-text-green);
+}
+
+.wa-text-white {
+  color: var(--wa-text-white);
+}
+
+.wa-bg-primary {
+  background: var(--wa-panel-background);
+}
+
+.wa-bg-secondary {
+  background: var(--wa-sidebar-background);
+}
+
+.wa-bg-chat {
+  background: var(--wa-chat-background);
+}
+
+.wa-shadow-sm {
+  box-shadow: var(--wa-shadow-light);
+}
+
+.wa-shadow-md {
+  box-shadow: var(--wa-shadow-medium);
+}
+
+.wa-shadow-lg {
+  box-shadow: var(--wa-shadow-heavy);
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  :root {
+    --wa-space-lg: 12px;
+    --wa-space-xl: 16px;
+    --wa-space-2xl: 20px;
+  }
+  
+  .wa-avatar {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .wa-avatar-lg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Animation Classes */
+.wa-fade-in {
+  animation: wa-fade-in 0.2s ease-out;
+}
+
+.wa-slide-in-right {
+  animation: wa-slide-in-right 0.3s ease-out;
+}
+
+.wa-slide-in-left {
+  animation: wa-slide-in-left 0.3s ease-out;
+}
+
+@keyframes wa-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes wa-slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes wa-slide-in-left {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+/* Focus Management */
+.wa-focus-visible {
+  outline: 2px solid var(--wa-primary-green);
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --wa-border-light: #000000;
+    --wa-border-medium: #000000;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

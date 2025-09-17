@@ -1,0 +1,14 @@
+{
+  "name": "@memory-app/blts",
+  "version": "1.0.0",
+  "description": "Bayesian Learning Trust System - Beta distribution trust scoring",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "b5e6ae54-6676-4938-bd62-a9f161548d55",
+    "content": "\n        Meeting with Acme Corporation about Project Phoenix.\n        \n        Attendees: john.smith@acme.com, sarah@ourcompany.com, mike.chen@partner.org\n        \n        Discussion points:\n        - Budget approved for $250,000\n        - Timeline: Start April 1st, complete by September 30th\n        - Main contact: Jennifer Davis (CEO of Acme) - phone: +1-555-0123\n        - Next meeting scheduled for March 20th at 3 PM\n        - Technical lead: Dr. Robert Johnson from MIT\n        - Using AWS cloud infrastructure\n        - Integration with Salesforce CRM required\n        - Development in Python and React\n        - Weekly status reports to stakeholders@acme.com\n        \n        Action items assigned during the meeting.\n        ",
+    "summary": "\n        Meeting with Acme Corporation about Project Phoenix.\n        \n        Attendees: john.smith...",
+    "category": "professional",
+    "subcategory": null,
+    "entities": [],
+    "action_items": [],
+    "relations": [],
+    "timestamp": "2025-09-16T02:42:03.717610",
+    "source_timestamp": "2025-09-16T02:42:03.716536",
+    "confidence": 1.0,
+    "importance": 5,
+    "provenance": {
+      "source": "conversation",
+      "contact_id": "entity_test",
+      "processing_version": "1.0.0"
+    },
+    "utterance_ids": [
+      "855d4fe9-060c-43a1-b61e-7f90a36e17f9"
+    ],
+    "tags": [
+      "meeting",
+      "action"
+    ],
+    "keywords": [
+      "acme",
+      "meeting",
+      "corporation",
+      "about",
+      "project",
+      "phoenix",
+      "attendees",
+      "john",
+      "smith",
+      "sarah"
+    ],
+    "context": {
+      "id": "1ae35ae0-6d1a-45d9-b3c4-aa9a33fe3586",
+      "meeting_title": null,
+      "meeting_type": "general",
+      "participants": [
+        {
+          "id": "entity_test",
+          "name": "entity_test",
+          "utterance_count": 1
+        }
+      ],
+      "scheduled_time": null,
+      "actual_time": "2025-09-16T02:42:03.716536",
+      "duration": 0,
+      "location": null,
+      "agenda": null,
+      "related_documents": [],
+      "previous_meeting_id": null,
+      "next_meeting_id": null,
+      "project": null,
+      "metadata": {}
+    },
+    "related_memory_ids": [],
+    "corrections": [],
+    "verified": false,
+    "visibility": "private",
+    "metadata": {}
+  }
+]

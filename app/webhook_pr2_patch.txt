@@ -1,0 +1,57 @@
+# This patch assumes your current app/webhook.py comes from PR-1.1 overlay.
+# Replace the TEXT branch with the following additions BEFORE the 'search:' case:
+
+# NEW: whoami
+if low.strip() == "whoami":
+    from .tenancy.rbac import whoami as _who, can_search
+    u = _who(frm)
+    if not u:
+        send_text(frm, "You are not assigned to any business tenant.", PHONE_ID, ACCESS_TOKEN)
+    else:
+        send_text(frm, f"Role: {u.get('role')} | Tenant: {u.get('tenant_id')} | Department: {u.get('department')}", PHONE_ID, ACCESS_TOKEN)
+    continue
+
+# NEW: department search
+if low.startswith("search dept:") or low.startswith("search department:"):
+    from .tenancy.rbac import can_search
+    from .tenancy.model import TENANCY
+    from .memory.search_multi import search_many
+    from .audit import audit_event
+    q = text.split(":",1)[1].strip()
+    ok, role = can_search(frm, "department")
+    if not ok:
+        send_text(frm, "You do not have permission for department search.", PHONE_ID, ACCESS_TOKEN)
+    else:
+        phones = TENANCY.phones_in_department(frm)
+        # Cross-scope: allow ONLY general/chronological/confidential
+        cats = ["GENERAL","CHRONOLOGICAL","CONFIDENTIAL"]
+        hits = search_many("memory-system", frm, phones, q, allowed_categories=cats, scope="department")
+        if not hits:
+            send_text(frm, f"No department matches for: {q}", PHONE_ID, ACCESS_TOKEN)
+        else:
+            lines = [f"- {h['phone']} [{h['category']}] {h['heading']}" for h in hits[:7]]
+            send_text(frm, "Dept matches:\n" + "\n".join(lines), PHONE_ID, ACCESS_TOKEN)
+        audit_event("search_dept", actor=frm, query=q, hits=len(hits))
+    continue
+
+# NEW: tenant search
+if low.startswith("search tenant:"):
+    from .tenancy.rbac import can_search
+    from .tenancy.model import TENANCY
+    from .memory.search_multi import search_many
+    from .audit import audit_event
+    q = text.split(":",1)[1].strip()
+    ok, role = can_search(frm, "tenant")
+    if not ok:
+        send_text(frm, "You do not have permission for tenant search.", PHONE_ID, ACCESS_TOKEN)
+    else:
+        phones = TENANCY.phones_in_tenant(frm)
+        cats = ["GENERAL","CHRONOLOGICAL","CONFIDENTIAL"]  # no SECRET/ULTRA_SECRET cross-scope
+        hits = search_many("memory-system", frm, phones, q, allowed_categories=cats, scope="tenant")
+        if not hits:
+            send_text(frm, f"No tenant matches for: {q}", PHONE_ID, ACCESS_TOKEN)
+        else:
+            lines = [f"- {h['phone']} [{h['category']}] {h['heading']}" for h in hits[:10]]
+            send_text(frm, "Tenant matches:\n" + "\n".join(lines), PHONE_ID, ACCESS_TOKEN)
+        audit_event("search_tenant", actor=frm, query=q, hits=len(hits))
+    continue

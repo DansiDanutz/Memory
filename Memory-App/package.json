@@ -1,0 +1,27 @@
+{
+  "name": "memory-app",
+  "version": "1.0.0",
+  "description": "Privacy-first AI memory system with Smart Limits Engine",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dev": "npm run build && node apps/dev-runner/dist/demo.js",
+    "clean": "rm -rf packages/*/dist apps/*/dist",
+    "install:all": "npm install --workspaces --include-workspace-root"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

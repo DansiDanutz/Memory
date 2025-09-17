@@ -1,0 +1,383 @@
+/* ===================================== */
+/* ENHANCED DESIGN SYSTEM - MEMOAPP V2 */
+/* Psychological UI/UX with Modern Aesthetics */
+/* ===================================== */
+
+/* Advanced Color Palette */
+:root {
+  /* Primary Colors - Psychological Impact */
+  --primary-purple: #8B5CF6;     /* Trust & creativity */
+  --primary-pink: #EC4899;       /* Energy & passion */
+  --primary-blue: #3B82F6;       /* Calm & reliability */
+  --primary-green: #10B981;      /* Success & growth */
+  --primary-orange: #F59E0B;     /* Optimism & warmth */
+  --primary-red: #EF4444;        /* Urgency & importance */
+  
+  /* Neural Color System */
+  --neural-dark: #0F0F23;
+  --neural-darker: #1A1A2E;
+  --neural-medium: #16213E;
+  --neural-light: #E94560;
+  --neural-accent: #0F3460;
+  
+  /* Gradients - Psychologically Designed */
+  --gradient-cosmic: linear-gradient(135deg, 
+    #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+  --gradient-success: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --gradient-warning: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%);
+  --gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-pink: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-neural: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  
+  /* Animated Gradients */
+  --gradient-shimmer: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  
+  /* Glass Morphism - Enhanced */
+  --glass-bg-ultra: rgba(255, 255, 255, 0.25);
+  --glass-bg-heavy: rgba(255, 255, 255, 0.15);
+  --glass-bg-medium: rgba(255, 255, 255, 0.1);
+  --glass-bg-light: rgba(255, 255, 255, 0.05);
+  --glass-blur-ultra: blur(40px);
+  --glass-blur-heavy: blur(20px);
+  --glass-blur-medium: blur(10px);
+  --glass-border-glow: rgba(255, 255, 255, 0.3);
+  
+  /* Shadows - Depth Psychology */
+  --shadow-neural: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 
+                   0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-cosmic: 0 25px 50px -12px rgba(139, 92, 246, 0.25);
+  --shadow-success: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
+  --shadow-intense: 0 35px 60px -12px rgba(0, 0, 0, 0.4);
+  
+  /* Typography - Psychological Hierarchy */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+  
+  /* Animation System - Dopamine Triggers */
+  --duration-instant: 0.1s;
+  --duration-fast: 0.2s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
+  --duration-epic: 1s;
+  
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Spacing System - Visual Rhythm */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+  
+  /* Border Radius - Friendly Psychology */
+  --radius-sm: 0.5rem;   /* 8px */
+  --radius-md: 0.75rem;  /* 12px */
+  --radius-lg: 1rem;     /* 16px */
+  --radius-xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+  
+  /* Z-Index Layers */
+  --z-background: -1;
+  --z-base: 1;
+  --z-content: 10;
+  --z-overlay: 100;
+  --z-modal: 1000;
+  --z-notification: 10000;
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --glass-bg-ultra: rgba(17, 24, 39, 0.8);
+  --glass-bg-heavy: rgba(17, 24, 39, 0.6);
+  --glass-bg-medium: rgba(17, 24, 39, 0.4);
+  --glass-bg-light: rgba(17, 24, 39, 0.2);
+  --glass-border-glow: rgba(139, 92, 246, 0.3);
+}
+
+/* Advanced Animation Library */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes countUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Micro-interactions */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.1); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.1); }
+  70% { transform: scale(1); }
+}
+
+@keyframes wiggle {
+  0%, 7% { transform: rotateZ(0); }
+  15% { transform: rotateZ(-15deg); }
+  20% { transform: rotateZ(10deg); }
+  25% { transform: rotateZ(-10deg); }
+  30% { transform: rotateZ(6deg); }
+  35% { transform: rotateZ(-4deg); }
+  40%, 100% { transform: rotateZ(0); }
+}
+
+/* Psychological UI Components */
+.neuro-glass {
+  background: var(--glass-bg-heavy);
+  backdrop-filter: var(--glass-blur-heavy);
+  -webkit-backdrop-filter: var(--glass-blur-heavy);
+  border: 1px solid var(--glass-border-glow);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-cosmic);
+  position: relative;
+  overflow: hidden;
+}
+
+.neuro-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-shimmer);
+  transition: left 0.5s;
+}
+
+.neuro-glass:hover::before {
+  left: 100%;
+}
+
+.dopamine-button {
+  background: var(--gradient-cosmic);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+  border: none;
+  border-radius: var(--radius-lg);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: var(--space-md) var(--space-xl);
+  position: relative;
+  transform: perspective(1000px) rotateX(0deg);
+  transition: all var(--duration-normal) var(--ease-smooth);
+  overflow: hidden;
+}
+
+.dopamine-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width var(--duration-slow), height var(--duration-slow);
+}
+
+.dopamine-button:hover {
+  transform: perspective(1000px) rotateX(-10deg) translateY(-5px);
+  box-shadow: var(--shadow-intense);
+}
+
+.dopamine-button:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+.dopamine-button:active {
+  transform: perspective(1000px) rotateX(0deg) translateY(0px);
+  transition: all var(--duration-instant);
+}
+
+/* Achievement Unlock Animation */
+.achievement-unlock {
+  animation: bounceIn var(--duration-slow) var(--ease-bounce);
+}
+
+/* Progress Bar - Psychological */
+.neuro-progress {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  height: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.neuro-progress-fill {
+  background: var(--gradient-cosmic);
+  height: 100%;
+  border-radius: var(--radius-full);
+  position: relative;
+  transition: width var(--duration-slow) var(--ease-smooth);
+}
+
+.neuro-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-shimmer);
+  animation: shimmer 2s linear infinite;
+}
+
+/* Cards - Enhanced Engagement */
+.engagement-card {
+  background: var(--glass-bg-medium);
+  backdrop-filter: var(--glass-blur-medium);
+  border: 1px solid var(--glass-border-glow);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  transition: all var(--duration-normal) var(--ease-smooth);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.engagement-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-cosmic);
+  border-color: var(--primary-purple);
+}
+
+.engagement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-cosmic);
+  transform: scaleX(0);
+  transition: transform var(--duration-normal);
+}
+
+.engagement-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Typography - Psychological Impact */
+.neuro-heading {
+  font-family: var(--font-display);
+  font-weight: 800;
+  background: var(--gradient-cosmic);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.neuro-text {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Loading States - Engaging */
+.neuro-skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: var(--radius-md);
+}
+
+/* Notification System */
+.neuro-notification {
+  background: var(--glass-bg-heavy);
+  backdrop-filter: var(--glass-blur-heavy);
+  border: 1px solid var(--glass-border-glow);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-cosmic);
+  padding: var(--space-lg);
+  animation: slideInRight var(--duration-normal) var(--ease-bounce);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  :root {
+    --space-md: 0.75rem;
+    --space-lg: 1rem;
+    --space-xl: 1.25rem;
+  }
+  
+  .neuro-glass {
+    border-radius: var(--radius-lg);
+  }
+  
+  .dopamine-button {
+    padding: var(--space-sm) var(--space-lg);
+  }
+}
+
+/* Performance Optimizations */
+.reduce-motion {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,1 @@
+{"attempt_id": "attempt_d5075ebb", "user_id": "demo_quick_test", "profile_id": "profile_ef56f7a3", "timestamp": "2025-09-13T10:50:54.105114", "confidence_score": 0.7779616117477417, "authentication_level": "medium", "success": false, "failure_reason": "Low confidence: 0.778", "ip_address": "127.0.0.1", "device_info": "Demo Test Client", "session_id": "session_fddcea1fd76b"}

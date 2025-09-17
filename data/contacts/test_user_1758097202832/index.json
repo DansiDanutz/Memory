@@ -1,0 +1,22 @@
+{
+  "memories": [
+    {
+      "id": "1f7fa96f",
+      "category": "CHRONOLOGICAL",
+      "timestamp": "2025-09-17T08:20:06.108854",
+      "content_preview": "Test memory created at 2025-09-17T08:20:06.383Z",
+      "encrypted": false,
+      "tenant_id": null,
+      "department_id": null,
+      "user_phone": "test_user_1758097202832"
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "by_category": {
+      "CHRONOLOGICAL": 1
+    },
+    "last_memory": "2025-09-17T08:20:06.108854",
+    "first_memory": "2025-09-17T08:20:06.108854"
+  }
+}

@@ -1,0 +1,383 @@
+/* Bottom Navigation Bar - Mobile First with Glassmorphism */
+
+/* Bottom Navigation Container */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Dark theme */
+.bottom-nav.dark {
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border-top-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -4px 30px rgba(0, 255, 163, 0.1);
+}
+
+/* Hidden state with slide animation */
+.bottom-nav.hidden {
+  transform: translateY(calc(100% + env(safe-area-inset-bottom)));
+}
+
+/* Navigation Container */
+.bottom-nav-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 64px;
+  padding: 0 8px;
+  align-items: center;
+}
+
+/* Individual Nav Tab */
+.nav-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 8px 4px;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  overflow: visible;
+}
+
+/* Tab Content Wrapper */
+.nav-tab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+}
+
+/* Icon Wrapper for badges */
+.icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+/* Tab Icon */
+.tab-icon {
+  color: #6b7280;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+
+.bottom-nav.dark .tab-icon {
+  color: #9ca3af;
+}
+
+/* Tab Label */
+.tab-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+.bottom-nav.dark .tab-label {
+  color: #9ca3af;
+}
+
+/* Active State */
+.nav-tab.active .tab-icon {
+  color: #10b981;
+  transform: scale(1.1);
+}
+
+.nav-tab.active .tab-label {
+  color: #10b981;
+  opacity: 1;
+  font-weight: 600;
+}
+
+.bottom-nav.dark .nav-tab.active .tab-icon,
+.bottom-nav.dark .nav-tab.active .tab-label {
+  color: #00ffa3;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 163, 0.5));
+}
+
+/* Active indicator dot */
+.nav-tab.active::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  width: 5px;
+  height: 5px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.bottom-nav.dark .nav-tab.active::before {
+  background: #00ffa3;
+  box-shadow: 0 0 8px rgba(0, 255, 163, 0.6);
+}
+
+/* Special Rewards Tab */
+.nav-tab.special .tab-icon {
+  color: #fbbf24;
+}
+
+.nav-tab.special.active .tab-icon {
+  color: #f59e0b;
+  animation: rewardGlow 2s ease-in-out infinite;
+}
+
+@keyframes rewardGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.4));
+    transform: scale(1.1);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6));
+    transform: scale(1.15);
+  }
+}
+
+/* Badge */
+.tab-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  background: #ef4444;
+  color: white;
+  border-radius: 9px;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  animation: badgePop 0.3s ease;
+}
+
+.bottom-nav.dark .tab-badge {
+  border-color: #111827;
+}
+
+.tab-badge.text-badge {
+  min-width: 28px;
+  font-size: 8px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+@keyframes badgePop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Press Animation */
+.nav-tab.pressed {
+  animation: tabPress 0.2s ease;
+}
+
+@keyframes tabPress {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+}
+
+/* Hover effects for desktop */
+@media (hover: hover) {
+  .nav-tab:hover {
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 12px;
+  }
+  
+  .bottom-nav.dark .nav-tab:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .nav-tab:hover .tab-icon {
+    transform: translateY(-2px);
+  }
+}
+
+/* Floating Action Button */
+.floating-action-btn {
+  position: fixed;
+  bottom: 84px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fabEntrance 0.3s ease;
+}
+
+.floating-action-btn.dark {
+  background: linear-gradient(135deg, #00ffa3, #00cc82);
+  box-shadow: 0 4px 20px rgba(0, 255, 163, 0.4);
+}
+
+.floating-action-btn:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 6px 30px rgba(16, 185, 129, 0.4);
+}
+
+.floating-action-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes fabEntrance {
+  0% {
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+/* FAB Tooltip */
+.fab-tooltip {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.floating-action-btn:hover .fab-tooltip {
+  opacity: 1;
+}
+
+/* Safe Area for Notched Devices */
+.safe-area-bottom {
+  height: env(safe-area-inset-bottom);
+  background: inherit;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Landscape Adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  .bottom-nav-container {
+    height: 48px;
+  }
+  
+  .tab-label {
+    display: none;
+  }
+  
+  .floating-action-btn {
+    bottom: 60px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bottom-nav-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .nav-tab {
+    padding: 12px 8px;
+  }
+  
+  .tab-label {
+    font-size: 11px;
+  }
+}
+
+/* Accessibility - Focus Styles */
+.nav-tab:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.bottom-nav.dark .nav-tab:focus-visible {
+  outline-color: #00ffa3;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .nav-tab,
+  .tab-icon,
+  .tab-label,
+  .floating-action-btn,
+  .bottom-nav {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .bottom-nav {
+    border-top-width: 2px;
+  }
+  
+  .nav-tab.active .tab-icon,
+  .nav-tab.active .tab-label {
+    font-weight: 700;
+  }
+}

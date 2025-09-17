@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #0D1117 0%, #161B22 50%, #21262D 100%);
+            background-image: url('/home/ubuntu/memory_app_presentation/title_bg.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .title-text {
+            color: #E6EDF3;
+            text-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+        }
+        
+        .subtitle-text {
+            color: #C9D1D9;
+            text-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
+        }
+        
+        .neon-accent {
+            color: #39FF14;
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+        }
+        
+        .logo-glow {
+            filter: drop-shadow(0 0 15px rgba(57, 255, 20, 0.4));
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex items-center justify-center">
+        <div class="text-center z-10">
+            <div class="mb-8">
+                <i class="fas fa-brain logo-glow text-6xl neon-accent mb-4"></i>
+            </div>
+            <h1 class="title-text text-6xl font-bold mb-6">
+                Memory App
+            </h1>
+            <h2 class="subtitle-text text-3xl font-light mb-8">
+                Professional Dark <span class="neon-accent">Neon</span> Theme
+            </h2>
+            <p class="subtitle-text text-xl max-w-2xl mx-auto leading-relaxed">
+                Sophisticated AI-powered memory management with WhatsApp-like interface
+                <br>
+                <span class="neon-accent">Memo - Personal AI Brain</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+

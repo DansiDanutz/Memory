@@ -1,0 +1,808 @@
+/* ================================= */
+/* WHATSAPP-STYLE CONTACT CARDS */
+/* Authentic WhatsApp Chat Item Design */
+/* ================================= */
+
+/* Header styling - clean and minimal */
+.wa-contacts-header {
+  background: transparent;
+  border: none;
+  margin-bottom: 12px;
+}
+
+/* Contact List Layout - Dark Mode */
+.wa-contacts-grid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+}
+
+.wa-contacts-header {
+  padding: 24px 20px;
+  background: #1f2937;
+  border-bottom: 1px solid #374151;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wa-section-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f9fafb;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.01em;
+}
+
+.wa-section-subtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.wa-cards-container {
+  flex: 1;
+  overflow-y: auto;
+  background: #111827;
+  padding: 8px 12px;
+  display: block;
+}
+
+/* Single column list - no grid needed */
+.wa-cards-container {
+  display: block;
+}
+
+/* ================================= */
+/* WHATSAPP CHAT ITEM STYLING */
+/* Exact replica of WhatsApp Web design */
+/* ================================= */
+
+.wa-contact-card {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background: #1f2937;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  min-height: 76px;
+  border-radius: 12px;
+  margin: 0 0 6px 0;
+  border: 1px solid #374151;
+}
+
+.wa-contact-card:hover {
+  background: #374151;
+  transform: translateY(-1px);
+  border-color: #4b5563;
+}
+
+/* WhatsApp Chat Avatar */
+.wa-chat-avatar {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  margin-right: 16px;
+  position: relative;
+}
+
+.wa-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+  border: 2px solid #1f2937;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Empty slot avatar */
+.wa-avatar.empty-slot {
+  background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+  border: 2px solid #1f2937;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.wa-plus-icon {
+  color: #10b981;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* Locked premium slot avatar */
+.wa-avatar.locked-premium {
+  background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+  border: 2px solid rgba(255, 159, 28, 0.3);
+}
+
+.wa-crown-icon {
+  color: #1f2937;
+  filter: none;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+/* Contact filled avatar */
+.wa-avatar.contact-filled {
+  background: var(--wa-primary-green);
+  color: white;
+}
+
+.wa-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.wa-avatar-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+}
+
+.wa-user-icon {
+  color: white;
+}
+
+/* WhatsApp Chat Content */
+.wa-chat-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  justify-content: center;
+  padding: 4px 0;
+}
+
+.wa-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.wa-chat-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #f9fafb;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  margin-right: 12px;
+  letter-spacing: -0.01em;
+}
+
+.wa-chat-time {
+  font-size: 12px;
+  color: #6b7280;
+  flex-shrink: 0;
+  font-weight: 400;
+}
+
+.wa-chat-preview {
+  font-size: 13px;
+  color: #9ca3af;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.4;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.wa-last-message {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--wa-font-size-sm);
+  color: var(--wa-text-secondary);
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.wa-inline-icon {
+  flex-shrink: 0;
+  color: var(--wa-text-secondary);
+}
+
+.wa-inline-icon.wa-delivered {
+  color: var(--wa-primary-green);
+}
+
+/* Unread Badge */
+.wa-unread-badge {
+  width: 20px;
+  height: 20px;
+  background: var(--wa-primary-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: var(--wa-space-xs);
+  flex-shrink: 0;
+}
+
+/* Selection Indicator - WhatsApp green pill */
+.wa-selection-indicator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 80%;
+  background: var(--wa-primary-green);
+  border-radius: 0 4px 4px 0;
+}
+
+/* ================================= */
+/* CARD STATES & VARIANTS */
+/* ================================= */
+
+/* Empty slot state */
+.wa-contact-card.empty {
+  background: #1f2937;
+  border: 1px dashed #10b981;
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.wa-contact-card.empty:hover {
+  background: #374151;
+  border-color: #10b981;
+}
+
+.wa-contact-card.empty .wa-chat-name {
+  color: #10b981;
+  font-weight: 500;
+}
+
+/* Beautiful orange premium slot with yellow lock */
+.wa-contact-card.locked {
+  background: transparent;
+  border: 1px solid rgba(255, 159, 28, 0.25);
+  position: relative;
+}
+
+.wa-contact-card.locked:hover {
+  background: rgba(255, 159, 28, 0.05);
+  border-color: rgba(255, 159, 28, 0.4);
+}
+
+.wa-contact-card.locked .wa-chat-name {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.wa-contact-card.locked .wa-chat-time {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* Inline Premium Details - Light and simple */
+.wa-premium-inline-details {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #374151;
+  border-top: 1px solid #4b5563;
+  border-radius: 0 0 8px 8px;
+}
+
+.wa-inline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wa-unlock-option-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.wa-inline-icon {
+  flex-shrink: 0;
+}
+
+.wa-inline-icon.premium {
+  color: #ff9f1c;
+}
+
+.wa-inline-icon.invite {
+  color: #10b981;
+}
+
+.wa-inline-text {
+  flex: 1;
+  color: #e5e7eb;
+  font-size: 13px;
+}
+
+.wa-inline-button {
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wa-inline-button.premium {
+  background: #f59e0b;
+  color: #1f2937;
+}
+
+.wa-inline-button.premium:hover {
+  background: #d97706;
+}
+
+.wa-inline-button.invite {
+  background: #10b981;
+  color: white;
+}
+
+.wa-inline-button.invite:hover {
+  background: #059669;
+}
+
+.wa-unlock-divider {
+  text-align: center;
+  color: #6b7280;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 4px 0;
+}
+
+/* ================================= */
+/* SMART ADD CONTACT BUTTON */
+/* ================================= */
+
+.wa-add-contact-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  color: white;
+  font-size: 24px;
+}
+
+.wa-add-contact-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+}
+
+.wa-add-contact-fab:active {
+  transform: scale(0.95);
+}
+
+/* Alternative: Smart header button */
+.wa-smart-add-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.wa-smart-add-btn:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
+  transform: translateY(-1px);
+}
+
+.wa-smart-add-btn .wa-add-icon {
+  font-size: 16px;
+}
+
+/* Contact counter in header */
+.wa-contact-counter {
+  font-size: 12px;
+  color: #6b7280;
+  background: #374151;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+
+/* ================================= */
+/* FOOTER */
+/* ================================= */
+
+.wa-contacts-footer {
+  padding: var(--wa-space-md) var(--wa-space-lg);
+  background: var(--wa-panel-background);
+  border-top: 1px solid var(--wa-border-light);
+}
+
+.wa-footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--wa-font-size-xs);
+  color: var(--wa-text-secondary);
+}
+
+.wa-slot-count {
+  font-weight: 500;
+}
+
+.wa-premium-hint {
+  color: var(--wa-primary-green);
+  font-weight: 500;
+}
+
+/* ================================= */
+/* RESPONSIVE DESIGN */
+/* ================================= */
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+  .wa-contact-card {
+    min-height: 72px;
+    padding: 14px 16px;
+    margin: 0 0 4px 0;
+    border-radius: 8px;
+  }
+  
+  .wa-cards-container {
+    padding: 6px 8px;
+  }
+  
+  .wa-contacts-header {
+    padding: 20px 16px;
+  }
+}
+
+/* Keep consistent flat design across all devices */
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .wa-contacts-grid {
+    max-width: 100%;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .wa-contact-card.empty {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.08) 0%, rgba(37, 211, 102, 0.02) 100%);
+  }
+  
+  .wa-contact-card.locked {
+    background: transparent;
+  }
+}
+
+.wa-locked-slot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.wa-slot-avatar.locked {
+  background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+  border: 2px solid #fff;
+}
+
+.wa-lock-icon {
+  color: #666;
+}
+
+.wa-unlock-hints {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wa-unlock-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #666;
+}
+
+.wa-unlock-divider {
+  text-align: center;
+  font-size: 10px;
+  color: #999;
+  font-weight: bold;
+}
+
+/* Modal Styles */
+.wa-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.wa-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.wa-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #f8f9fa;
+}
+
+.wa-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.wa-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.wa-modal-close:hover {
+  background: #e5e5e5;
+}
+
+.wa-modal-content {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(80vh - 80px);
+}
+
+.wa-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.wa-button-primary, .wa-button-secondary {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.wa-button-primary {
+  background: #25d366;
+  color: white;
+}
+
+.wa-button-primary:hover {
+  background: #20c157;
+}
+
+.wa-button-secondary {
+  background: #f1f1f1;
+  color: #666;
+}
+
+.wa-button-secondary:hover {
+  background: #e8e8e8;
+}
+
+/* Unlock Options Styles */
+.wa-unlock-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wa-unlock-option {
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.wa-unlock-option:hover {
+  border-color: #25d366;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.1);
+}
+
+.wa-unlock-option-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.wa-unlock-option-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.wa-premium-icon {
+  color: #ffd700;
+}
+
+.wa-gift-icon {
+  color: #ff6b6b;
+}
+
+.wa-unlock-divider-horizontal {
+  text-align: center;
+  position: relative;
+  margin: 20px 0;
+}
+
+.wa-unlock-divider-horizontal span {
+  background: white;
+  padding: 0 15px;
+  color: #666;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.wa-unlock-divider-horizontal::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e5e5;
+  z-index: -1;
+}
+
+.wa-unlock-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  margin-top: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+.wa-unlock-button.premium {
+  background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+  color: #333;
+}
+
+.wa-unlock-button.premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+}
+
+.wa-unlock-button.invite {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+  color: white;
+}
+
+.wa-unlock-button.invite:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+}
+
+.wa-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.wa-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #25d366 0%, #20c157 100%);
+  transition: width 0.3s ease;
+}
+
+/* Contact List Styles */
+.wa-contacts-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.wa-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.wa-contact-item:hover {
+  background: #f5f5f5;
+}
+
+.wa-contact-info h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.wa-contact-info span {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Memory Categories */
+.wa-memory-icon {
+  color: #25d366;
+  margin-left: 4px;
+}
+
+.wa-locked-icon {
+  color: #666;
+  margin-left: 4px;
+}

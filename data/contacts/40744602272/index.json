@@ -1,0 +1,22 @@
+{
+  "memories": [
+    {
+      "id": "a0ace0c7",
+      "category": "GENERAL",
+      "timestamp": "2025-09-15T23:56:16.720674",
+      "content_preview": "Hello",
+      "encrypted": false,
+      "tenant_id": null,
+      "department_id": null,
+      "user_phone": "40744602272"
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "by_category": {
+      "GENERAL": 1
+    },
+    "last_memory": "2025-09-15T23:56:16.720674",
+    "first_memory": "2025-09-15T23:56:16.720674"
+  }
+}

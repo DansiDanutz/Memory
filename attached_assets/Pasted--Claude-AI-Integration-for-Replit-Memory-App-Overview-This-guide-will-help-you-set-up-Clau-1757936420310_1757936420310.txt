@@ -1,0 +1,399 @@
+# Claude AI Integration for Replit - Memory App
+
+## Overview
+This guide will help you set up Claude AI integration in your Memory App on Replit, including both the Claude Code extension and Claude API integration.
+
+## Prerequisites
+- Replit account
+- Memory App project imported to Replit
+- Claude API key from Anthropic Console
+
+## Step 1: Environment Setup
+
+### 1.1 Install Dependencies
+Add to your `requirements.txt` (already included):
+```txt
+anthropic==0.34.0
+```
+
+### 1.2 Set Environment Variables
+In Replit, go to **Secrets** tab and add:
+```
+CLAUDE_API_KEY=your_claude_api_key_here
+```
+
+## Step 2: Claude Code Extension for Replit
+
+### 2.1 Install Claude Code via npm
+In the Replit Shell, run:
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+### 2.2 Start Claude Code
+```bash
+claude
+```
+
+### 2.3 Configure for Replit Environment
+If you encounter issues, set the environment variable:
+```bash
+export CLAUDE_CODE_EDITOR=replit
+```
+
+## Step 3: Verify Installation
+
+### 3.1 Check Claude API Integration
+Run this test script in the Replit console:
+
+```python
+import os
+import asyncio
+from app.claude_service import claude_service
+
+async def test_claude():
+    print("Testing Claude API integration...")
+    
+    # Check if service is available
+    available = claude_service.is_available()
+    print(f"Claude service available: {available}")
+    
+    if available:
+        # Test message analysis
+        result = await claude_service.analyze_message(
+            "Hello, I'm testing Claude integration!",
+            "Replit test"
+        )
+        print(f"Analysis successful: {'analysis' in result}")
+    else:
+        print("Set CLAUDE_API_KEY in Replit Secrets to enable full functionality")
+
+# Run the test
+asyncio.run(test_claude())
+```
+
+### 3.2 Test API Endpoints
+Start your server:
+```bash
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
+
+Test the Claude endpoints:
+```bash
+curl https://your-repl-name.your-username.repl.co/claude/status
+```
+
+## Step 4: Replit-Specific Configuration
+
+### 4.1 Update .replit File
+Create or update `.replit` in your project root:
+```toml
+[deployment]
+run = ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+[interpreter]
+command = ["python3", "-u", "main.py"]
+
+[nix]
+channel = "stable-22_11"
+
+[env]
+PYTHONPATH = "${REPL_HOME}:${PYTHONPATH}"
+```
+
+### 4.2 Create main.py for Replit
+Create `main.py` in project root:
+```python
+#!/usr/bin/env python3
+"""
+Replit entry point for Memory App with Claude integration
+"""
+
+import uvicorn
+from app.main import app
+
+if __name__ == "__main__":
+    uvicorn.run(
+        app, 
+        host="0.0.0.0", 
+        port=8000,
+        reload=True
+    )
+```
+
+## Step 5: Claude API Key Setup
+
+### 5.1 Get Your API Key
+1. Visit [Anthropic Console](https://console.anthropic.com/)
+2. Sign up or log in
+3. Navigate to API Keys
+4. Create a new API key
+5. Copy the key
+
+### 5.2 Add to Replit Secrets
+1. In your Repl, click the **Secrets** tab (lock icon)
+2. Add new secret:
+   - Key: `CLAUDE_API_KEY`
+   - Value: `your_actual_api_key_here`
+
+## Step 6: Available Claude Features
+
+### 6.1 API Endpoints
+Your Memory App now includes these Claude endpoints:
+
+- **GET** `/claude/status` - Service status
+- **GET** `/claude/health` - Health check
+- **POST** `/claude/analyze` - Message analysis
+- **POST** `/claude/generate` - Response generation
+- **POST** `/claude/summarize` - Conversation summary
+- **POST** `/claude/extract-memory` - Memory extraction
+
+### 6.2 Example API Usage
+```python
+import requests
+
+# Test message analysis
+response = requests.post(
+    "https://your-repl-url/claude/analyze",
+    json={
+        "message": "I'm excited about this new feature!",
+        "context": "User feedback"
+    }
+)
+print(response.json())
+
+# Generate response
+response = requests.post(
+    "https://your-repl-url/claude/generate",
+    json={
+        "message": "How do I reset my password?",
+        "tone": "helpful"
+    }
+)
+print(response.json())
+```
+
+## Step 7: Integration with WhatsApp Bot
+
+### 7.1 Enhance Webhook with Claude
+Update your WhatsApp webhook to use Claude analysis:
+
+```python
+from app.claude_service import analyze_message, generate_response
+
+async def process_whatsapp_message(message_text, sender):
+    # Analyze the message
+    analysis = await analyze_message(message_text, f"WhatsApp from {sender}")
+    
+    # Generate intelligent response
+    response = await generate_response(
+        message_text, 
+        f"WhatsApp conversation with {sender}",
+        tone="helpful"
+    )
+    
+    return response.get('response', 'I understand your message!')
+```
+
+## Step 8: Replit Deployment
+
+### 8.1 Auto-Deploy Setup
+1. Click **Deploy** in Replit
+2. Choose **Autoscale Deployment**
+3. Your app will be available at: `https://your-repl-name.your-username.repl.co`
+
+### 8.2 Custom Domain (Optional)
+1. In deployment settings, add custom domain
+2. Update webhook URLs accordingly
+
+## Step 9: Monitoring and Logs
+
+### 9.1 View Logs
+In Replit console:
+```bash
+tail -f /tmp/replit.log
+```
+
+### 9.2 Monitor Claude Usage
+Check your usage at [Anthropic Console](https://console.anthropic.com/settings/usage)
+
+## Step 10: Troubleshooting
+
+### 10.1 Common Issues
+
+**Claude Code not working:**
+```bash
+# Reinstall Claude Code
+npm uninstall -g @anthropic-ai/claude-code
+npm install -g @anthropic-ai/claude-code
+```
+
+**API not responding:**
+- Check CLAUDE_API_KEY in Secrets
+- Verify API key is valid
+- Check network connectivity
+
+**Module not found errors:**
+```bash
+pip install -r requirements.txt --force-reinstall
+```
+
+### 10.2 Debug Commands
+```bash
+# Check Python environment
+python --version
+pip list | grep anthropic
+
+# Test Claude service
+python -c "from app.claude_service import claude_service; print(claude_service.is_available())"
+
+# Check server status
+curl localhost:8000/health
+curl localhost:8000/claude/status
+```
+
+## Step 11: Performance Optimization
+
+### 11.1 Caching Responses
+Add Redis caching for Claude responses:
+```python
+import redis
+import json
+import hashlib
+
+redis_client = redis.from_url(os.getenv('REDIS_URL', 'redis://localhost:6379'))
+
+async def cached_claude_request(prompt, cache_duration=3600):
+    # Create cache key
+    cache_key = f"claude:{hashlib.md5(prompt.encode()).hexdigest()}"
+    
+    # Try to get from cache
+    cached = redis_client.get(cache_key)
+    if cached:
+        return json.loads(cached)
+    
+    # Make Claude request
+    result = await claude_service.analyze_message(prompt)
+    
+    # Cache the result
+    redis_client.setex(cache_key, cache_duration, json.dumps(result))
+    
+    return result
+```
+
+### 11.2 Rate Limiting
+Implement rate limiting for Claude API calls:
+```python
+from time import time
+import asyncio
+
+class RateLimiter:
+    def __init__(self, max_calls=10, time_window=60):
+        self.max_calls = max_calls
+        self.time_window = time_window
+        self.calls = []
+    
+    async def wait_if_needed(self):
+        now = time()
+        # Remove old calls
+        self.calls = [call_time for call_time in self.calls if now - call_time < self.time_window]
+        
+        if len(self.calls) >= self.max_calls:
+            sleep_time = self.time_window - (now - self.calls[0])
+            await asyncio.sleep(sleep_time)
+        
+        self.calls.append(now)
+
+claude_limiter = RateLimiter()
+```
+
+## Step 12: Security Best Practices
+
+### 12.1 API Key Security
+- Never commit API keys to code
+- Use Replit Secrets for all sensitive data
+- Rotate API keys regularly
+- Monitor usage for unusual activity
+
+### 12.2 Input Validation
+```python
+from pydantic import BaseModel, validator
+
+class ClaudeRequest(BaseModel):
+    message: str
+    context: str = None
+    
+    @validator('message')
+    def message_length(cls, v):
+        if len(v) > 10000:
+            raise ValueError('Message too long')
+        return v
+```
+
+## Step 13: Testing in Replit
+
+### 13.1 Unit Tests
+Create `test_claude_replit.py`:
+```python
+import pytest
+import asyncio
+from app.claude_service import claude_service
+
+@pytest.mark.asyncio
+async def test_claude_availability():
+    assert claude_service.is_available() or not os.getenv('CLAUDE_API_KEY')
+
+@pytest.mark.asyncio
+async def test_message_analysis():
+    if claude_service.is_available():
+        result = await claude_service.analyze_message("Test message")
+        assert 'analysis' in result or 'error' in result
+
+# Run tests
+# python -m pytest test_claude_replit.py -v
+```
+
+### 13.2 Integration Tests
+```bash
+# Test all endpoints
+curl -X GET https://your-repl-url/claude/status
+curl -X POST https://your-repl-url/claude/analyze -H "Content-Type: application/json" -d '{"message":"test"}'
+```
+
+## Step 14: Production Deployment
+
+### 14.1 Environment Variables
+Set these in Replit Secrets for production:
+```
+CLAUDE_API_KEY=your_production_api_key
+ENVIRONMENT=production
+LOG_LEVEL=INFO
+REDIS_URL=your_redis_url
+```
+
+### 14.2 Health Checks
+Your app includes health check endpoints:
+- `/health` - General app health
+- `/claude/health` - Claude service health
+
+## Conclusion
+
+Your Memory App is now fully integrated with Claude AI on Replit! You have:
+
+✅ Claude Code extension for AI-assisted coding
+✅ Claude API integration for intelligent text processing
+✅ WhatsApp bot enhancement capabilities
+✅ Production-ready deployment on Replit
+✅ Comprehensive error handling and monitoring
+✅ Security best practices implemented
+
+## Support
+
+For issues:
+1. Check Replit console logs
+2. Verify environment variables
+3. Test API endpoints individually
+4. Monitor Claude API usage limits
+5. Review this documentation
+
+Happy coding with Claude AI! 

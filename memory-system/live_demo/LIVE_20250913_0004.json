@@ -1,0 +1,14 @@
+{
+  "id": "LIVE_20250913_0004",
+  "user": "john_doe_5354",
+  "timestamp": "2025-09-13T03:44:03.917563",
+  "content": "Doctor appointment for annual checkup - Monday 11 AM",
+  "category": "\ud83c\udfe5 HEALTH",
+  "ai_insights": {
+    "gpt5": "GPT-5: Health maintenance requirement",
+    "claude": "Claude: Importance level HIGH",
+    "grok": "Grok: Social impact analyzed"
+  },
+  "smart_reminder": "Monday 10 AM",
+  "status": "ACTIVE"
+}

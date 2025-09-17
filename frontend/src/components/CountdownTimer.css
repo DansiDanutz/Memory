@@ -1,0 +1,193 @@
+/* Countdown Timer Styles */
+.countdown-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.countdown-timer.compact {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.countdown-timer.expired {
+  background: rgba(255, 0, 0, 0.2);
+  border-color: rgba(255, 0, 0, 0.5);
+  color: #ff4444;
+}
+
+.expired-text {
+  animation: blink 1s infinite;
+}
+
+/* Timer Icon */
+.timer-icon {
+  width: 20px;
+  height: 20px;
+  animation: tick 1s infinite;
+}
+
+.timer-icon.flame {
+  color: #ff5722;
+  animation: flameBurn 0.5s infinite alternate;
+}
+
+.timer-icon.alert {
+  color: #ff9800;
+  animation: alertShake 0.3s infinite;
+}
+
+/* Time Display */
+.time-display {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+}
+
+/* Urgency Levels */
+.countdown-timer.normal {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.countdown-timer.medium {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.2), rgba(255, 152, 0, 0.1));
+  border-color: rgba(255, 152, 0, 0.5);
+  color: #ff9800;
+}
+
+.countdown-timer.high {
+  background: linear-gradient(135deg, rgba(255, 87, 34, 0.3), rgba(255, 87, 34, 0.1));
+  border-color: rgba(255, 87, 34, 0.7);
+  color: #ff5722;
+}
+
+.countdown-timer.critical {
+  background: linear-gradient(135deg, rgba(244, 67, 54, 0.4), rgba(244, 67, 54, 0.2));
+  border-color: #f44336;
+  color: #ff1744;
+  animation: criticalPulse 0.5s infinite;
+}
+
+/* Urgent State */
+.countdown-timer.urgent {
+  box-shadow: 0 0 20px rgba(255, 87, 34, 0.3);
+}
+
+.countdown-timer.urgent.pulse {
+  animation: urgentPulse 1s infinite;
+}
+
+/* Color Transition */
+.countdown-timer.color-transition {
+  transition: all 0.5s ease;
+}
+
+/* Progress Ring */
+.progress-ring {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.progress-ring svg {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.progress-ring-fill {
+  fill: none;
+  stroke: currentColor;
+  transition: stroke-dashoffset 1s linear;
+  stroke-linecap: round;
+}
+
+.countdown-timer.critical .progress-ring-fill {
+  stroke: #ff1744;
+}
+
+.countdown-timer.high .progress-ring-fill {
+  stroke: #ff5722;
+}
+
+.countdown-timer.medium .progress-ring-fill {
+  stroke: #ff9800;
+}
+
+/* Animations */
+@keyframes tick {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  75% { transform: rotate(-10deg); }
+}
+
+@keyframes flameBurn {
+  0% { 
+    transform: scale(1) translateY(0);
+    filter: brightness(1);
+  }
+  100% { 
+    transform: scale(1.2) translateY(-2px);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes alertShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes criticalPulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.3);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(244, 67, 54, 0.6);
+  }
+}
+
+@keyframes urgentPulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+  }
+  50% { 
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 87, 34, 0.5);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .countdown-timer {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .timer-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .progress-ring {
+    display: none;
+  }
+}

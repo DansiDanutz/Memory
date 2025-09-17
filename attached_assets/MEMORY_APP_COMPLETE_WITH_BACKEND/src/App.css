@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  
+  /* Photosynthesis-Inspired Green Palette */
+  --whatsapp-green: #2ECC40;        /* Vibrant life green */
+  --whatsapp-dark-green: #1B8B2B;   /* Deep forest green */
+  --whatsapp-teal: #0F5F3F;         /* Rich chlorophyll green */
+  --whatsapp-light-green: #D4F4DD;  /* Fresh leaf green */
+  --whatsapp-blue: #34B7F1;
+  --whatsapp-light-gray: #ECE5DD;
+  --whatsapp-gray: #F0F0F0;
+  --whatsapp-dark-gray: #4A4A4A;
+  --whatsapp-white: #FFFFFF;
+  
+  --background: #ECE5DD;
+  --foreground: #4A4A4A;
+  --card: #FFFFFF;
+  --card-foreground: #4A4A4A;
+  --popover: #FFFFFF;
+  --popover-foreground: #4A4A4A;
+  --primary: #2ECC40;               /* Vibrant life green */
+  --primary-foreground: #FFFFFF;
+  --secondary: #F0F0F0;
+  --secondary-foreground: #4A4A4A;
+  --muted: #F0F0F0;
+  --muted-foreground: #8A8A8A;
+  --accent: #1B8B2B;                /* Deep forest green */
+  --accent-foreground: #FFFFFF;
+  --destructive: #E53E3E;
+  --border: #E0E0E0;
+  --input: #FFFFFF;
+  --ring: #2ECC40;                  /* Vibrant life green */
+  --chart-1: #2ECC40;               /* Vibrant life green */
+  --chart-2: #1B8B2B;               /* Deep forest green */
+  --chart-3: #0F5F3F;               /* Rich chlorophyll green */
+  --chart-4: #34B7F1;
+  --chart-5: #D4F4DD;               /* Fresh leaf green */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #4A4A4A;
+  --sidebar-primary: #2ECC40;       /* Vibrant life green */
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F0F0F0;
+  --sidebar-accent-foreground: #4A4A4A;
+  --sidebar-border: #E0E0E0;
+  --sidebar-ring: #2ECC40;          /* Vibrant life green */
+}
+
+.dark {
+  /* Professional Dark Theme with Subtle Neon Accents */
+  --background: #0D1117;                /* Professional dark background */
+  --foreground: #E6EDF3;                /* Clean white text */
+  --card: #161B22;                      /* Subtle card background */
+  --card-foreground: #E6EDF3;           /* Clean white text */
+  --popover: #161B22;                   /* Subtle card background */
+  --popover-foreground: #E6EDF3;        /* Clean white text */
+  --primary: #00D9FF;                   /* Professional neon cyan */
+  --primary-foreground: #0D1117;        /* Professional dark background */
+  --secondary: #21262D;                 /* Subtle secondary background */
+  --secondary-foreground: #C9D1D9;      /* Muted text */
+  --muted: #21262D;                     /* Subtle secondary background */
+  --muted-foreground: #8B949E;          /* Professional muted text */
+  --accent: #39FF14;                    /* Refined neon green accent */
+  --accent-foreground: #0D1117;         /* Professional dark background */
+  --destructive: #FF4757;               /* Professional red */
+  --border: #30363D;                    /* Subtle border */
+  --input: #161B22;                     /* Subtle card background */
+  --ring: #00D9FF;                      /* Professional neon cyan */
+  --chart-1: #00D9FF;                   /* Professional neon cyan */
+  --chart-2: #39FF14;                   /* Refined neon green accent */
+  --chart-3: #2ECC40;                   /* Vibrant life green */
+  --chart-4: #4FC3F7;
+  --chart-5: #1B8B2B;                   /* Deep forest green */
+  --sidebar: #161B22;                   /* Subtle card background */
+  --sidebar-foreground: #E6EDF3;        /* Clean white text */
+  --sidebar-primary: #00D9FF;           /* Professional neon cyan */
+  --sidebar-primary-foreground: #0D1117; /* Professional dark background */
+  --sidebar-accent: #21262D;            /* Subtle secondary background */
+  --sidebar-accent-foreground: #C9D1D9; /* Muted text */
+  --sidebar-border: #30363D;            /* Subtle border */
+  --sidebar-ring: #00D9FF;              /* Professional neon cyan */
+  
+  /* Professional Neon Theme Specific Colors */
+  --whatsapp-green: #39FF14;            /* Refined neon green */
+  --whatsapp-dark-green: #2ECC40;       /* Vibrant life green */
+  --whatsapp-teal: #00D9FF;             /* Professional neon cyan */
+  --whatsapp-light-green: #1A2F1A;      /* Subtle dark green background */
+  --whatsapp-blue: #4FC3F7;             /* Professional blue */
+  --whatsapp-light-gray: #0D1117;       /* Professional dark background */
+  --whatsapp-gray: #21262D;             /* Subtle secondary background */
+  --whatsapp-dark-gray: #8B949E;        /* Professional muted text */
+  --whatsapp-white: #161B22;            /* Subtle card background */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "profile_id": "profile_ef56f7a3",
+  "user_id": "demo_quick_test",
+  "display_name": "Test User demo_quick_test",
+  "model_version": "advanced_v2.0",
+  "created_at": "2025-09-13T10:50:54.086549",
+  "updated_at": "2025-09-13T10:50:54.086551",
+  "device_hints": [
+    "demo_device"
+  ],
+  "enrollment_samples": 3,
+  "confidence_threshold": 0.85,
+  "is_primary": true,
+  "is_active": true,
+  "metadata": {},
+  "embeddings_count": 3
+}

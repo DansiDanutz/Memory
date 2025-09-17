@@ -1,0 +1,22 @@
+{
+  "memories": [
+    {
+      "id": "2b3b5810",
+      "category": "GENERAL",
+      "timestamp": "2025-09-15T15:10:28.179047",
+      "content_preview": "Test memory created from API to verify CRUD operations are working",
+      "encrypted": false,
+      "tenant_id": null,
+      "department_id": null,
+      "user_phone": "test_user"
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "by_category": {
+      "GENERAL": 1
+    },
+    "last_memory": "2025-09-15T15:10:28.179047",
+    "first_memory": "2025-09-15T15:10:28.179047"
+  }
+}

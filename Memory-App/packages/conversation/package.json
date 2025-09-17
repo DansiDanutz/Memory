@@ -1,0 +1,19 @@
+{
+  "name": "@memory-app/conversation",
+  "version": "1.0.0",
+  "description": "MCP-style conversation protocol for Memory App language interactions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "openai": "^4.28.0",
+    "@anthropic-ai/sdk": "^0.27.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/node": "^20.5.0"
+  }
+}

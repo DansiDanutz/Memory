@@ -1,0 +1,1441 @@
+[{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 5,
+	"startColumn": 1,
+	"endLineNumber": 5,
+	"endColumn": 22,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 7,
+	"startColumn": 1,
+	"endLineNumber": 7,
+	"endColumn": 51,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 15,
+	"startColumn": 1,
+	"endLineNumber": 15,
+	"endColumn": 29,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 16,
+	"startColumn": 1,
+	"endLineNumber": 16,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 16,
+	"startColumn": 1,
+	"endLineNumber": 16,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 25,
+	"startColumn": 1,
+	"endLineNumber": 25,
+	"endColumn": 24,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 26,
+	"startColumn": 1,
+	"endLineNumber": 26,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 26,
+	"startColumn": 1,
+	"endLineNumber": 26,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 36,
+	"startColumn": 1,
+	"endLineNumber": 36,
+	"endColumn": 33,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 37,
+	"startColumn": 1,
+	"endLineNumber": 37,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 37,
+	"startColumn": 1,
+	"endLineNumber": 37,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 45,
+	"startColumn": 1,
+	"endLineNumber": 45,
+	"endColumn": 22,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 46,
+	"startColumn": 1,
+	"endLineNumber": 46,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 46,
+	"startColumn": 1,
+	"endLineNumber": 46,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 51,
+	"startColumn": 1,
+	"endLineNumber": 51,
+	"endColumn": 18,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 52,
+	"startColumn": 1,
+	"endLineNumber": 52,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 52,
+	"startColumn": 1,
+	"endLineNumber": 52,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 61,
+	"startColumn": 1,
+	"endLineNumber": 61,
+	"endColumn": 24,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 62,
+	"startColumn": 1,
+	"endLineNumber": 62,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 62,
+	"startColumn": 1,
+	"endLineNumber": 62,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 72,
+	"startColumn": 1,
+	"endLineNumber": 72,
+	"endColumn": 36,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 73,
+	"startColumn": 1,
+	"endLineNumber": 73,
+	"endColumn": 13,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 82,
+	"startColumn": 1,
+	"endLineNumber": 82,
+	"endColumn": 35,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 83,
+	"startColumn": 1,
+	"endLineNumber": 83,
+	"endColumn": 38,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 96,
+	"startColumn": 1,
+	"endLineNumber": 96,
+	"endColumn": 27,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 97,
+	"startColumn": 1,
+	"endLineNumber": 97,
+	"endColumn": 7,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 106,
+	"startColumn": 1,
+	"endLineNumber": 106,
+	"endColumn": 32,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 107,
+	"startColumn": 1,
+	"endLineNumber": 107,
+	"endColumn": 8,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 112,
+	"startColumn": 1,
+	"endLineNumber": 112,
+	"endColumn": 37,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 113,
+	"startColumn": 1,
+	"endLineNumber": 113,
+	"endColumn": 8,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 120,
+	"startColumn": 1,
+	"endLineNumber": 120,
+	"endColumn": 41,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 122,
+	"startColumn": 1,
+	"endLineNumber": 122,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 122,
+	"startColumn": 1,
+	"endLineNumber": 122,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 128,
+	"startColumn": 1,
+	"endLineNumber": 128,
+	"endColumn": 31,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 129,
+	"startColumn": 1,
+	"endLineNumber": 129,
+	"endColumn": 7,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 135,
+	"startColumn": 1,
+	"endLineNumber": 135,
+	"endColumn": 27,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 136,
+	"startColumn": 1,
+	"endLineNumber": 136,
+	"endColumn": 8,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 149,
+	"startColumn": 1,
+	"endLineNumber": 149,
+	"endColumn": 25,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 150,
+	"startColumn": 1,
+	"endLineNumber": 150,
+	"endColumn": 8,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 155,
+	"startColumn": 1,
+	"endLineNumber": 155,
+	"endColumn": 29,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 157,
+	"startColumn": 1,
+	"endLineNumber": 157,
+	"endColumn": 43,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 162,
+	"startColumn": 1,
+	"endLineNumber": 162,
+	"endColumn": 24,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 164,
+	"startColumn": 1,
+	"endLineNumber": 164,
+	"endColumn": 7,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 171,
+	"startColumn": 1,
+	"endLineNumber": 171,
+	"endColumn": 27,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 172,
+	"startColumn": 1,
+	"endLineNumber": 172,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 172,
+	"startColumn": 1,
+	"endLineNumber": 172,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 183,
+	"startColumn": 1,
+	"endLineNumber": 183,
+	"endColumn": 14,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 184,
+	"startColumn": 1,
+	"endLineNumber": 184,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 184,
+	"startColumn": 1,
+	"endLineNumber": 184,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 192,
+	"startColumn": 1,
+	"endLineNumber": 192,
+	"endColumn": 30,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 193,
+	"startColumn": 1,
+	"endLineNumber": 193,
+	"endColumn": 10,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 208,
+	"startColumn": 1,
+	"endLineNumber": 208,
+	"endColumn": 25,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 209,
+	"startColumn": 1,
+	"endLineNumber": 209,
+	"endColumn": 10,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 220,
+	"startColumn": 1,
+	"endLineNumber": 220,
+	"endColumn": 23,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 221,
+	"startColumn": 1,
+	"endLineNumber": 221,
+	"endColumn": 10,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 235,
+	"startColumn": 1,
+	"endLineNumber": 235,
+	"endColumn": 44,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 241,
+	"startColumn": 1,
+	"endLineNumber": 241,
+	"endColumn": 16,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD026",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md026.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD026/no-trailing-punctuation: Trailing punctuation in heading [Punctuation: ':']",
+	"source": "markdownlint",
+	"startLineNumber": 241,
+	"startColumn": 15,
+	"endLineNumber": 241,
+	"endColumn": 16,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 242,
+	"startColumn": 1,
+	"endLineNumber": 242,
+	"endColumn": 48,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 247,
+	"startColumn": 1,
+	"endLineNumber": 247,
+	"endColumn": 34,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD026",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md026.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD026/no-trailing-punctuation: Trailing punctuation in heading [Punctuation: ':']",
+	"source": "markdownlint",
+	"startLineNumber": 247,
+	"startColumn": 33,
+	"endLineNumber": 247,
+	"endColumn": 34,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 248,
+	"startColumn": 1,
+	"endLineNumber": 248,
+	"endColumn": 34,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 255,
+	"startColumn": 1,
+	"endLineNumber": 255,
+	"endColumn": 4,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 296,
+	"startColumn": 1,
+	"endLineNumber": 296,
+	"endColumn": 26,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD026",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md026.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD026/no-trailing-punctuation: Trailing punctuation in heading [Punctuation: ':']",
+	"source": "markdownlint",
+	"startLineNumber": 296,
+	"startColumn": 25,
+	"endLineNumber": 296,
+	"endColumn": 26,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 297,
+	"startColumn": 1,
+	"endLineNumber": 297,
+	"endColumn": 43,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 302,
+	"startColumn": 1,
+	"endLineNumber": 302,
+	"endColumn": 26,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD026",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md026.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD026/no-trailing-punctuation: Trailing punctuation in heading [Punctuation: ':']",
+	"source": "markdownlint",
+	"startLineNumber": 302,
+	"startColumn": 25,
+	"endLineNumber": 302,
+	"endColumn": 26,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 303,
+	"startColumn": 1,
+	"endLineNumber": 303,
+	"endColumn": 32,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD034",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md034.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD034/no-bare-urls: Bare URL used",
+	"source": "markdownlint",
+	"startLineNumber": 311,
+	"startColumn": 12,
+	"endLineNumber": 311,
+	"endColumn": 44,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 332,
+	"startColumn": 1,
+	"endLineNumber": 332,
+	"endColumn": 54,
+	"modelVersionId": 3
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/REPLIT_CURSOR_SYNC_GUIDE.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD047",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md047.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD047/single-trailing-newline: Files should end with a single newline character",
+	"source": "markdownlint",
+	"startLineNumber": 344,
+	"startColumn": 23,
+	"endLineNumber": 344,
+	"endColumn": 24,
+	"modelVersionId": 3
+}]

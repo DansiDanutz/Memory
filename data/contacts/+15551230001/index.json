@@ -1,0 +1,22 @@
+{
+  "memories": [
+    {
+      "id": "04b7e62a",
+      "category": "CHRONOLOGICAL",
+      "timestamp": "2025-09-15T07:41:27.228294",
+      "content_preview": "Remember: Today I had a great meeting with the engineering team about the new product launch.",
+      "encrypted": false,
+      "tenant_id": null,
+      "department_id": null,
+      "user_phone": "+15551230001"
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "by_category": {
+      "CHRONOLOGICAL": 1
+    },
+    "last_memory": "2025-09-15T07:41:27.228294",
+    "first_memory": "2025-09-15T07:41:27.228294"
+  }
+}

@@ -1,0 +1,601 @@
+[{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 3,
+	"startColumn": 1,
+	"endLineNumber": 3,
+	"endColumn": 19,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 8,
+	"startColumn": 1,
+	"endLineNumber": 8,
+	"endColumn": 30,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 9,
+	"startColumn": 1,
+	"endLineNumber": 9,
+	"endColumn": 44,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 16,
+	"startColumn": 1,
+	"endLineNumber": 16,
+	"endColumn": 30,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 17,
+	"startColumn": 1,
+	"endLineNumber": 17,
+	"endColumn": 25,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 28,
+	"startColumn": 1,
+	"endLineNumber": 28,
+	"endColumn": 52,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 29,
+	"startColumn": 1,
+	"endLineNumber": 29,
+	"endColumn": 37,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 38,
+	"startColumn": 1,
+	"endLineNumber": 38,
+	"endColumn": 33,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 39,
+	"startColumn": 1,
+	"endLineNumber": 39,
+	"endColumn": 27,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 47,
+	"startColumn": 1,
+	"endLineNumber": 47,
+	"endColumn": 26,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 48,
+	"startColumn": 1,
+	"endLineNumber": 48,
+	"endColumn": 33,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 53,
+	"startColumn": 1,
+	"endLineNumber": 53,
+	"endColumn": 29,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 54,
+	"startColumn": 1,
+	"endLineNumber": 54,
+	"endColumn": 29,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 65,
+	"startColumn": 1,
+	"endLineNumber": 65,
+	"endColumn": 4,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 102,
+	"startColumn": 1,
+	"endLineNumber": 102,
+	"endColumn": 20,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 103,
+	"startColumn": 1,
+	"endLineNumber": 103,
+	"endColumn": 45,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 107,
+	"startColumn": 1,
+	"endLineNumber": 107,
+	"endColumn": 16,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 108,
+	"startColumn": 1,
+	"endLineNumber": 108,
+	"endColumn": 58,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 112,
+	"startColumn": 1,
+	"endLineNumber": 112,
+	"endColumn": 18,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 113,
+	"startColumn": 1,
+	"endLineNumber": 113,
+	"endColumn": 52,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 116,
+	"startColumn": 1,
+	"endLineNumber": 116,
+	"endColumn": 18,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 117,
+	"startColumn": 1,
+	"endLineNumber": 117,
+	"endColumn": 58,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 121,
+	"startColumn": 1,
+	"endLineNumber": 121,
+	"endColumn": 14,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 122,
+	"startColumn": 1,
+	"endLineNumber": 122,
+	"endColumn": 27,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 231,
+	"startColumn": 1,
+	"endLineNumber": 231,
+	"endColumn": 14,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 232,
+	"startColumn": 1,
+	"endLineNumber": 232,
+	"endColumn": 45,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 236,
+	"startColumn": 1,
+	"endLineNumber": 236,
+	"endColumn": 24,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 237,
+	"startColumn": 1,
+	"endLineNumber": 237,
+	"endColumn": 29,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 254,
+	"startColumn": 1,
+	"endLineNumber": 254,
+	"endColumn": 27,
+	"modelVersionId": 2
+},{
+	"resource": "/C:/Users/dansi/Desktop/Memory/Memory/SYSTEM_COMPLETE_SUMMARY.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD047",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.38.0/doc/md047.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD047/single-trailing-newline: Files should end with a single newline character",
+	"source": "markdownlint",
+	"startLineNumber": 269,
+	"startColumn": 29,
+	"endLineNumber": 269,
+	"endColumn": 30,
+	"modelVersionId": 2
+}]

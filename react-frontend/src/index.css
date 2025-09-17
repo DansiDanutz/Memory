@@ -1,0 +1,349 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* CSS Custom Properties for Theme System */
+@layer base {
+  :root {
+    /* Light Theme Variables */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 120 100% 50%;
+    --radius: 0.5rem;
+    
+    /* WhatsApp Light Theme Colors */
+    --whatsapp-green: 142 76% 36%;
+    --whatsapp-dark-green: 174 72% 32%;
+    --whatsapp-teal: 174 86% 20%;
+    --whatsapp-light-green: 80 61% 87%;
+    --whatsapp-blue: 199 89% 48%;
+    --whatsapp-light-gray: 40 23% 93%;
+    --whatsapp-gray: 0 0% 24%;
+    --whatsapp-dark-gray: 220 13% 18%;
+    --whatsapp-white: 0 0% 100%;
+  }
+
+  .dark {
+    /* Professional Dark Theme with Subtle Neon Accents */
+    --background: 220 26% 7%;
+    --foreground: 210 40% 92%;
+    --card: 220 23% 11%;
+    --card-foreground: 210 40% 92%;
+    --popover: 220 23% 11%;
+    --popover-foreground: 210 40% 92%;
+    --primary: 120 100% 55%;
+    --primary-foreground: 220 26% 7%;
+    --secondary: 220 17% 17%;
+    --secondary-foreground: 210 40% 80%;
+    --muted: 220 17% 17%;
+    --muted-foreground: 215 20% 55%;
+    --accent: 120 100% 55%;
+    --accent-foreground: 220 26% 7%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 92%;
+    --border: 220 20% 20%;
+    --input: 220 23% 11%;
+    --ring: 120 100% 55%;
+    
+    /* Dark Theme WhatsApp Colors */
+    --whatsapp-green: 120 100% 55%;
+    --whatsapp-dark-green: 142 76% 36%;
+    --whatsapp-teal: 195 100% 55%;
+    --whatsapp-light-green: 120 25% 15%;
+    --whatsapp-blue: 199 89% 48%;
+    --whatsapp-light-gray: 220 26% 7%;
+    --whatsapp-gray: 220 17% 17%;
+    --whatsapp-dark-gray: 215 20% 55%;
+    --whatsapp-white: 220 23% 11%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
+  }
+  
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground)) hsl(var(--muted));
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .memory-app {
+    @apply min-h-screen bg-background text-foreground;
+  }
+  
+  .sidebar {
+    @apply bg-card border-r border-border;
+  }
+  
+  .chat-area {
+    @apply bg-background;
+  }
+  
+  .message-bubble {
+    @apply rounded-lg px-3 py-2 max-w-xs break-words;
+  }
+  
+  .message-bubble.user {
+    @apply bg-primary text-primary-foreground ml-auto;
+  }
+  
+  .message-bubble.ai {
+    @apply bg-card text-card-foreground;
+  }
+  
+  .memory-item {
+    @apply p-3 border-b border-border hover:bg-muted/50 cursor-pointer transition-colors;
+  }
+  
+  .memory-item.selected {
+    @apply bg-primary/10 border-l-4 border-l-primary;
+  }
+  
+  .sync-indicator {
+    @apply flex items-center justify-center space-x-2 p-2 bg-muted/50 rounded-lg;
+  }
+  
+  .sync-dot {
+    @apply w-2 h-2 rounded-full bg-muted-foreground;
+  }
+  
+  .sync-dot.active {
+    @apply bg-primary animate-pulse-neon;
+  }
+  
+  .neon-glow {
+    @apply shadow-neon;
+  }
+  
+  .neon-text {
+    @apply text-primary animate-glow;
+  }
+  
+  .glass-effect {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50;
+  }
+  
+  .input-glow:focus {
+    @apply ring-2 ring-primary/50 border-primary;
+  }
+  
+  .button-neon {
+    @apply bg-primary text-primary-foreground hover:shadow-neon transition-all duration-300;
+  }
+  
+  .button-neon:hover {
+    @apply scale-105;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:scale-[1.02];
+  }
+  
+  .fade-in {
+    @apply animate-fade-in;
+  }
+  
+  .slide-in-right {
+    @apply animate-slide-in-right;
+  }
+  
+  .slide-in-left {
+    @apply animate-slide-in-left;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .text-shadow-neon {
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+  }
+  
+  .bg-gradient-neon {
+    background: linear-gradient(135deg, rgba(57, 255, 20, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%);
+  }
+  
+  .border-gradient-neon {
+    border-image: linear-gradient(135deg, #39FF14, #00D9FF) 1;
+  }
+  
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+  
+  .safe-area-inset-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-area-inset-left {
+    padding-left: env(safe-area-inset-left);
+  }
+  
+  .safe-area-inset-right {
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseNeon {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(57, 255, 20, 0.3);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+  }
+}
+
+@keyframes glowText {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.8);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .mobile-optimized {
+    @apply text-base leading-relaxed;
+  }
+  
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .mobile-padding {
+    @apply px-4 py-2;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    @apply border-2 border-foreground;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    @apply hidden;
+  }
+  
+  .print-only {
+    @apply block;
+  }
+  
+  body {
+    @apply text-black bg-white;
+  }
+}
+

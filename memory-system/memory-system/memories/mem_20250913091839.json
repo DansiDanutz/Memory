@@ -1,0 +1,12 @@
+{
+  "id": "74bef822-50ac-4ffb-bb7f-ed321d7b7a41",
+  "memory_number": 1001,
+  "user_id": "platform_test",
+  "content": "Testing critical memory storage",
+  "category": "general",
+  "timestamp": "2025-09-13T09:18:39.452074",
+  "platform": "api",
+  "message_type": "text",
+  "metadata": {},
+  "ai_insights": {}
+}

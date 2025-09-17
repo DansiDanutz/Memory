@@ -1,0 +1,967 @@
+{
+  "9e302ae7": {
+    "name": "Bank",
+    "category_id": "9e302ae7",
+    "created_at": "2025-09-16T03:03:12.179377",
+    "score": {
+      "sensitivity": 0.8,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.43,
+      "security_level": "confidential"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "action",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "summary",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.179390",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for bank related memories",
+    "keywords": [
+      "bank",
+      "account",
+      "password",
+      "changed",
+      "password"
+    ],
+    "similar_categories": [],
+    "num_slots": 5,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Standard category",
+      "retention_days": 90
+    }
+  },
+  "c22d0244": {
+    "name": "Investment",
+    "category_id": "c22d0244",
+    "created_at": "2025-09-16T03:03:12.182122",
+    "score": {
+      "sensitivity": 0.8,
+      "importance": 0.5,
+      "frequency": 0.12,
+      "criticality": 0.0,
+      "total_score": 0.43499999999999994,
+      "security_level": "confidential"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "action",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "summary",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 3,
+    "last_accessed": "2025-09-16T03:03:12.386254",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for investment related memories",
+    "keywords": [
+      "investment",
+      "portfolio",
+      "review",
+      "total",
+      "value"
+    ],
+    "similar_categories": [],
+    "num_slots": 5,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Standard category",
+      "retention_days": 90
+    }
+  },
+  "a62d6f6c": {
+    "name": "Return",
+    "category_id": "a62d6f6c",
+    "created_at": "2025-09-16T03:03:12.185855",
+    "score": {
+      "sensitivity": 0.8,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.43,
+      "security_level": "confidential"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": "Tax return filed. Refund expected: $3,200. SSN used for filing: XXX-XX-4567",
+        "memory_id": "mem_3",
+        "timestamp": "2025-09-16T03:03:12.195372",
+        "score": 0.85,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "action",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "summary",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.195376",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for return related memories",
+    "keywords": [
+      "return",
+      "filed",
+      "refund",
+      "expected",
+      "3200"
+    ],
+    "similar_categories": [],
+    "num_slots": 5,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Standard category",
+      "retention_days": 90
+    }
+  },
+  "65e3b964": {
+    "name": "Blood",
+    "category_id": "65e3b964",
+    "created_at": "2025-09-16T03:03:12.206198",
+    "score": {
+      "sensitivity": 0.7,
+      "importance": 0.5,
+      "frequency": 0.11,
+      "criticality": 0.0,
+      "total_score": 0.3975,
+      "security_level": "confidential"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "action",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "summary",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 2,
+    "last_accessed": "2025-09-16T03:03:12.287066",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for blood related memories",
+    "keywords": [
+      "blood",
+      "test",
+      "results",
+      "cholesterol",
+      "blood"
+    ],
+    "similar_categories": [],
+    "num_slots": 5,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Standard category",
+      "retention_days": 90
+    }
+  },
+  "0edcdef7": {
+    "name": "Prescription",
+    "category_id": "0edcdef7",
+    "created_at": "2025-09-16T03:03:12.236409",
+    "score": {
+      "sensitivity": 0.7,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.395,
+      "security_level": "confidential"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "action",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "summary",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.236421",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for prescription related memories",
+    "keywords": [
+      "prescription",
+      "filled",
+      "lisinopril",
+      "10mg",
+      "90day"
+    ],
+    "similar_categories": [],
+    "num_slots": 5,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Standard category",
+      "retention_days": 90
+    }
+  },
+  "b311e1a8": {
+    "name": "Meetings",
+    "category_id": "b311e1a8",
+    "created_at": "2025-09-16T03:03:12.273167",
+    "score": {
+      "sensitivity": 0.75,
+      "importance": 0.5,
+      "frequency": 0.13,
+      "criticality": 0.0,
+      "total_score": 0.41999999999999993,
+      "security_level": "confidential"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": "Travel itinerary: NYC to London, Dec 15-22. Flight BA178, Hotel: The Savoy, Meeting with UK team on ",
+        "memory_id": "mem_18",
+        "timestamp": "2025-09-16T03:03:12.402203",
+        "score": 0.5,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "action",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "summary",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 4,
+    "last_accessed": "2025-09-16T03:03:12.487340",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for meetings related memories",
+    "keywords": [
+      "strategy",
+      "meeting",
+      "focus",
+      "integration",
+      "target"
+    ],
+    "similar_categories": [],
+    "num_slots": 5,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Standard category",
+      "retention_days": 90
+    }
+  },
+  "32841f00": {
+    "name": "Ideas",
+    "category_id": "32841f00",
+    "created_at": "2025-09-16T03:03:12.334004",
+    "score": {
+      "sensitivity": 0.0,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.15,
+      "security_level": "general"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.334013",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for ideas related memories",
+    "keywords": [
+      "idea",
+      "voiceactivated",
+      "memory",
+      "assistant",
+      "with"
+    ],
+    "similar_categories": [],
+    "num_slots": 3,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Low-priority category",
+      "retention_days": 30
+    }
+  },
+  "f7ba0010": {
+    "name": "Personal",
+    "category_id": "f7ba0010",
+    "created_at": "2025-09-16T03:03:12.337067",
+    "score": {
+      "sensitivity": 0.6,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.36,
+      "security_level": "confidential"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": "Blog post draft: 10 Ways AI is Transforming Personal Productivity in 2025",
+        "memory_id": "mem_12",
+        "timestamp": "2025-09-16T03:03:12.344194",
+        "score": 0.3,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "action",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "summary",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.344197",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for personal related memories",
+    "keywords": [
+      "blog",
+      "post",
+      "draft",
+      "ways",
+      "transforming"
+    ],
+    "similar_categories": [],
+    "num_slots": 5,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Standard category",
+      "retention_days": 90
+    }
+  },
+  "547e54e2": {
+    "name": "Grocery",
+    "category_id": "547e54e2",
+    "created_at": "2025-09-16T03:03:12.347785",
+    "score": {
+      "sensitivity": 0.0,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.15,
+      "security_level": "general"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.347795",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for grocery related memories",
+    "keywords": [
+      "grocery",
+      "list",
+      "milk",
+      "eggs",
+      "bread"
+    ],
+    "similar_categories": [],
+    "num_slots": 3,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Low-priority category",
+      "retention_days": 30
+    }
+  },
+  "32545625": {
+    "name": "Water",
+    "category_id": "32545625",
+    "created_at": "2025-09-16T03:03:12.357403",
+    "score": {
+      "sensitivity": 0.0,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.15,
+      "security_level": "general"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.357411",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for water related memories",
+    "keywords": [
+      "reminder",
+      "water",
+      "plants",
+      "wednesday",
+      "sunday"
+    ],
+    "similar_categories": [],
+    "num_slots": 3,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Low-priority category",
+      "retention_days": 30
+    }
+  },
+  "faa6540c": {
+    "name": "Emergency",
+    "category_id": "faa6540c",
+    "created_at": "2025-09-16T03:03:12.390303",
+    "score": {
+      "sensitivity": 0.0,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.7,
+      "total_score": 0.255,
+      "security_level": "general"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.390315",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for emergency related memories",
+    "keywords": [
+      "emergency",
+      "contact",
+      "updated",
+      "jane",
+      "relationship"
+    ],
+    "similar_categories": [],
+    "num_slots": 3,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Low-priority category",
+      "retention_days": 30
+    }
+  },
+  "e7136bb9": {
+    "name": "Learning",
+    "category_id": "e7136bb9",
+    "created_at": "2025-09-16T03:03:12.441362",
+    "score": {
+      "sensitivity": 0.0,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.15,
+      "security_level": "general"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.441373",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for learning related memories",
+    "keywords": [
+      "learning",
+      "spanish",
+      "duolingo",
+      "current",
+      "streak"
+    ],
+    "similar_categories": [],
+    "num_slots": 3,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Low-priority category",
+      "retention_days": 30
+    }
+  },
+  "602ff9d4": {
+    "name": "Dream",
+    "category_id": "602ff9d4",
+    "created_at": "2025-09-16T03:03:12.471742",
+    "score": {
+      "sensitivity": 0.0,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.15,
+      "security_level": "general"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.471751",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for dream related memories",
+    "keywords": [
+      "dream",
+      "journal",
+      "recurring",
+      "dream",
+      "about"
+    ],
+    "similar_categories": [],
+    "num_slots": 3,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Low-priority category",
+      "retention_days": 30
+    }
+  },
+  "c2c7ed99": {
+    "name": "Executive",
+    "category_id": "c2c7ed99",
+    "created_at": "2025-09-16T03:03:12.491360",
+    "score": {
+      "sensitivity": 0.0,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.15,
+      "security_level": "general"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.491368",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for executive related memories",
+    "keywords": [
+      "executive",
+      "committee",
+      "decision",
+      "budget",
+      "allocation"
+    ],
+    "similar_categories": [],
+    "num_slots": 3,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Low-priority category",
+      "retention_days": 30
+    }
+  },
+  "85297349": {
+    "name": "Approval",
+    "category_id": "85297349",
+    "created_at": "2025-09-16T03:03:12.496379",
+    "score": {
+      "sensitivity": 0.0,
+      "importance": 0.5,
+      "frequency": 0.1,
+      "criticality": 0.0,
+      "total_score": 0.15,
+      "security_level": "general"
+    },
+    "slots": [
+      {
+        "type": "recent",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "important",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      },
+      {
+        "type": "referenced",
+        "content": null,
+        "memory_id": null,
+        "timestamp": null,
+        "score": 0.0,
+        "metadata": {}
+      }
+    ],
+    "memory_count": 1,
+    "last_accessed": "2025-09-16T03:03:12.496384",
+    "lifecycle_stage": "birth",
+    "ai_description": "Category for approval related memories",
+    "keywords": [
+      "approval",
+      "needed",
+      "initiative"
+    ],
+    "similar_categories": [],
+    "num_slots": 3,
+    "cleaning_policy": {
+      "cleanable": true,
+      "reason": "Low-priority category",
+      "retention_days": 30
+    }
+  }
+}

@@ -1,0 +1,44 @@
+tenants:
+- active: true
+  departments:
+  - description: Product development team
+    id: engineering
+    name: Engineering
+  - description: Sales and business development
+    id: sales
+    name: Sales
+  - description: Customer support team
+    id: support
+    name: Support
+  id: memoapp
+  name: MemoApp HQ
+  settings:
+    features:
+    - voice_auth
+    - cross_dept_search
+    max_users: 100
+    memory_retention_days: 365
+  type: enterprise
+- active: true
+  departments:
+  - description: HR department
+    id: hr
+    name: Human Resources
+  - description: Finance team
+    id: finance
+    name: Finance
+  id: demo_corp
+  name: Demo Corporation
+  settings:
+    max_users: 20
+    memory_retention_days: 90
+  type: business
+user_mappings:
+- department_id: engineering
+  role: admin
+  tenant_id: memoapp
+  user_phone: '+15551234567'
+- department_id: hr
+  role: manager
+  tenant_id: demo_corp
+  user_phone: '+15559876543'

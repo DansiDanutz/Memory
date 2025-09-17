@@ -1,0 +1,1 @@
+{"id": "audit_20250914_234949_cc107d47", "timestamp": "2025-09-14T23:49:49.085143", "action": "memory.stored", "user": "40744602272", "tenant_id": null, "department_id": null, "sensitivity": "GENERAL", "details": {"memory_id": "addf6298", "category": "GENERAL"}, "ip_address": "127.0.0.1", "session_id": null}

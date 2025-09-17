@@ -1,0 +1,22 @@
+{
+  "memories": [
+    {
+      "id": "e56e04ea",
+      "category": "GENERAL",
+      "timestamp": "2025-09-15T03:37:25.474432",
+      "content_preview": "help:",
+      "encrypted": false,
+      "tenant_id": "memoapp",
+      "department_id": "general",
+      "user_phone": "user1"
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "by_category": {
+      "GENERAL": 1
+    },
+    "last_memory": "2025-09-15T03:37:25.474432",
+    "first_memory": "2025-09-15T03:37:25.474432"
+  }
+}

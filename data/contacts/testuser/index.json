@@ -1,0 +1,22 @@
+{
+  "memories": [
+    {
+      "id": "dd473847",
+      "category": "CONFIDENTIAL",
+      "timestamp": "2025-09-15T03:23:25.735157",
+      "content_preview": "Passport 12345",
+      "encrypted": false,
+      "tenant_id": "memoapp",
+      "department_id": "general",
+      "user_phone": "testuser"
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "by_category": {
+      "CONFIDENTIAL": 1
+    },
+    "last_memory": "2025-09-15T03:23:25.735157",
+    "first_memory": "2025-09-15T03:23:25.735157"
+  }
+}

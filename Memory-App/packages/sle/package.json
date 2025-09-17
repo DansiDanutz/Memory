@@ -1,0 +1,21 @@
+{
+  "name": "@memory-app/sle",
+  "version": "1.0.0",
+  "description": "Smart Limits Engine - Core governance brain for Memory App",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@memory-app/mpl": "file:../mpl",
+    "@memory-app/blts": "file:../blts",
+    "@memory-app/cemg": "file:../cemg",
+    "@memory-app/kpe": "file:../kpe",
+    "@memory-app/ipsg": "file:../ipsg"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,0 +1,252 @@
+# Memory App Policy Configuration
+# This file defines the governance rules for the Smart Limits Engine (SLE)
+
+version: "1.0.0"
+metadata:
+  name: "Memory App Default Policies"
+  description: "Privacy-first governance rules for Memory App with Smart Limits Engine"
+  author: "Memory App Team"
+  created: "2025-09-12T00:00:00Z"
+  lastModified: "2025-09-12T00:00:00Z"
+
+# Default thresholds and configurations
+defaults:
+  # Domain-specific trust thresholds (τ values from architecture)
+  trustThresholds:
+    Finance: 0.75
+    Health: 0.75
+    Family: 0.60
+    Work: 0.65
+    Memories: 0.55
+    Legal: 0.80
+
+  # MKE decision ladder thresholds
+  mkeThresholds:
+    divert: 0.20    # DL-0: Too low mutual knowledge, divert
+    probe: 0.40     # DL-1: Low mutual knowledge, probe for more info
+    partial: 0.60   # DL-2: Moderate knowledge, partial disclosure
+    disclose: 0.70  # DL-3: High knowledge, full disclosure
+    verify: 0.90    # DL-4: Maximum knowledge, verification needed
+
+  # Security label restrictions
+  securityPolicies:
+    General:
+      maxTrustRequired: 0.50
+      requireVerify: false
+      allowExternal: true
+    Secret:
+      maxTrustRequired: 0.75
+      requireVerify: true
+      allowExternal: true
+    Ultra:
+      maxTrustRequired: 0.95
+      requireVerify: true
+      allowExternal: false
+    C2:
+      maxTrustRequired: 0.80
+      requireVerify: true
+      allowExternal: true
+    C3:
+      maxTrustRequired: 0.85
+      requireVerify: true
+      allowExternal: true
+
+# Domain and security level inheritance hierarchy
+inheritance:
+  domain:
+    # Finance inherits from these domains
+    Finance: ["Work"]
+    # Health inherits from these domains
+    Health: ["Family"]
+    # Family inherits from these domains
+    Family: ["Memories"]
+    # Work inherits from these domains
+    Work: ["General"]
+    # Legal inherits from these domains
+    Legal: ["Work", "Finance"]
+    
+  securityLevel:
+    # Ultra inherits restrictions from these levels
+    Ultra: ["Secret", "C3", "C2"]
+    # Secret inherits restrictions from these levels
+    Secret: ["C3", "C2"]
+    # C3 inherits restrictions from these levels
+    C3: ["C2"]
+    # C2 inherits restrictions from these levels
+    C2: ["General"]
+
+# Policy rules (ordered by priority)
+rules:
+  # Ultra-secret protection rule
+  - id: "ultra-secret-protection"
+    name: "Ultra Secret Self-Only Access"
+    description: "Ultra-secret information can only be accessed by the owner"
+    domain: ["Finance", "Health", "Family", "Work", "Memories", "Legal"]
+    securityLevel: ["Ultra"]
+    conditions:
+      trustScore:
+        min: 0.95
+    actions:
+      allow: false
+      customResponse: "This information is restricted to self-access only."
+      logLevel: "warn"
+    priority: 100
+    enabled: true
+
+  # High-security finance rule
+  - id: "finance-high-security"
+    name: "Financial Information High Security"
+    description: "Financial information requires high trust and verification"
+    domain: ["Finance"]
+    securityLevel: ["Secret", "C2", "C3"]
+    conditions:
+      trustScore:
+        min: 0.80
+    actions:
+      allow: true
+      requireVerify: true
+      redactions: ["account_numbers", "ssn", "credit_card"]
+      logLevel: "info"
+    priority: 90
+    enabled: true
+
+  # Health information privacy rule
+  - id: "health-privacy-protection"
+    name: "Health Information Privacy"
+    description: "Medical information requires verification and high trust"
+    domain: ["Health"]
+    securityLevel: ["Secret", "General"]
+    conditions:
+      trustScore:
+        min: 0.70
+      mkeScore:
+        min: 0.50
+    actions:
+      allow: true
+      requireVerify: true
+      redactions: ["medical_records", "prescriptions", "diagnoses"]
+      logLevel: "info"
+    priority: 85
+    enabled: true
+
+  # Family sharing rule
+  - id: "family-trusted-sharing"
+    name: "Family Trusted Sharing"
+    description: "Family information sharing with trusted members"
+    domain: ["Family", "Memories"]
+    securityLevel: ["General"]
+    conditions:
+      trustScore:
+        min: 0.60
+      userRoles: ["family", "spouse", "child", "parent"]
+    actions:
+      allow: true
+      requireVerify: false
+      logLevel: "info"
+    priority: 80
+    enabled: true
+
+  # Work information rule
+  - id: "work-information-sharing"
+    name: "Work Information Controlled Sharing"
+    description: "Work-related information with colleagues and supervisors"
+    domain: ["Work"]
+    securityLevel: ["General", "C2"]
+    conditions:
+      trustScore:
+        min: 0.65
+      userRoles: ["colleague", "supervisor", "team_member"]
+      timeRestrictions:
+        allowedHours: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] # 8 AM to 6 PM
+        allowedDays: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    actions:
+      allow: true
+      requireVerify: false
+      redactions: ["salary", "performance_review"]
+      logLevel: "info"
+    priority: 75
+    enabled: true
+
+  # Legal information strict rule
+  - id: "legal-information-strict"
+    name: "Legal Information Strict Access"
+    description: "Legal documents require highest security measures"
+    domain: ["Legal"]
+    securityLevel: ["Secret", "C3"]
+    conditions:
+      trustScore:
+        min: 0.85
+      userRoles: ["lawyer", "legal_counsel", "self"]
+    actions:
+      allow: true
+      requireVerify: true
+      redactions: ["case_numbers", "settlements", "legal_strategy"]
+      logLevel: "warn"
+    priority: 95
+    enabled: true
+
+  # Low trust blocking rule
+  - id: "low-trust-block"
+    name: "Low Trust Score Blocking"
+    description: "Block access for very low trust scores"
+    domain: ["Finance", "Health", "Family", "Work", "Memories", "Legal"]
+    securityLevel: ["General", "Secret", "Ultra", "C2", "C3"]
+    conditions:
+      trustScore:
+        max: 0.30
+    actions:
+      allow: false
+      customResponse: "I'm not comfortable sharing that information."
+      logLevel: "warn"
+    priority: 70
+    enabled: true
+
+  # Geolocation restriction rule
+  - id: "geo-restriction"
+    name: "Geolocation Restrictions"
+    description: "Restrict access from certain countries"
+    domain: ["Finance", "Legal"]
+    securityLevel: ["Secret", "Ultra", "C2", "C3"]
+    conditions:
+      geolocation:
+        blockedCountries: ["XX", "YY"] # Replace with actual country codes if needed
+    actions:
+      allow: false
+      customResponse: "This information is not available in your current location."
+      logLevel: "warn"
+    priority: 60
+    enabled: false # Disabled by default
+
+  # Time-sensitive information rule
+  - id: "time-sensitive-access"
+    name: "Time-Sensitive Information Access"
+    description: "Certain information only available during specific hours"
+    domain: ["Work"]
+    securityLevel: ["General"]
+    conditions:
+      timeRestrictions:
+        allowedHours: [9, 10, 11, 12, 13, 14, 15, 16, 17] # 9 AM to 5 PM
+    actions:
+      allow: true
+      customResponse: "This information is only available during business hours."
+      logLevel: "info"
+    priority: 50
+    enabled: false # Disabled by default
+
+  # Default allowance rule (lowest priority)
+  - id: "default-allow"
+    name: "Default Allowance"
+    description: "Default rule for general information sharing"
+    domain: ["Memories", "Family"]
+    securityLevel: ["General"]
+    conditions:
+      trustScore:
+        min: 0.40
+    actions:
+      allow: true
+      requireVerify: false
+      logLevel: "info"
+    priority: 10
+    enabled: true
+    metadata:
+      note: "This is the fallback rule for general content"

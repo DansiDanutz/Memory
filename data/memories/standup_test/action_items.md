@@ -1,0 +1,982 @@
+# Action Items Memories
+
+### 📝 Good morning everyone, let's start our standup. I completed the API integration yesterday. Great wor......
+**ID:** `7b1bd85d-e872-4712-a3be-e48e5a70971c`
+**Date:** 2025-09-16 02:24
+**Confidence:** 1.00
+**Importance:** ⭐⭐⭐⭐⭐⭐⭐⭐
+
+Good morning everyone, let's start our standup. I completed the API integration yesterday.
+Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.
+I need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?
+Sure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?
+Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.
+
+**Entities:**
+- date: yesterday (0.80)
+- date: tomorrow (0.80)
+- date: today (0.80)
+
+**Action Items:**
+- ⏳ be done by tomorrow
+- ⏳ discuss a blocker with sarah about the api endpoints
+- ⏳ deploy the new version to staging by friday
+- ⏳ do
+
+**Tags:** #123, #meeting
+
+<details>
+<summary>Metadata</summary>
+
+```json
+{
+  "id": "7b1bd85d-e872-4712-a3be-e48e5a70971c",
+  "content": "Good morning everyone, let's start our standup. I completed the API integration yesterday.\nGreat work John! I'm currently working on the frontend dashboard, should be done by tomorrow.\nI need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?\nSure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?\nWill do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+  "summary": "Good morning everyone, let's start our standup. I completed the API integration yesterday. Great wor...",
+  "category": "action_items",
+  "subcategory": null,
+  "entities": [
+    {
+      "id": "dea6177a-0281-45e6-89d4-1e48ede1206a",
+      "type": "date",
+      "value": "yesterday",
+      "canonical_name": "yesterday",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "305c07f5-69ed-40f6-9303-38fa80ec56f6"
+      ],
+      "context": "Good morning everyone, let's start our standup. I completed the API integration yesterday.",
+      "attributes": {},
+      "aliases": []
+    },
+    {
+      "id": "546e2054-e907-4ec7-becd-afe2b5db2481",
+      "type": "date",
+      "value": "tomorrow",
+      "canonical_name": "tomorrow",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "49952efc-f14a-426f-9c04-8d487e684746"
+      ],
+      "context": "Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.",
+      "attributes": {},
+      "aliases": []
+    },
+    {
+      "id": "b8b8c104-20e3-436e-a823-5368b1cafc25",
+      "type": "date",
+      "value": "today",
+      "canonical_name": "today",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "02ceb443-cfc3-420f-9965-1b9c10155601"
+      ],
+      "context": "Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+      "attributes": {},
+      "aliases": []
+    }
+  ],
+  "action_items": [
+    {
+      "id": "f0ac3424-9b61-48f8-90e3-3d57f69f0e80",
+      "title": "be done by tomorrow",
+      "description": "Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "49952efc-f14a-426f-9c04-8d487e684746"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:20:46.686278",
+      "updated_at": "2025-09-16T02:24:46.849215",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "8a6af1fe-7314-4080-b14b-60980085ddb1",
+      "title": "discuss a blocker with sarah about the api endpoints",
+      "description": "I need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "85a4c7cc-f90a-485d-a78e-316861bf451f"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:21:46.686281",
+      "updated_at": "2025-09-16T02:24:46.849286",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "2dfaec58-2c10-4b5f-83d4-fc14a6f4f132",
+      "title": "deploy the new version to staging by friday",
+      "description": "Sure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "8a5d3779-82a3-4c20-87a8-2697c2d7b00c"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:22:46.686283",
+      "updated_at": "2025-09-16T02:24:46.849425",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "2b17d5ac-05f2-4619-8df8-96cab7e4dc43",
+      "title": "do",
+      "description": "Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "02ceb443-cfc3-420f-9965-1b9c10155601"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:23:46.686286",
+      "updated_at": "2025-09-16T02:24:46.849749",
+      "completed_at": null,
+      "metadata": {}
+    }
+  ],
+  "relations": [],
+  "timestamp": "2025-09-16T02:24:46.850548",
+  "source_timestamp": "2025-09-16T02:19:46.686265",
+  "confidence": 1.0,
+  "importance": 8,
+  "provenance": {
+    "source": "conversation",
+    "contact_id": "standup_test",
+    "processing_version": "1.0.0"
+  },
+  "utterance_ids": [
+    "305c07f5-69ed-40f6-9303-38fa80ec56f6",
+    "49952efc-f14a-426f-9c04-8d487e684746",
+    "85a4c7cc-f90a-485d-a78e-316861bf451f",
+    "8a5d3779-82a3-4c20-87a8-2697c2d7b00c",
+    "02ceb443-cfc3-420f-9965-1b9c10155601"
+  ],
+  "tags": [
+    "123",
+    "meeting"
+  ],
+  "keywords": [
+    "need",
+    "sarah",
+    "also",
+    "review",
+    "good",
+    "morning",
+    "everyone",
+    "start",
+    "standup",
+    "completed"
+  ],
+  "context": {
+    "id": "791f0a2a-0e3c-4cb7-8006-96d212d1ea1d",
+    "meeting_title": null,
+    "meeting_type": "standup",
+    "participants": [
+      {
+        "id": "Sarah Johnson",
+        "name": "Sarah Johnson",
+        "utterance_count": 2
+      },
+      {
+        "id": "John Smith",
+        "name": "John Smith",
+        "utterance_count": 2
+      },
+      {
+        "id": "Mike Chen",
+        "name": "Mike Chen",
+        "utterance_count": 1
+      }
+    ],
+    "scheduled_time": null,
+    "actual_time": "2025-09-16T02:19:46.686265",
+    "duration": 4,
+    "location": null,
+    "agenda": null,
+    "related_documents": [],
+    "previous_meeting_id": null,
+    "next_meeting_id": null,
+    "project": null,
+    "metadata": {}
+  },
+  "related_memory_ids": [],
+  "corrections": [],
+  "verified": false,
+  "visibility": "private",
+  "metadata": {}
+}
+```
+</details>
+
+---
+### 📝 Good morning everyone, let's start our standup. I completed the API integration yesterday. Great wor......
+**ID:** `1294d875-afb3-4fb6-8a54-b40ab795c9aa`
+**Date:** 2025-09-16 02:26
+**Confidence:** 1.00
+**Importance:** ⭐⭐⭐⭐⭐⭐⭐⭐
+
+Good morning everyone, let's start our standup. I completed the API integration yesterday.
+Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.
+I need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?
+Sure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?
+Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.
+
+**Entities:**
+- date: yesterday (0.80)
+- date: tomorrow (0.80)
+- date: today (0.80)
+
+**Action Items:**
+- ⏳ be done by tomorrow
+- ⏳ discuss a blocker with sarah about the api endpoints
+- ⏳ deploy the new version to staging by friday
+- ⏳ do
+
+**Tags:** #meeting, #123
+
+<details>
+<summary>Metadata</summary>
+
+```json
+{
+  "id": "1294d875-afb3-4fb6-8a54-b40ab795c9aa",
+  "content": "Good morning everyone, let's start our standup. I completed the API integration yesterday.\nGreat work John! I'm currently working on the frontend dashboard, should be done by tomorrow.\nI need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?\nSure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?\nWill do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+  "summary": "Good morning everyone, let's start our standup. I completed the API integration yesterday. Great wor...",
+  "category": "action_items",
+  "subcategory": null,
+  "entities": [
+    {
+      "id": "4bf73304-ff12-446d-ac8f-018db8b04050",
+      "type": "date",
+      "value": "yesterday",
+      "canonical_name": "yesterday",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "238ec540-fd86-458e-8c8a-f5f513469713"
+      ],
+      "context": "Good morning everyone, let's start our standup. I completed the API integration yesterday.",
+      "attributes": {},
+      "aliases": []
+    },
+    {
+      "id": "41cf5ab5-89fd-40c2-857d-2c1fdeadadae",
+      "type": "date",
+      "value": "tomorrow",
+      "canonical_name": "tomorrow",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "13ca1a67-bac0-4620-8071-fbb72ebd8216"
+      ],
+      "context": "Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.",
+      "attributes": {},
+      "aliases": []
+    },
+    {
+      "id": "e38ee0bb-02d8-46a6-936e-094f40c2fd64",
+      "type": "date",
+      "value": "today",
+      "canonical_name": "today",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "67fad175-98b7-4d77-8b40-58dd58fbe7c0"
+      ],
+      "context": "Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+      "attributes": {},
+      "aliases": []
+    }
+  ],
+  "action_items": [
+    {
+      "id": "dd0f0ee6-504c-45b4-bb78-0f1138f74a05",
+      "title": "be done by tomorrow",
+      "description": "Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "13ca1a67-bac0-4620-8071-fbb72ebd8216"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:22:51.134836",
+      "updated_at": "2025-09-16T02:26:51.275489",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "ec8fce64-4de1-4883-8a9a-f5865e185d5a",
+      "title": "discuss a blocker with sarah about the api endpoints",
+      "description": "I need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "cb6a6e79-cc87-4735-92cd-d19bc85e63d2"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:23:51.134839",
+      "updated_at": "2025-09-16T02:26:51.275541",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "971e5431-e364-4072-8f84-f13ae258bcba",
+      "title": "deploy the new version to staging by friday",
+      "description": "Sure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "4322caa0-268a-409f-9600-1650d204be6b"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:24:51.134841",
+      "updated_at": "2025-09-16T02:26:51.275589",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "4e0bb8d0-c2ca-4d96-86a3-ed992b9d4ca1",
+      "title": "do",
+      "description": "Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "67fad175-98b7-4d77-8b40-58dd58fbe7c0"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:25:51.134843",
+      "updated_at": "2025-09-16T02:26:51.275672",
+      "completed_at": null,
+      "metadata": {}
+    }
+  ],
+  "relations": [],
+  "timestamp": "2025-09-16T02:26:51.276244",
+  "source_timestamp": "2025-09-16T02:21:51.134824",
+  "confidence": 1.0,
+  "importance": 8,
+  "provenance": {
+    "source": "conversation",
+    "contact_id": "standup_test",
+    "processing_version": "1.0.0"
+  },
+  "utterance_ids": [
+    "238ec540-fd86-458e-8c8a-f5f513469713",
+    "13ca1a67-bac0-4620-8071-fbb72ebd8216",
+    "cb6a6e79-cc87-4735-92cd-d19bc85e63d2",
+    "4322caa0-268a-409f-9600-1650d204be6b",
+    "67fad175-98b7-4d77-8b40-58dd58fbe7c0"
+  ],
+  "tags": [
+    "meeting",
+    "123"
+  ],
+  "keywords": [
+    "need",
+    "sarah",
+    "also",
+    "review",
+    "good",
+    "morning",
+    "everyone",
+    "start",
+    "standup",
+    "completed"
+  ],
+  "context": {
+    "id": "18e8e23f-dbc7-4f46-84db-c45b1a733a9b",
+    "meeting_title": null,
+    "meeting_type": "standup",
+    "participants": [
+      {
+        "id": "Mike Chen",
+        "name": "Mike Chen",
+        "utterance_count": 1
+      },
+      {
+        "id": "Sarah Johnson",
+        "name": "Sarah Johnson",
+        "utterance_count": 2
+      },
+      {
+        "id": "John Smith",
+        "name": "John Smith",
+        "utterance_count": 2
+      }
+    ],
+    "scheduled_time": null,
+    "actual_time": "2025-09-16T02:21:51.134824",
+    "duration": 4,
+    "location": null,
+    "agenda": null,
+    "related_documents": [],
+    "previous_meeting_id": null,
+    "next_meeting_id": null,
+    "project": null,
+    "metadata": {}
+  },
+  "related_memory_ids": [],
+  "corrections": [],
+  "verified": false,
+  "visibility": "private",
+  "metadata": {}
+}
+```
+</details>
+
+---
+### 📝 Good morning everyone, let's start our standup. I completed the API integration yesterday. Great wor......
+**ID:** `33d4676d-6178-4e2b-8ffa-ec8c37a4f7eb`
+**Date:** 2025-09-16 02:27
+**Confidence:** 1.00
+**Importance:** ⭐⭐⭐⭐⭐⭐⭐⭐
+
+Good morning everyone, let's start our standup. I completed the API integration yesterday.
+Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.
+I need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?
+Sure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?
+Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.
+
+**Entities:**
+- date: yesterday (0.80)
+- date: tomorrow (0.80)
+- date: today (0.80)
+
+**Action Items:**
+- ⏳ be done by tomorrow
+- ⏳ discuss a blocker with sarah about the api endpoints
+- ⏳ deploy the new version to staging by friday
+- ⏳ do
+
+**Tags:** #123, #meeting
+
+<details>
+<summary>Metadata</summary>
+
+```json
+{
+  "id": "33d4676d-6178-4e2b-8ffa-ec8c37a4f7eb",
+  "content": "Good morning everyone, let's start our standup. I completed the API integration yesterday.\nGreat work John! I'm currently working on the frontend dashboard, should be done by tomorrow.\nI need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?\nSure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?\nWill do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+  "summary": "Good morning everyone, let's start our standup. I completed the API integration yesterday. Great wor...",
+  "category": "action_items",
+  "subcategory": null,
+  "entities": [
+    {
+      "id": "61be10aa-1e23-4b1d-b7f6-0bb6aa3cf77c",
+      "type": "date",
+      "value": "yesterday",
+      "canonical_name": "yesterday",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "3e1e7817-49f7-468a-ad92-ac235465a9cd"
+      ],
+      "context": "Good morning everyone, let's start our standup. I completed the API integration yesterday.",
+      "attributes": {},
+      "aliases": []
+    },
+    {
+      "id": "81ec42ee-2c08-47de-8080-019a5d2b3c43",
+      "type": "date",
+      "value": "tomorrow",
+      "canonical_name": "tomorrow",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "ca9abc79-c291-4727-bf9b-4181da46cb01"
+      ],
+      "context": "Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.",
+      "attributes": {},
+      "aliases": []
+    },
+    {
+      "id": "dbf26b2b-496f-464a-8365-cfe4866734e8",
+      "type": "date",
+      "value": "today",
+      "canonical_name": "today",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "87125099-27b5-4418-9e71-0353fa0797b3"
+      ],
+      "context": "Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+      "attributes": {},
+      "aliases": []
+    }
+  ],
+  "action_items": [
+    {
+      "id": "e696574f-3c68-45bd-8124-edda32b94e8e",
+      "title": "be done by tomorrow",
+      "description": "Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "ca9abc79-c291-4727-bf9b-4181da46cb01"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:23:56.762672",
+      "updated_at": "2025-09-16T02:27:56.895854",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "659a21ea-f276-45d7-bdbd-f841541cf103",
+      "title": "discuss a blocker with sarah about the api endpoints",
+      "description": "I need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "791febbe-c555-41dc-ab8c-444bdfdeeda3"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:24:56.762674",
+      "updated_at": "2025-09-16T02:27:56.895923",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "80aef3c0-6aba-4205-a51a-c699da962467",
+      "title": "deploy the new version to staging by friday",
+      "description": "Sure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "ed8b99bb-9a88-4638-8a92-73afc04da59a"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:25:56.762676",
+      "updated_at": "2025-09-16T02:27:56.895980",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "97da35c1-fe6a-4032-b7c7-9a2f751e28eb",
+      "title": "do",
+      "description": "Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "87125099-27b5-4418-9e71-0353fa0797b3"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:26:56.762677",
+      "updated_at": "2025-09-16T02:27:56.896080",
+      "completed_at": null,
+      "metadata": {}
+    }
+  ],
+  "relations": [],
+  "timestamp": "2025-09-16T02:27:56.896584",
+  "source_timestamp": "2025-09-16T02:22:56.762664",
+  "confidence": 1.0,
+  "importance": 8,
+  "provenance": {
+    "source": "conversation",
+    "contact_id": "standup_test",
+    "processing_version": "1.0.0"
+  },
+  "utterance_ids": [
+    "3e1e7817-49f7-468a-ad92-ac235465a9cd",
+    "ca9abc79-c291-4727-bf9b-4181da46cb01",
+    "791febbe-c555-41dc-ab8c-444bdfdeeda3",
+    "ed8b99bb-9a88-4638-8a92-73afc04da59a",
+    "87125099-27b5-4418-9e71-0353fa0797b3"
+  ],
+  "tags": [
+    "123",
+    "meeting"
+  ],
+  "keywords": [
+    "need",
+    "sarah",
+    "also",
+    "review",
+    "good",
+    "morning",
+    "everyone",
+    "start",
+    "standup",
+    "completed"
+  ],
+  "context": {
+    "id": "b3c5e17d-39f0-4081-a739-33265c11ee41",
+    "meeting_title": null,
+    "meeting_type": "standup",
+    "participants": [
+      {
+        "id": "John Smith",
+        "name": "John Smith",
+        "utterance_count": 2
+      },
+      {
+        "id": "Mike Chen",
+        "name": "Mike Chen",
+        "utterance_count": 1
+      },
+      {
+        "id": "Sarah Johnson",
+        "name": "Sarah Johnson",
+        "utterance_count": 2
+      }
+    ],
+    "scheduled_time": null,
+    "actual_time": "2025-09-16T02:22:56.762664",
+    "duration": 4,
+    "location": null,
+    "agenda": null,
+    "related_documents": [],
+    "previous_meeting_id": null,
+    "next_meeting_id": null,
+    "project": null,
+    "metadata": {}
+  },
+  "related_memory_ids": [],
+  "corrections": [],
+  "verified": false,
+  "visibility": "private",
+  "metadata": {}
+}
+```
+</details>
+
+---
+### 📝 Good morning everyone, let's start our standup. I completed the API integration yesterday. Great wor......
+**ID:** `76859812-a672-49f4-a2eb-3476e3cf8d08`
+**Date:** 2025-09-16 02:41
+**Confidence:** 1.00
+**Importance:** ⭐⭐⭐⭐⭐⭐⭐⭐
+
+Good morning everyone, let's start our standup. I completed the API integration yesterday.
+Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.
+I need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?
+Sure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?
+Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.
+
+**Entities:**
+- date: yesterday (0.80)
+- date: tomorrow (0.80)
+- date: today (0.80)
+
+**Action Items:**
+- ⏳ be done by tomorrow
+- ⏳ discuss a blocker with sarah about the api endpoints
+- ⏳ deploy the new version to staging by friday
+- ⏳ do
+
+**Tags:** #123, #meeting
+
+<details>
+<summary>Metadata</summary>
+
+```json
+{
+  "id": "76859812-a672-49f4-a2eb-3476e3cf8d08",
+  "content": "Good morning everyone, let's start our standup. I completed the API integration yesterday.\nGreat work John! I'm currently working on the frontend dashboard, should be done by tomorrow.\nI need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?\nSure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?\nWill do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+  "summary": "Good morning everyone, let's start our standup. I completed the API integration yesterday. Great wor...",
+  "category": "action_items",
+  "subcategory": null,
+  "entities": [
+    {
+      "id": "5ed095fa-1b68-4822-a6c6-b75d6d774771",
+      "type": "date",
+      "value": "yesterday",
+      "canonical_name": "yesterday",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "96d13697-a1b0-4f9a-9373-feb8de249206"
+      ],
+      "context": "Good morning everyone, let's start our standup. I completed the API integration yesterday.",
+      "attributes": {},
+      "aliases": []
+    },
+    {
+      "id": "8e29403c-5022-4d48-9894-aecfa515b78e",
+      "type": "date",
+      "value": "tomorrow",
+      "canonical_name": "tomorrow",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "168c3424-873f-4032-9efd-0258028dcb8a"
+      ],
+      "context": "Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.",
+      "attributes": {},
+      "aliases": []
+    },
+    {
+      "id": "ee4a6d9e-37fc-47f5-a66c-ec1fc5932656",
+      "type": "date",
+      "value": "today",
+      "canonical_name": "today",
+      "confidence": 0.8,
+      "utterance_ids": [
+        "03cb16e9-87d8-4cd6-a40d-889f1febce04"
+      ],
+      "context": "Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+      "attributes": {},
+      "aliases": []
+    }
+  ],
+  "action_items": [
+    {
+      "id": "aefe99bd-64f4-4c87-8321-242c51696778",
+      "title": "be done by tomorrow",
+      "description": "Great work John! I'm currently working on the frontend dashboard, should be done by tomorrow.",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "168c3424-873f-4032-9efd-0258028dcb8a"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:37:38.030848",
+      "updated_at": "2025-09-16T02:41:38.149244",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "09b9ce80-462d-479a-8587-4778ef037f22",
+      "title": "discuss a blocker with sarah about the api endpoints",
+      "description": "I need to discuss a blocker with Sarah about the API endpoints. Can we sync after this meeting?",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "779c8ce1-be14-4dfd-85ce-717b0d1a125c"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:38:38.030850",
+      "updated_at": "2025-09-16T02:41:38.149295",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "070c3ccc-2ab9-4e92-9b3a-a29d43197d61",
+      "title": "deploy the new version to staging by friday",
+      "description": "Sure, I'll also need to deploy the new version to staging by Friday. Sarah, can you review the PR #123?",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "c523b33f-d08f-40f2-bcea-cd09483dd153"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:39:38.030851",
+      "updated_at": "2025-09-16T02:41:38.149345",
+      "completed_at": null,
+      "metadata": {}
+    },
+    {
+      "id": "cbf54bdc-e73c-45df-814a-66774d4cae55",
+      "title": "do",
+      "description": "Will do! I'll review it today. Also, we have the client demo next Tuesday at 2 PM.",
+      "assignee": null,
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "status": "pending",
+      "dependencies": [],
+      "blockers": [],
+      "utterance_ids": [
+        "03cb16e9-87d8-4cd6-a40d-889f1febce04"
+      ],
+      "tags": [],
+      "completion_criteria": null,
+      "estimated_effort": null,
+      "actual_effort": null,
+      "created_at": "2025-09-16T02:40:38.030852",
+      "updated_at": "2025-09-16T02:41:38.149439",
+      "completed_at": null,
+      "metadata": {}
+    }
+  ],
+  "relations": [],
+  "timestamp": "2025-09-16T02:41:38.149891",
+  "source_timestamp": "2025-09-16T02:36:38.030839",
+  "confidence": 1.0,
+  "importance": 8,
+  "provenance": {
+    "source": "conversation",
+    "contact_id": "standup_test",
+    "processing_version": "1.0.0"
+  },
+  "utterance_ids": [
+    "96d13697-a1b0-4f9a-9373-feb8de249206",
+    "168c3424-873f-4032-9efd-0258028dcb8a",
+    "779c8ce1-be14-4dfd-85ce-717b0d1a125c",
+    "c523b33f-d08f-40f2-bcea-cd09483dd153",
+    "03cb16e9-87d8-4cd6-a40d-889f1febce04"
+  ],
+  "tags": [
+    "123",
+    "meeting"
+  ],
+  "keywords": [
+    "need",
+    "sarah",
+    "also",
+    "review",
+    "good",
+    "morning",
+    "everyone",
+    "start",
+    "standup",
+    "completed"
+  ],
+  "context": {
+    "id": "062a887c-65be-43a8-a426-02bd37dea225",
+    "meeting_title": null,
+    "meeting_type": "standup",
+    "participants": [
+      {
+        "id": "Sarah Johnson",
+        "name": "Sarah Johnson",
+        "utterance_count": 2
+      },
+      {
+        "id": "John Smith",
+        "name": "John Smith",
+        "utterance_count": 2
+      },
+      {
+        "id": "Mike Chen",
+        "name": "Mike Chen",
+        "utterance_count": 1
+      }
+    ],
+    "scheduled_time": null,
+    "actual_time": "2025-09-16T02:36:38.030839",
+    "duration": 4,
+    "location": null,
+    "agenda": null,
+    "related_documents": [],
+    "previous_meeting_id": null,
+    "next_meeting_id": null,
+    "project": null,
+    "metadata": {}
+  },
+  "related_memory_ids": [],
+  "corrections": [],
+  "verified": false,
+  "visibility": "private",
+  "metadata": {}
+}
+```
+</details>
+
+---

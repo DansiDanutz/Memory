@@ -1,0 +1,59 @@
+run = "python main.py"
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-22_11"
+
+[env]
+PYTHONPATH = "${REPL_HOME}"
+PYTHONUNBUFFERED = "1"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", "requirements.txt", "main.py"]
+
+[languages]
+
+[languages.python3]
+pattern = "**/*.py"
+
+[languages.python3.languageServer]
+start = "pylsp"
+
+[deployment]
+run = ["sh", "-c", "python main.py"]
+deploymentTarget = "cloudrun"
+
+[packager]
+language = "python3"
+ignoredPackages = ["unit_tests"]
+
+[packager.features]
+enabledForHosting = false
+packageSearch = true
+guessImports = true
+
+[debugger]
+support = true
+
+[debugger.interactive]
+transport = "localhost:5678"
+startCommand = ["dap-python", "main.py"]
+
+[debugger.interactive.integratedAdapter]
+dapTcpAddress = "localhost:5678"
+
+[unitTest]
+language = "python3"
+
+[interpreter]
+command = [
+  "prybar-python311",
+  "-q",
+  "--ps1",
+  "\u0001\u001b[33m\u0002\u0001\u001b[00m\u0002 ",
+  "-i"
+]
+
+[interpreter.env]
+LD_LIBRARY_PATH = "$PYTHON_LD_LIBRARY_PATH"
+

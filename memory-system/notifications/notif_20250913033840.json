@@ -1,0 +1,7 @@
+{
+  "type": "commitment_reminder",
+  "user_id": "user_20250913_033840",
+  "message": "Don't forget: Dinner with Sarah tomorrow at 7 PM",
+  "urgency": "high",
+  "scheduled_for": "tomorrow at 6 PM"
+}

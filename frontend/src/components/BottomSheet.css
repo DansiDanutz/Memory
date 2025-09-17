@@ -1,0 +1,186 @@
+/* Bottom Sheet Component Styles */
+
+.bottom-sheet-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+/* Backdrop */
+.bottom-sheet-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Bottom Sheet */
+.bottom-sheet {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottom-sheet-container.dark .bottom-sheet {
+  background: #1f2937;
+  box-shadow: 0 -4px 30px rgba(0, 255, 163, 0.1);
+}
+
+/* Drag Handle */
+.drag-handle-container {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.drag-handle {
+  width: 40px;
+  height: 4px;
+  background: #d1d5db;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.bottom-sheet-container.dark .drag-handle {
+  background: #4b5563;
+}
+
+.drag-handle-container:active .drag-handle {
+  width: 60px;
+  background: #9ca3af;
+}
+
+/* Header */
+.bottom-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.bottom-sheet-container.dark .bottom-sheet-header {
+  border-bottom-color: #374151;
+}
+
+.bottom-sheet-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.bottom-sheet-container.dark .bottom-sheet-title {
+  color: #f3f4f6;
+}
+
+.close-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bottom-sheet-container.dark .close-button {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.close-button:active {
+  transform: scale(0.95);
+  background: #e5e7eb;
+}
+
+/* Content */
+.bottom-sheet-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Smooth Scrolling */
+.bottom-sheet-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.bottom-sheet-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bottom-sheet-content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 2px;
+}
+
+.bottom-sheet-container.dark .bottom-sheet-content::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+/* Animation Classes */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .bottom-sheet,
+  .bottom-sheet-backdrop {
+    transition: none;
+  }
+}
+
+/* Landscape Adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  .bottom-sheet {
+    max-height: 80vh;
+  }
+}
