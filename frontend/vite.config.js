@@ -11,8 +11,8 @@ export default defineConfig({
     },
   },
   server: {
-    port: 5555,
-    strictPort: true,
+    port: process.env.PORT || 5555,
+    strictPort: false, // Allow Replit to assign port
     host: '0.0.0.0',
     allowedHosts: true,
     proxy: {
